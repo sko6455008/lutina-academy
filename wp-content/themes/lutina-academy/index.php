@@ -114,7 +114,7 @@
         <nav class="fixed w-full z-50 transition-all duration-500 bg-transparent py-4">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="flex items-center justify-between h-16">
-                    <div class="logo-area flex-shrink-0 flex items-center gap-3 cursor-pointer group">
+                    <div class="logo-area flex-shrink-0 flex items-center gap-3 cursor-pointer group" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">
                         <div class="relative">
                             <div class="absolute inset-0 bg-accent-400 blur-md opacity-20 group-hover:opacity-40 transition-opacity duration-300"></div>
                             <i data-lucide="moon" class="relative w-6 h-6 text-accent-500 fill-accent-400/10"></i>
@@ -126,6 +126,9 @@
                     
                     <div class="hidden md:block">
                         <div class="ml-10 flex items-center space-x-8">
+                            <a href="#about" class="text-gray-500 hover:text-accent-600 text-sm font-mincho font-medium transition-colors duration-300 tracking-wider relative group">
+                                私たちについて<span class="absolute -bottom-1 left-0 w-0 h-[1.5px] bg-accent-400 transition-all duration-300 group-hover:w-full"></span>
+                            </a>
                             <a href="#features" class="text-gray-500 hover:text-accent-600 text-sm font-mincho font-medium transition-colors duration-300 tracking-wider relative group">
                                 特徴<span class="absolute -bottom-1 left-0 w-0 h-[1.5px] bg-accent-400 transition-all duration-300 group-hover:w-full"></span>
                             </a>
@@ -159,6 +162,7 @@
             <!-- Mobile menu -->
             <div id="mobile-menu" class="md:hidden transition-all duration-300 ease-in-out overflow-hidden max-h-0 opacity-0 bg-white border-b border-accent-100">
                 <div class="px-4 pt-4 pb-6 space-y-2">
+                    <a href="#about" class="text-gray-600 hover:text-accent-600 block px-3 py-3 rounded-md text-base font-mincho font-medium border-b border-gray-50">私たちについて</a>
                     <a href="#features" class="text-gray-600 hover:text-accent-600 block px-3 py-3 rounded-md text-base font-mincho font-medium border-b border-gray-50">特徴</a>
                     <a href="#courses" class="text-gray-600 hover:text-accent-600 block px-3 py-3 rounded-md text-base font-mincho font-medium border-b border-gray-50">コース紹介</a>
                     <a href="#instructors" class="text-gray-600 hover:text-accent-600 block px-3 py-3 rounded-md text-base font-mincho font-medium border-b border-gray-50">講師紹介</a>
@@ -173,7 +177,7 @@
         </nav>
 
         <main>
-            <!-- Hero -->
+            <!-- 1. Hero -->
             <section class="relative h-screen flex items-center justify-center overflow-hidden bg-mystic-950">
                 <div class="absolute inset-0 z-0">
                     <div class="absolute inset-0 bg-gradient-to-b from-white/10 via-mystic-950/80 to-mystic-950 z-10"></div>
@@ -221,7 +225,70 @@
                 </div>
             </section>
 
-            <!-- Features -->
+            <!-- 2. Our Identity (About) -->
+            <section id="about" class="py-32 bg-white overflow-hidden relative">
+                <!-- Background Decorative Text -->
+                <div class="absolute inset-0 flex items-center justify-center pointer-events-none select-none overflow-hidden">
+                    <span class="text-[250px] md:text-[400px] font-serif font-bold text-accent-100/20 leading-none whitespace-nowrap transform translate-y-20">
+                        Lutina Academy
+                    </span>
+                </div>
+
+                <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                    <div class="flex flex-col items-center text-center">
+                        
+                        <div class="animate-on-scroll bg-white/40 backdrop-blur-sm p-8 md:p-16 border border-accent-100/50 shadow-sm w-full">
+                            <div class="inline-flex items-center gap-4 mb-8">
+                                <div class="h-px w-8 bg-accent-400"></div>
+                                <span class="text-accent-600 font-serif tracking-[0.4em] text-xs uppercase font-bold">
+                                    Our Identity
+                                </span>
+                                <div class="h-px w-8 bg-accent-400"></div>
+                            </div>
+                            
+                            <h2 class="text-4xl md:text-6xl font-serif text-mystic-600 mb-12 leading-[1.3] tracking-tight">
+                                光と叡智が交差する<br />
+                                <span class="text-accent-500 italic">学びの聖域</span>
+                            </h2>
+                            
+                            <div class="space-y-8 text-gray-500 font-mincho leading-[2.2] text-base md:text-lg max-w-2xl mx-auto mb-16">
+                                <p>
+                                    Lutina（ルティナ）は、ラテン語で「光」を意味する言葉から名付けられました。<br class="hidden md:block" />
+                                    占いとは単なる予言ではなく、人生という暗闇を照らす「灯火」であるべきだと私たちは考えます。
+                                </p>
+                                <p>
+                                    当アカデミーは、受講生が心穏やかに、かつ集中して叡智に触れられるよう、<br class="hidden md:block" />
+                                    静寂と光が調和した、最高の学習環境を提供することをお約束します。
+                                </p>
+                                <p class="italic font-serif text-accent-700 text-xl md:text-2xl mt-12 py-4 border-y border-accent-100/50">
+                                    "一流の導き手となるための、最高の環境を。"
+                                </p>
+                            </div>
+
+                            <!-- Atmosphere Image -->
+                            <div class="animate-on-scroll delay-200 mt-4">
+                                <div class="relative aspect-[16/9] overflow-hidden rounded-sm shadow-xl border border-accent-100 p-1 bg-white">
+                                    <img 
+                                        src="https://images.unsplash.com/photo-1518133835878-5a93cc3f89e5?q=80&w=1200&auto=format&fit=crop" 
+                                        alt="Academy Atmosphere" 
+                                        class="w-full h-full object-cover grayscale-[10%] hover:grayscale-0 transition-all duration-700"
+                                    />
+                                    <div class="absolute inset-0 bg-gradient-to-t from-mystic-600/10 to-transparent"></div>
+                                </div>
+                                
+                                <div class="mt-6 flex flex-col items-center gap-2">
+                                    <div class="h-8 w-px bg-gradient-to-b from-accent-400 to-transparent"></div>
+                                    <span class="text-[9px] text-accent-400 tracking-[0.5em] uppercase font-bold">
+                                        Academy Atmosphere
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 3. Features (選ばれる理由) -->
             <section id="features" class="py-32 bg-white relative">
                 <div class="absolute inset-0 bg-gradient-to-b from-mystic-950 via-white to-white pointer-events-none"></div>
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -281,7 +348,264 @@
                 </div>
             </section>
 
-            <!-- Courses -->
+            <!-- 4. TargetAudience (こんな方にオススメ) -->
+            <section id="target" class="py-32 bg-mystic-950 relative overflow-hidden">
+                <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                    
+                    <!-- Main Frame Container -->
+                    <div class="animate-on-scroll relative bg-white border-[3px] border-accent-200 p-8 md:p-16 shadow-lg">
+                        <!-- Ornamental Corners (SVG) -->
+                        <div class="absolute top-2 left-2 w-16 h-16 md:w-24 md:h-24 text-accent-400 opacity-60">
+                            <svg viewBox="0 0 100 100" fill="currentColor">
+                                <path d="M0,0 L40,0 Q20,0 20,20 L20,40 Q20,20 0,20 Z" />
+                                <circle cx="15" cy="15" r="2" />
+                                <path d="M10,30 Q10,10 30,10" fill="none" stroke="currentColor" strokeWidth="1" />
+                            </svg>
+                        </div>
+                        <div class="absolute top-2 right-2 w-16 h-16 md:w-24 md:h-24 text-accent-400 opacity-60 rotate-90">
+                            <svg viewBox="0 0 100 100" fill="currentColor">
+                                <path d="M0,0 L40,0 Q20,0 20,20 L20,40 Q20,20 0,20 Z" />
+                                <circle cx="15" cy="15" r="2" />
+                                <path d="M10,30 Q10,10 30,10" fill="none" stroke="currentColor" strokeWidth="1" />
+                            </svg>
+                        </div>
+                        <div class="absolute bottom-2 left-2 w-16 h-16 md:w-24 md:h-24 text-accent-400 opacity-60 -rotate-90">
+                            <svg viewBox="0 0 100 100" fill="currentColor">
+                                <path d="M0,0 L40,0 Q20,0 20,20 L20,40 Q20,20 0,20 Z" />
+                                <circle cx="15" cy="15" r="2" />
+                                <path d="M10,30 Q10,10 30,10" fill="none" stroke="currentColor" strokeWidth="1" />
+                            </svg>
+                        </div>
+                        <div class="absolute bottom-2 right-2 w-16 h-16 md:w-24 md:h-24 text-accent-400 opacity-60 rotate-180">
+                            <svg viewBox="0 0 100 100" fill="currentColor">
+                                <path d="M0,0 L40,0 Q20,0 20,20 L20,40 Q20,20 0,20 Z" />
+                                <circle cx="15" cy="15" r="2" />
+                                <path d="M10,30 Q10,10 30,10" fill="none" stroke="currentColor" strokeWidth="1" />
+                            </svg>
+                        </div>
+
+                        <!-- Content -->
+                        <div class="relative z-10 text-center">
+                            <h2 class="text-3xl md:text-5xl font-mincho font-bold text-accent-600 mb-6 tracking-tight">
+                                こんな方にオススメ！
+                            </h2>
+
+                            <!-- Decorative Divider -->
+                            <div class="flex items-center justify-center gap-4 mb-12">
+                                <div class="h-[1px] w-12 md:w-24 bg-accent-400"></div>
+                                <div class="text-accent-500">
+                                    <svg width="60" height="20" viewBox="0 0 60 20" fill="currentColor">
+                                        <path d="M30,0 Q35,10 45,10 T60,10 M30,0 Q25,10 15,10 T0,10" fill="none" stroke="currentColor" strokeWidth="1" />
+                                        <path d="M30,5 L33,10 L30,15 L27,10 Z" />
+                                    </svg>
+                                </div>
+                                <div class="h-[1px] w-12 md:w-24 bg-accent-400"></div>
+                            </div>
+
+                            <!-- Checklist -->
+                            <div class="max-w-lg mx-auto text-left space-y-8">
+                                <?php
+                                $targets = [
+                                    ['text' => '副業で占いを始めてみたい', 'underline' => '占いを始めてみたい'],
+                                    ['text' => '独学で占いを学んだけれどスキルが不安', 'underline' => 'スキルが不安'],
+                                    ['text' => '本格的にプロの占い師になりたい', 'underline' => 'プロの占い師になりたい'],
+                                    ['text' => '人気の稼げる占い師になりたい', 'underline' => '人気の稼げる占い師になりたい'],
+                                ];
+                                foreach ($targets as $i => $item) : 
+                                    $parts = explode($item['underline'], $item['text']);
+                                ?>
+                                    <div class="animate-on-scroll delay-<?php echo ($i * 100); ?> flex items-start gap-4 group">
+                                        <div class="mt-1 flex-shrink-0 border border-accent-400 p-0.5 rounded-sm">
+                                            <i data-lucide="check" class="w-[18px] h-[18px] text-accent-600" stroke-width="3"></i>
+                                        </div>
+                                        <p class="text-lg md:text-2xl font-mincho font-medium text-mystic-600 leading-snug">
+                                            <?php echo $parts[0]; ?>
+                                            <span class="relative inline-block">
+                                                <?php echo $item['underline']; ?>
+                                                <span class="absolute bottom-0 left-0 w-full h-[2px] bg-accent-400/60"></span>
+                                            </span>
+                                            <?php if(isset($parts[1])) echo $parts[1]; ?>
+                                        </p>
+                                    </div>
+                                <?php endforeach; ?>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Caption -->
+                    <p class="animate-on-scroll delay-500 mt-12 text-center text-gray-400 font-mincho text-sm tracking-widest italic">
+                        Lutina Academyは、あなたの「なりたい」を全力でサポートします。
+                    </p>
+                </div>
+            </section>
+
+            <!-- 5. Earnings (占い師になってどのくらい稼げるの？) -->
+            <section id="earnings" class="py-32 bg-mystic-900 relative">
+                <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-20 relative z-10 animate-on-scroll">
+                        <div class="flex flex-col items-center">
+                            <span class="block text-accent-600 font-serif tracking-[0.3em] mb-3 text-xs md:text-sm uppercase font-bold">— Real Earnings —</span>
+                            <h2 class="text-3xl md:text-4xl lg:text-5xl font-serif text-mystic-600 tracking-wide leading-relaxed drop-shadow-sm">占い師になってどのくらい稼げるの？</h2>
+                            <div class="mt-6 flex items-center justify-center gap-4">
+                                <div class="h-[1px] w-12 bg-gradient-to-r from-transparent to-accent-400"></div>
+                                <div class="w-2 h-2 rotate-45 border border-accent-400 bg-white"></div>
+                                <div class="h-[1px] w-12 bg-gradient-to-l from-transparent to-accent-400"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Card Grid -->
+                    <div class="grid grid-cols-2 gap-4 md:gap-8 mb-16">
+                        <?php
+                        $earningData = [
+                            ['name' => 'M.Sさん', 'income' => '70', 'days' => '5', 'gender' => 'female'],
+                            ['name' => 'K.Fさん', 'income' => '55', 'days' => '4', 'gender' => 'male'],
+                            ['name' => 'Y.Yさん', 'income' => '25', 'days' => '2', 'gender' => 'female'],
+                            ['name' => 'H.Tさん', 'income' => '10', 'days' => '1', 'gender' => 'female'],
+                        ];
+                        foreach ($earningData as $i => $data) : ?>
+                            <div class="animate-on-scroll delay-<?php echo ($i * 100); ?> bg-white border border-accent-200 overflow-hidden shadow-sm">
+                                <!-- Top Section: Icon & Name -->
+                                <div class="p-6 md:p-10 flex flex-col items-center justify-center relative min-h-[160px] md:min-h-[200px]">
+                                    <div class="mb-4 text-accent-300">
+                                        <?php if ($data['gender'] === 'female') : ?>
+                                            <div class="relative">
+                                                <i data-lucide="user" class="w-[64px] h-[64px] md:w-24 md:h-24 stroke-[1]"></i>
+                                                <div class="absolute inset-0 bg-accent-100/20 rounded-full blur-xl"></div>
+                                            </div>
+                                        <?php else : ?>
+                                            <div class="relative">
+                                                <i data-lucide="user-round" class="w-[64px] h-[64px] md:w-24 md:h-24 stroke-[1]"></i>
+                                                <div class="absolute inset-0 bg-accent-100/20 rounded-full blur-xl"></div>
+                                            </div>
+                                        <?php endif; ?>
+                                    </div>
+                                    <div class="text-gray-500 font-serif text-xs md:text-sm tracking-widest absolute bottom-4 right-4">
+                                        <?php echo $data['name']; ?>
+                                    </div>
+                                </div>
+
+                                <!-- Bottom Section: Income Bar -->
+                                <div class="bg-accent-600 py-3 md:py-5 px-2 text-center text-white">
+                                    <div class="flex items-baseline justify-center gap-1">
+                                        <span class="text-xs md:text-sm font-mincho opacity-90">月収</span>
+                                        <span class="text-2xl md:text-4xl font-serif font-bold tracking-tighter leading-none"><?php echo $data['income']; ?></span>
+                                        <span class="text-xs md:text-sm font-mincho">万円 / 週<?php echo $data['days']; ?></span>
+                                    </div>
+                                </div>
+                            </div>
+                        <?php endforeach; ?>
+                    </div>
+
+                    <!-- Footer Text -->
+                    <div class="animate-on-scroll delay-500 text-center space-y-2">
+                        <p class="text-gray-500 font-mincho text-sm md:text-lg leading-relaxed">
+                            アカデミーを卒業し、占い師になった方の<br class="md:hidden" />
+                            <span class="text-accent-600 font-bold">実際に稼いだ金額</span>です。
+                        </p>
+                        <p class="text-gray-500 font-mincho text-sm md:text-lg leading-relaxed">
+                            自分に合った働き方で、<br class="md:hidden" />
+                            <span class="text-accent-600 font-bold">目標の収入</span>を得ることができています。
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 6. Lutinaの特徴 (CourseStrengths) -->
+            <section id="course-strengths" class="py-32 bg-white relative">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-20 relative z-10 animate-on-scroll">
+                        <div class="flex flex-col items-center">
+                            <span class="block text-accent-600 font-serif tracking-[0.3em] mb-3 text-xs md:text-sm uppercase font-bold">— Strengths —</span>
+                            <h2 class="text-3xl md:text-4xl lg:text-5xl font-serif text-mystic-600 tracking-wide leading-relaxed drop-shadow-sm">Lutinaの特徴</h2>
+                            <div class="mt-6 flex items-center justify-center gap-4">
+                                <div class="h-[1px] w-12 bg-gradient-to-r from-transparent to-accent-400"></div>
+                                <div class="w-2 h-2 rotate-45 border border-accent-400 bg-white"></div>
+                                <div class="h-[1px] w-12 bg-gradient-to-l from-transparent to-accent-400"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border-t border-l border-accent-100">
+                        <?php
+                        $strengths = [
+                            [
+                                'title' => '門外不出の教材',
+                                'desc' => '代表・月読セレナが25年の鑑定経験から編み出した、的中率を極限まで高める独自のテキストを使用します。',
+                                'image' => 'https://images.unsplash.com/photo-1544947950-fa07a98d237f?q=80&w=800&auto=format&fit=crop',
+                                'tag' => 'Original'
+                            ],
+                            [
+                                'title' => '個別添削',
+                                'desc' => '課題提出ごとに講師が丁寧に添削。あなたのリーディングの癖を見抜き、的確なアドバイスを行います。',
+                                'image' => 'https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=800&auto=format&fit=crop',
+                                'tag' => 'Feedback'
+                            ],
+                            [
+                                'title' => '実践実習',
+                                'desc' => '実際の相談者を想定した模擬鑑定で即戦力を養います。リアルタイムでの対話力が身につきます。',
+                                'image' => 'https://images.unsplash.com/photo-1576182103405-b3e346579218?q=80&w=800&auto=format&fit=crop',
+                                'tag' => 'Practice'
+                            ],
+                            [
+                                'title' => '動画アーカイブ',
+                                'desc' => '全講義は高画質動画で録画。受講期間中はいつでも、どこでも、何度でも復習することが可能です。',
+                                'image' => 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=800&auto=format&fit=crop',
+                                'tag' => 'Archive'
+                            ],
+                            [
+                                'title' => 'コミュニティ',
+                                'desc' => '受講生・卒業生限定のSNSへ招待。一生涯の仲間と悩み相談や情報交換が盛んに行われています。',
+                                'image' => 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=800&auto=format&fit=crop',
+                                'tag' => 'Network'
+                            ],
+                            [
+                                'title' => '認定ブランド',
+                                'desc' => '卒業試験合格者には認定証を授与。大手会社への優先推薦枠など、デビュー後の信頼を保証します。',
+                                'image' => 'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?q=80&w=800&auto=format&fit=crop',
+                                'tag' => 'License'
+                            ]
+                        ];
+                        foreach ($strengths as $i => $s) : ?>
+                            <div class="animate-on-scroll delay-<?php echo ($i * 100); ?> group transition-all duration-500 bg-white border-r border-b border-accent-100 flex flex-col items-start relative overflow-hidden">
+                                <!-- Image Header -->
+                                <div class="w-full aspect-[16/10] overflow-hidden bg-mystic-900">
+                                    <img 
+                                        src="<?php echo $s['image']; ?>" 
+                                        alt="<?php echo $s['title']; ?>"
+                                        class="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 scale-100 group-hover:scale-110 transition-all duration-1000 ease-out"
+                                    />
+                                </div>
+
+                                <!-- Content Area -->
+                                <div class="p-8 md:p-10 flex flex-col flex-1">
+                                    <!-- Tag -->
+                                    <div class="mb-4">
+                                        <span class="text-[10px] font-serif tracking-[0.2em] text-accent-500 font-bold uppercase border-b border-accent-200 pb-1">
+                                            <?php echo $s['tag']; ?>
+                                        </span>
+                                    </div>
+
+                                    <h3 class="text-xl font-serif font-bold text-mystic-600 mb-4 tracking-wide group-hover:text-accent-600 transition-colors">
+                                        <?php echo $s['title']; ?>
+                                    </h3>
+                                    
+                                    <p class="text-gray-500 font-mincho text-sm leading-loose group-hover:text-gray-700 transition-colors">
+                                        <?php echo $s['desc']; ?>
+                                    </p>
+
+                                    <div class="mt-8 overflow-hidden h-px w-0 group-hover:w-16 bg-accent-400 transition-all duration-500"></div>
+                                </div>
+                                
+                                <!-- Subtle hover overlay for the whole card -->
+                                <div class="absolute inset-0 bg-accent-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+                            </div>
+                        <?php endforeach; ?>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 7. Courses -->
             <section id="courses" class="py-32 bg-mystic-900 relative overflow-hidden">
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                     <div class="text-center mb-20 relative z-10 animate-on-scroll">
@@ -378,7 +702,7 @@
                 </div>
             </section>
 
-            <!-- Instructors -->
+            <!-- 8. Instructors -->
             <section id="instructors" class="py-32 bg-white relative overflow-hidden">
                 <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                     <div class="text-center mb-20 relative z-10 animate-on-scroll">
@@ -463,7 +787,7 @@
                 </div>
             </section>
 
-            <!-- Testimonials -->
+            <!-- 9. Testimonials -->
             <section id="testimonials" class="py-24 bg-mystic-900 relative">
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                     <div class="text-center mb-20 relative z-10 animate-on-scroll">
@@ -530,7 +854,7 @@
                 </div>
             </section>
 
-            <!-- Flow -->
+            <!-- 10. Flow -->
             <section id="flow" class="py-24 bg-white">
                 <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
                      <div class="text-center mb-20 relative z-10 animate-on-scroll">
@@ -648,7 +972,7 @@
                 </div>
             </section>
 
-            <!-- FAQ -->
+            <!-- 11. FAQ -->
             <section id="faq" class="py-24 bg-mystic-900">
                 <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
                      <div class="text-center mb-20 relative z-10 animate-on-scroll">
@@ -755,4 +1079,3 @@
     <?php wp_footer(); ?>
   </body>
 </html>
-
