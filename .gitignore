@@ -1,0 +1,35 @@
+# WordPress Core
+wp-admin/
+wp-includes/
+wp-*.php
+index.php
+license.txt
+readme.html
+xmlrpc.php
+
+# Configuration
+wp-config.php
+wp-config-sample.php
+.htaccess
+local-xdebuginfo.php
+
+# wp-content
+wp-content/index.php
+wp-content/plugins/
+wp-content/mu-plugins/
+wp-content/languages/
+wp-content/upgrade/
+wp-content/uploads/
+wp-content/et-cache/
+
+# Themes: Ignore all themes except lutina-academy
+wp-content/themes/*
+!wp-content/themes/lutina-academy/
+
+# System & Misc
+.DS_Store
+*.log
+*.sql
+node_modules/
+.vscode/
+.idea/
