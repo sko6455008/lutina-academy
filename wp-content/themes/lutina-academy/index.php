@@ -41,7 +41,7 @@
               }
             },
             backgroundImage: {
-              'hero-light': "linear-gradient(to bottom, rgba(250, 247, 252, 0.4), rgba(250, 247, 252, 1)), url('https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=2940&auto=format&fit=crop')",
+              'hero-light': "url('<?php echo get_template_directory_uri(); ?>/assets/images/top.webp')",
             },
             animation: {
               'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
@@ -117,17 +117,19 @@
                     <div class="logo-area flex-shrink-0 flex items-center gap-3 cursor-pointer group" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">
                         <div class="relative">
                             <div class="absolute inset-0 bg-accent-400 blur-md opacity-20 group-hover:opacity-40 transition-opacity duration-300"></div>
-                            <i data-lucide="moon" class="relative w-6 h-6 text-accent-500 fill-accent-400/10"></i>
                         </div>
-                        <span class="text-xl font-serif font-bold text-mystic-600 tracking-widest group-hover:text-accent-600 transition-colors">
+                        <span class="text-xl font-mincho font-bold text-mystic-600 tracking-wider group-hover:text-accent-600 transition-colors">
                             Lutina Academy
                         </span>
                     </div>
                     
-                    <div class="hidden md:block">
+                    <div class="hidden lg:block">
                         <div class="ml-10 flex items-center space-x-8">
-                            <a href="#about" class="text-gray-500 hover:text-accent-600 text-sm font-mincho font-medium transition-colors duration-300 tracking-wider relative group">
-                                私たちについて<span class="absolute -bottom-1 left-0 w-0 h-[1.5px] bg-accent-400 transition-all duration-300 group-hover:w-full"></span>
+                            <a href="#reasons" class="text-gray-500 hover:text-accent-600 text-sm font-mincho font-medium transition-colors duration-300 tracking-wider relative group">
+                                選ばれる理由<span class="absolute -bottom-1 left-0 w-0 h-[1.5px] bg-accent-400 transition-all duration-300 group-hover:w-full"></span>
+                            </a>
+                            <a href="#earnings" class="text-gray-500 hover:text-accent-600 text-sm font-mincho font-medium transition-colors duration-300 tracking-wider relative group">
+                                将来像<span class="absolute -bottom-1 left-0 w-0 h-[1.5px] bg-accent-400 transition-all duration-300 group-hover:w-full"></span>
                             </a>
                             <a href="#features" class="text-gray-500 hover:text-accent-600 text-sm font-mincho font-medium transition-colors duration-300 tracking-wider relative group">
                                 特徴<span class="absolute -bottom-1 left-0 w-0 h-[1.5px] bg-accent-400 transition-all duration-300 group-hover:w-full"></span>
@@ -136,22 +138,25 @@
                                 コース紹介<span class="absolute -bottom-1 left-0 w-0 h-[1.5px] bg-accent-400 transition-all duration-300 group-hover:w-full"></span>
                             </a>
                             <a href="#instructors" class="text-gray-500 hover:text-accent-600 text-sm font-mincho font-medium transition-colors duration-300 tracking-wider relative group">
-                                講師紹介<span class="absolute -bottom-1 left-0 w-0 h-[1.5px] bg-accent-400 transition-all duration-300 group-hover:w-full"></span>
+                                講師<span class="absolute -bottom-1 left-0 w-0 h-[1.5px] bg-accent-400 transition-all duration-300 group-hover:w-full"></span>
+                            </a>
+                            <a href="#testimonials" class="text-gray-500 hover:text-accent-600 text-sm font-mincho font-medium transition-colors duration-300 tracking-wider relative group">
+                                受講生の声<span class="absolute -bottom-1 left-0 w-0 h-[1.5px] bg-accent-400 transition-all duration-300 group-hover:w-full"></span>
                             </a>
                             <a href="#flow" class="text-gray-500 hover:text-accent-600 text-sm font-mincho font-medium transition-colors duration-300 tracking-wider relative group">
                                 受講の流れ<span class="absolute -bottom-1 left-0 w-0 h-[1.5px] bg-accent-400 transition-all duration-300 group-hover:w-full"></span>
                             </a>
                             <a href="#faq" class="text-gray-500 hover:text-accent-600 text-sm font-mincho font-medium transition-colors duration-300 tracking-wider relative group">
-                                よくある質問<span class="absolute -bottom-1 left-0 w-0 h-[1.5px] bg-accent-400 transition-all duration-300 group-hover:w-full"></span>
+                                Q&A<span class="absolute -bottom-1 left-0 w-0 h-[1.5px] bg-accent-400 transition-all duration-300 group-hover:w-full"></span>
                             </a>
                             
-                            <a href="#" class="counseling-btn bg-accent-500/10 border border-accent-400 hover:bg-accent-400 hover:text-white text-accent-600 px-6 py-2 rounded-sm text-sm font-serif transition-all duration-300 tracking-wider shadow-sm">
-                                COUNSELING
+                            <a href="https://lin.ee/NmIGh0t" target="_blank" rel="noopener noreferrer" class="counseling-btn bg-accent-500/10 border border-accent-400 hover:bg-accent-400 hover:text-white text-accent-600 px-6 py-2 rounded-sm text-sm font-serif transition-all duration-300 tracking-wider shadow-sm">
+                                無料相談する
                             </a>
                         </div>
                     </div>
 
-                    <div class="-mr-2 flex md:hidden">
+                    <div class="-mr-2 flex lg:hidden">
                         <button id="mobile-menu-button" aria-expanded="false" class="inline-flex items-center justify-center p-2 text-accent-600 hover:text-accent-400 focus:outline-none">
                             <i data-lucide="menu" class="w-6 h-6"></i>
                         </button>
@@ -160,17 +165,19 @@
             </div>
 
             <!-- Mobile menu -->
-            <div id="mobile-menu" class="md:hidden transition-all duration-300 ease-in-out overflow-hidden max-h-0 opacity-0 bg-white border-b border-accent-100">
+            <div id="mobile-menu" class="lg:hidden transition-all duration-300 ease-in-out overflow-hidden max-h-0 opacity-0 bg-white border-b border-accent-100">
                 <div class="px-4 pt-4 pb-6 space-y-2">
-                    <a href="#about" class="text-gray-600 hover:text-accent-600 block px-3 py-3 rounded-md text-base font-mincho font-medium border-b border-gray-50">私たちについて</a>
+                    <a href="#reasons" class="text-gray-600 hover:text-accent-600 block px-3 py-3 rounded-md text-base font-mincho font-medium border-b border-gray-50">選ばれる理由</a>
+                    <a href="#earnings" class="text-gray-600 hover:text-accent-600 block px-3 py-3 rounded-md text-base font-mincho font-medium border-b border-gray-50">将来像</a>
                     <a href="#features" class="text-gray-600 hover:text-accent-600 block px-3 py-3 rounded-md text-base font-mincho font-medium border-b border-gray-50">特徴</a>
                     <a href="#courses" class="text-gray-600 hover:text-accent-600 block px-3 py-3 rounded-md text-base font-mincho font-medium border-b border-gray-50">コース紹介</a>
-                    <a href="#instructors" class="text-gray-600 hover:text-accent-600 block px-3 py-3 rounded-md text-base font-mincho font-medium border-b border-gray-50">講師紹介</a>
+                    <a href="#instructors" class="text-gray-600 hover:text-accent-600 block px-3 py-3 rounded-md text-base font-mincho font-medium border-b border-gray-50">講師</a>
+                    <a href="#testimonials" class="text-gray-600 hover:text-accent-600 block px-3 py-3 rounded-md text-base font-mincho font-medium border-b border-gray-50">受講生の声</a>
                     <a href="#flow" class="text-gray-600 hover:text-accent-600 block px-3 py-3 rounded-md text-base font-mincho font-medium border-b border-gray-50">受講の流れ</a>
-                    <a href="#faq" class="text-gray-600 hover:text-accent-600 block px-3 py-3 rounded-md text-base font-mincho font-medium border-b border-gray-50">よくある質問</a>
+                    <a href="#faq" class="text-gray-600 hover:text-accent-600 block px-3 py-3 rounded-md text-base font-mincho font-medium border-b border-gray-50">Q&A</a>
                     
-                    <a href="#" class="counseling-btn text-white bg-accent-400 hover:bg-accent-500 block px-3 py-3 rounded-md text-base font-serif text-center mt-6 font-bold shadow-md">
-                        FREE COUNSELING
+                    <a href="https://lin.ee/NmIGh0t" target="_blank" rel="noopener noreferrer" class="counseling-btn text-white bg-accent-400 hover:bg-accent-500 block px-3 py-3 rounded-md text-base font-serif text-center mt-6 font-bold shadow-md">
+                        無料相談する
                     </a>
                 </div>
             </div>
@@ -178,49 +185,14 @@
 
         <main>
             <!-- 1. Hero -->
-            <section class="relative h-screen flex items-center justify-center overflow-hidden bg-mystic-950">
-                <div class="absolute inset-0 z-0">
-                    <div class="absolute inset-0 bg-gradient-to-b from-white/10 via-mystic-950/80 to-mystic-950 z-10"></div>
-                    <div class="w-full h-full transform scale-100 transition-transform duration-[15000ms] ease-linear">
-                        <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=2940&auto=format&fit=crop" alt="Bright Mystic Background" class="w-full h-full object-cover opacity-30">
-                    </div>
-                </div>
-
-                <div class="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                    <div class="animate-on-scroll">
-                        <div class="flex justify-center mb-8">
-                            <div class="h-[1px] w-16 bg-accent-400/30 self-center"></div>
-                            <div class="px-4 text-accent-600 font-serif tracking-[0.3em] text-xs md:text-sm uppercase font-bold">
-                                Professional Fortune Telling School
-                            </div>
-                            <div class="h-[1px] w-16 bg-accent-400/30 self-center"></div>
-                        </div>
-
-                        <h1 class="font-serif font-medium text-mystic-600 mb-8 leading-tight">
-                            <span class="block text-xl md:text-2xl lg:text-3xl mb-4 text-gray-500 font-mincho tracking-[0.2em]">
-                                星々が導く、真理への扉
-                            </span>
-                            <span class="block text-5xl md:text-7xl lg:text-8xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-accent-600 via-accent-400 to-accent-600 pb-2 drop-shadow-sm">
-                                Lutina Academy
-                            </span>
-                        </h1>
-
-                        <p class="mt-8 max-w-2xl mx-auto text-base md:text-lg text-gray-600 leading-loose font-mincho tracking-wide border-t border-b border-accent-200 py-8">
-                            プロの占い師から直接学ぶ、本物の叡智。<br />
-                            あなたの眠れる才能を呼び覚まし、<br class="md:hidden" />
-                            光輝く未来への道標を。
-                        </p>
-
-                        <div class="mt-12 flex flex-col sm:flex-row gap-6 justify-center items-center">
-                            <a href="#" class="counseling-btn group relative w-full sm:w-64 px-8 py-5 bg-accent-400 text-white shadow-lg shadow-accent-400/20 hover:shadow-accent-400/40 transition-all duration-300 overflow-hidden">
-                                <div class="absolute inset-0 bg-white/20 transform -translate-x-full skew-x-12 group-hover:translate-x-full transition-transform duration-700"></div>
-                                <span class="relative z-10 font-serif tracking-widest font-bold">無料カウンセリング</span>
-                            </a>
-                            
-                            <a href="#courses" class="group w-full sm:w-64 px-8 py-5 text-gray-500 hover:text-accent-600 transition-colors duration-300 flex justify-center items-center gap-2 border border-accent-200 bg-white/50">
-                                <span class="font-serif tracking-widest text-sm font-bold">コース一覧を見る</span>
-                            </a>
-                        </div>
+            <section class="relative flex items-center justify-center bg-mystic-950">
+                <div class="w-full mx-auto">
+                    <div class="w-full">
+                        <img
+                            src="<?php echo get_template_directory_uri(); ?>/assets/images/top.webp"
+                            alt="Lutina Academy Hero"
+                            class="w-full h-auto mx-auto"
+                        >
                     </div>
                 </div>
             </section>
@@ -229,7 +201,7 @@
             <section id="about" class="py-32 bg-white overflow-hidden relative">
                 <!-- Background Decorative Text -->
                 <div class="absolute inset-0 flex items-center justify-center pointer-events-none select-none overflow-hidden">
-                    <span class="text-[250px] md:text-[400px] font-serif font-bold text-accent-100/20 leading-none whitespace-nowrap transform translate-y-20">
+                    <span class="text-[250px] md:text-[400px] font-mincho font-bold text-accent-100/20 leading-none whitespace-nowrap transform translate-y-20">
                         Lutina Academy
                     </span>
                 </div>
@@ -241,7 +213,7 @@
                             <div class="inline-flex items-center gap-4 mb-8">
                                 <div class="h-px w-8 bg-accent-400"></div>
                                 <span class="text-accent-600 font-serif tracking-[0.4em] text-xs uppercase font-bold">
-                                    Our Identity
+                                    私たちについて
                                 </span>
                                 <div class="h-px w-8 bg-accent-400"></div>
                             </div>
@@ -269,7 +241,7 @@
                             <div class="animate-on-scroll delay-200 mt-4">
                                 <div class="relative aspect-[16/9] overflow-hidden rounded-sm shadow-xl border border-accent-100 p-1 bg-white">
                                     <img 
-                                        src="https://images.unsplash.com/photo-1518133835878-5a93cc3f89e5?q=80&w=1200&auto=format&fit=crop" 
+                                        src="<?php echo get_template_directory_uri(); ?>/assets/images/hero.webp"
                                         alt="Academy Atmosphere" 
                                         class="w-full h-full object-cover grayscale-[10%] hover:grayscale-0 transition-all duration-700"
                                     />
@@ -288,8 +260,8 @@
                 </div>
             </section>
 
-            <!-- 3. Features (選ばれる理由) -->
-            <section id="features" class="py-32 bg-white relative">
+            <!-- 3. Reasons (選ばれる理由) -->
+            <section id="reasons" class="py-32 bg-white relative">
                 <div class="absolute inset-0 bg-gradient-to-b from-mystic-950 via-white to-white pointer-events-none"></div>
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                     <div class="text-center mb-20 relative z-10 animate-on-scroll">
@@ -308,7 +280,7 @@
                         <!-- Feature 1 -->
                         <div class="animate-on-scroll group bg-white border border-accent-100 rounded-2xl overflow-hidden transition-all duration-500 shadow-sm hover:shadow-xl hover:-translate-y-2 flex flex-col">
                             <div class="h-56 relative overflow-hidden">
-                                <img src="https://images.unsplash.com/photo-1515942400420-2b98fed1f515?q=80&w=800&auto=format&fit=crop" alt="未経験からプロへ" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-1000">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/reason1.webp" alt="未経験からプロへ" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-1000">
                             </div>
                             <div class="p-8 relative">
                                 <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-16 h-1 bg-accent-400"></div>
@@ -321,7 +293,7 @@
                         <!-- Feature 2 -->
                         <div class="animate-on-scroll delay-200 group bg-white border border-accent-100 rounded-2xl overflow-hidden transition-all duration-500 shadow-sm hover:shadow-xl hover:-translate-y-2 flex flex-col">
                             <div class="h-56 relative overflow-hidden">
-                                <img src="https://images.unsplash.com/photo-1564591746687-3c5b4b1f4a9b?q=80&w=800&auto=format&fit=crop" alt="実践的カリキュラム" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-1000">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/reason2.webp" alt="実践的カリキュラム" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-1000">
                             </div>
                             <div class="p-8 relative">
                                 <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-16 h-1 bg-accent-400"></div>
@@ -334,7 +306,7 @@
                         <!-- Feature 3 -->
                         <div class="animate-on-scroll delay-400 group bg-white border border-accent-100 rounded-2xl overflow-hidden transition-all duration-500 shadow-sm hover:shadow-xl hover:-translate-y-2 flex flex-col">
                             <div class="h-56 relative overflow-hidden">
-                                <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=800&auto=format&fit=crop" alt="充実の開業サポート" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-1000">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/reason3.webp" alt="充実の開業サポート" class="w-full h-full object-cover object-ceneter transform group-hover:scale-110 transition-transform duration-1000">
                             </div>
                             <div class="p-8 relative">
                                 <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-16 h-1 bg-accent-400"></div>
@@ -512,12 +484,12 @@
             </section>
 
             <!-- 6. Lutinaの特徴 (CourseStrengths) -->
-            <section id="course-strengths" class="py-32 bg-white relative">
+            <section id="features" class="py-32 bg-white relative">
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div class="text-center mb-20 relative z-10 animate-on-scroll">
                         <div class="flex flex-col items-center">
                             <span class="block text-accent-600 font-serif tracking-[0.3em] mb-3 text-xs md:text-sm uppercase font-bold">— Strengths —</span>
-                            <h2 class="text-3xl md:text-4xl lg:text-5xl font-serif text-mystic-600 tracking-wide leading-relaxed drop-shadow-sm">Lutinaの特徴</h2>
+                            <h2 class="text-3xl md:text-4xl lg:text-5xl font-mincho text-mystic-600 tracking-wide leading-relaxed drop-shadow-sm">Lutina Academyの特徴</h2>
                             <div class="mt-6 flex items-center justify-center gap-4">
                                 <div class="h-[1px] w-12 bg-gradient-to-r from-transparent to-accent-400"></div>
                                 <div class="w-2 h-2 rotate-45 border border-accent-400 bg-white"></div>
@@ -530,39 +502,39 @@
                         <?php
                         $strengths = [
                             [
-                                'title' => '門外不出の教材',
-                                'desc' => '代表・月読セレナが25年の鑑定経験から編み出した、的中率を極限まで高める独自のテキストを使用します。',
-                                'image' => 'https://images.unsplash.com/photo-1544947950-fa07a98d237f?q=80&w=800&auto=format&fit=crop',
+                                'title' => '門外不出のノウハウ',
+                                'desc' => 'るみか先生が15年の鑑定経験から編み出した、的中率を極限まで高める独自ノウハウを提供します。',
+                                'image' => get_template_directory_uri() . '/assets/images/feature1.webp',
                                 'tag' => 'Original'
                             ],
                             [
                                 'title' => '個別添削',
-                                'desc' => '課題提出ごとに講師が丁寧に添削。あなたのリーディングの癖を見抜き、的確なアドバイスを行います。',
-                                'image' => 'https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=800&auto=format&fit=crop',
+                                'desc' => '講師が丁寧に課題に対して個別で添削。あなたのリーディングの癖を見抜き、的確なアドバイスを行います。',
+                                'image' => get_template_directory_uri() . '/assets/images/feature2.webp',
                                 'tag' => 'Feedback'
                             ],
                             [
                                 'title' => '実践実習',
                                 'desc' => '実際の相談者を想定した模擬鑑定で即戦力を養います。リアルタイムでの対話力が身につきます。',
-                                'image' => 'https://images.unsplash.com/photo-1576182103405-b3e346579218?q=80&w=800&auto=format&fit=crop',
+                                'image' => get_template_directory_uri() . '/assets/images/feature3.webp',
                                 'tag' => 'Practice'
                             ],
                             [
                                 'title' => '動画アーカイブ',
-                                'desc' => '全講義は高画質動画で録画。受講期間中はいつでも、どこでも、何度でも復習することが可能です。',
-                                'image' => 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=800&auto=format&fit=crop',
+                                'desc' => '全講義は動画で録画。受講期間中はいつでも、どこでも、何度でも復習することが可能です。',
+                                'image' => get_template_directory_uri() . '/assets/images/feature4.webp',
                                 'tag' => 'Archive'
                             ],
                             [
                                 'title' => 'コミュニティ',
-                                'desc' => '受講生・卒業生限定のSNSへ招待。一生涯の仲間と悩み相談や情報交換が盛んに行われています。',
-                                'image' => 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=800&auto=format&fit=crop',
+                                'desc' => '受講生・卒業生限定のSNSへ招待。一生涯の仲間と悩み相談や情報交換が可能です。',
+                                'image' => get_template_directory_uri() . '/assets/images/feature5.webp',
                                 'tag' => 'Network'
                             ],
                             [
-                                'title' => '認定ブランド',
-                                'desc' => '卒業試験合格者には認定証を授与。大手会社への優先推薦枠など、デビュー後の信頼を保証します。',
-                                'image' => 'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?q=80&w=800&auto=format&fit=crop',
+                                'title' => '就職支援',
+                                'desc' => '就職するまでの履歴書・面接対策などのアドバイスを行います。',
+                                'image' => get_template_directory_uri() . '/assets/images/feature6.webp',
                                 'tag' => 'License'
                             ]
                         ];
@@ -624,7 +596,7 @@
                         <!-- Tarot -->
                         <div class="animate-on-scroll flex flex-col h-full bg-white border border-accent-100 rounded-lg overflow-hidden transition-all duration-500 group shadow-sm hover:shadow-2xl relative">
                             <div class="h-64 overflow-hidden relative">
-                                <img src="https://images.unsplash.com/photo-1620023428136-19343ee00508?q=80&w=800&auto=format&fit=crop" alt="タロットプロフェッショナル講座" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-1000">
+                                <img src="https://images.unsplash.com/photo-1446776653964-20c1d3a81b06?q=80&w=800&auto=format&fit=crop" alt="タロットプロフェッショナル講座" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-1000">
                             </div>
                             <div class="p-8 flex-1 flex flex-col relative bg-white">
                                 <h3 class="text-2xl font-serif font-bold text-mystic-600 mb-4 group-hover:text-accent-600 transition-colors">タロットプロフェッショナル講座</h3>
@@ -641,8 +613,8 @@
                                         <span class="text-xl text-accent-600 font-serif font-bold">¥380,000</span>
                                     </div>
                                 </div>
-                                <a href="#" class="view-details-btn w-full block text-center py-4 bg-mystic-900 hover:bg-accent-400 text-accent-600 hover:text-white text-xs font-serif font-bold tracking-[0.2em] transition-all duration-300 rounded border border-accent-200">
-                                    VIEW DETAILS
+                                <a href="https://lin.ee/NmIGh0t" target="_blank" rel="noopener noreferrer" class="view-details-btn w-full block text-center py-4 bg-mystic-900 hover:bg-accent-400 text-accent-600 hover:text-white text-xs font-serif font-bold tracking-[0.2em] transition-all duration-300 rounded border border-accent-200">
+                                    無料相談する
                                 </a>
                             </div>
                         </div>
@@ -667,8 +639,8 @@
                                         <span class="text-xl text-accent-600 font-serif font-bold">¥550,000</span>
                                     </div>
                                 </div>
-                                <a href="#" class="view-details-btn w-full block text-center py-4 bg-mystic-900 hover:bg-accent-400 text-accent-600 hover:text-white text-xs font-serif font-bold tracking-[0.2em] transition-all duration-300 rounded border border-accent-200">
-                                    VIEW DETAILS
+                                <a href="https://lin.ee/NmIGh0t" target="_blank" rel="noopener noreferrer" class="view-details-btn w-full block text-center py-4 bg-mystic-900 hover:bg-accent-400 text-accent-600 hover:text-white text-xs font-serif font-bold tracking-[0.2em] transition-all duration-300 rounded border border-accent-200">
+                                    無料相談する
                                 </a>
                             </div>
                         </div>
@@ -676,7 +648,7 @@
                         <!-- Palmistry -->
                         <div class="animate-on-scroll delay-200 flex flex-col h-full bg-white border border-accent-100 rounded-lg overflow-hidden transition-all duration-500 group shadow-sm hover:shadow-2xl relative">
                             <div class="h-64 overflow-hidden relative">
-                                <img src="https://images.unsplash.com/photo-1505540328704-5858fb3862bb?q=80&w=800&auto=format&fit=crop" alt="手相・人相・観相学統合コース" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-1000">
+                                <img src="https://images.unsplash.com/photo-1462331940025-496dfbfc7564?q=80&w=800&auto=format&fit=crop" alt="手相・人相・観相学統合コース" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-1000">
                             </div>
                             <div class="p-8 flex-1 flex flex-col relative bg-white">
                                 <h3 class="text-2xl font-serif font-bold text-mystic-600 mb-4 group-hover:text-accent-600 transition-colors">手相・人相・観相学統合コース</h3>
@@ -693,8 +665,8 @@
                                         <span class="text-xl text-accent-600 font-serif font-bold">¥280,000</span>
                                     </div>
                                 </div>
-                                <a href="#" class="view-details-btn w-full block text-center py-4 bg-mystic-900 hover:bg-accent-400 text-accent-600 hover:text-white text-xs font-serif font-bold tracking-[0.2em] transition-all duration-300 rounded border border-accent-200">
-                                    VIEW DETAILS
+                                <a href="https://lin.ee/NmIGh0t" target="_blank" rel="noopener noreferrer" class="view-details-btn w-full block text-center py-4 bg-mystic-900 hover:bg-accent-400 text-accent-600 hover:text-white text-xs font-serif font-bold tracking-[0.2em] transition-all duration-300 rounded border border-accent-200">
+                                    無料相談する
                                 </a>
                             </div>
                         </div>
@@ -720,46 +692,44 @@
                     <div class="animate-on-scroll flex flex-col md:flex-row gap-12 lg:gap-20 items-center md:items-start">
                         <div class="w-full md:w-5/12 relative">
                             <div class="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl">
-                                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=1200&auto=format&fit=crop" alt="月読 セレナ" class="w-full h-full object-cover">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/rumika.webp" alt="るみか" class="w-full h-full object-cover">
                                 <div class="absolute inset-0 bg-gradient-to-t from-accent-600/20 to-transparent"></div>
                             </div>
                         </div>
 
                         <div class="w-full md:w-7/12 flex flex-col justify-center">
                             <div class="mb-8 border-b border-accent-100 pb-6">
-                                <h3 class="text-4xl lg:text-5xl font-serif font-bold text-mystic-600 mb-3 tracking-wide">月読 セレナ</h3>
-                                <p class="text-accent-600 text-sm lg:text-base tracking-[0.2em] uppercase font-serif font-bold">Lutina Academy 代表 / 占星術師</p>
+                                <h3 class="text-4xl lg:text-5xl font-serif font-bold text-mystic-600 mb-3 tracking-wide">るみか先生</h3>
+                                <p class="text-accent-600 text-sm lg:text-base tracking-[0.2em] uppercase font-mincho font-bold">Lutina Academy 講師 / 占い師</p>
                             </div>
 
                             <div class="space-y-8">
                                 <div>
                                     <h4 class="text-lg font-serif font-bold text-mystic-600 mb-4 flex items-center gap-3">
                                         <span class="w-8 h-[1px] bg-accent-400"></span>
-                                        Biography
+                                        メッセージ
                                     </h4>
-                                    <p class="text-gray-600 font-mincho leading-loose whitespace-pre-wrap text-justify">鑑定歴25年。幼少期より星を読む力を持ち、渡英して英国占星術協会にて正式な資格を取得。帰国後、政財界の重鎮や著名人を顧客に持ち、その的中率は「神の目」と称される。
-
-現在は後進の育成に注力し、心理学と伝統的な占術を融合させた独自のメソッド「ルティナ式占術」を確立。論理的かつ直感的な指導には定評があり、これまでに育てたプロ占い師は500名を超える。</p>
+                                    <p class="text-gray-600 font-mincho leading-loose whitespace-pre-wrap text-justify">鑑定歴15年。</p>
                                 </div>
 
                                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
                                     <div>
                                         <h4 class="text-lg font-serif font-bold text-mystic-600 mb-4 flex items-center gap-3">
                                             <span class="w-8 h-[1px] bg-accent-400"></span>
-                                            Specialization
+                                            使用占術
                                         </h4>
                                         <div class="flex flex-wrap gap-2">
-                                            <span class="px-3 py-1 bg-mystic-900 border border-accent-100 text-accent-600 text-xs tracking-wider font-bold">西洋占星術</span>
-                                            <span class="px-3 py-1 bg-mystic-900 border border-accent-100 text-accent-600 text-xs tracking-wider font-bold">タロットリーディング</span>
-                                            <span class="px-3 py-1 bg-mystic-900 border border-accent-100 text-accent-600 text-xs tracking-wider font-bold">心理カウンセリング</span>
-                                            <span class="px-3 py-1 bg-mystic-900 border border-accent-100 text-accent-600 text-xs tracking-wider font-bold">恒星占星術</span>
+                                            <span class="px-3 py-1 bg-mystic-900 border border-accent-100 text-accent-600 text-xs tracking-wider font-bold">チャネリング</span>
+                                            <span class="px-3 py-1 bg-mystic-900 border border-accent-100 text-accent-600 text-xs tracking-wider font-bold">霊感霊視</span>
+                                            <span class="px-3 py-1 bg-mystic-900 border border-accent-100 text-accent-600 text-xs tracking-wider font-bold">タロット</span>
+                                            <span class="px-3 py-1 bg-mystic-900 border border-accent-100 text-accent-600 text-xs tracking-wider font-bold">写真鑑定</span>
                                         </div>
                                     </div>
 
                                     <div>
                                         <h4 class="text-lg font-serif font-bold text-mystic-600 mb-4 flex items-center gap-3">
                                             <span class="w-8 h-[1px] bg-accent-400"></span>
-                                            Achievements
+                                            実績
                                         </h4>
                                         <ul class="space-y-3">
                                             <li class="flex items-start gap-3 text-sm text-gray-500 font-mincho">
@@ -768,11 +738,7 @@
                                             </li>
                                             <li class="flex items-start gap-3 text-sm text-gray-500 font-mincho">
                                                 <i data-lucide="award" class="w-4 h-4 text-accent-500 mt-1 flex-shrink-0"></i>
-                                                <span>著書「星が告げる未来」累計50万部突破</span>
-                                            </li>
-                                            <li class="flex items-start gap-3 text-sm text-gray-500 font-mincho">
-                                                <i data-lucide="award" class="w-4 h-4 text-accent-500 mt-1 flex-shrink-0"></i>
-                                                <span>大手電話占いサイト 年間指名ランキング1位獲得（2018-2022）</span>
+                                                <span>大手占いサイト 年間指名ランキング1位獲得（2018-2022）</span>
                                             </li>
                                             <li class="flex items-start gap-3 text-sm text-gray-500 font-mincho">
                                                 <i data-lucide="award" class="w-4 h-4 text-accent-500 mt-1 flex-shrink-0"></i>
@@ -811,9 +777,14 @@
                                 趣味から始めましたが、今では副業として週末だけ鑑定を行っています。先生方のサポートが手厚く、自信を持ってデビューできました。
                             </p>
                             <div class="flex items-center pt-6 border-t border-gray-50">
-                                <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?q=80&w=200&auto=format&fit=crop" alt="佐藤 ありさ" class="w-14 h-14 rounded-full object-cover border-2 border-accent-100 mr-4 shadow-sm">
+                                <div class="w-14 h-14 rounded-full bg-accent-200 border-2 border-accent-100 mr-4 shadow-sm flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-8 h-8 text-accent-600" fill="currentColor" viewBox="0 0 24 24">
+                                        <circle cx="12" cy="8" r="4" />
+                                        <path d="M6 21c0-3.314 2.686-6 6-6s6 2.686 6 6" />
+                                    </svg>
+                                </div>
                                 <div>
-                                    <h4 class="text-mystic-600 font-bold font-serif">佐藤 ありさ</h4>
+                                    <h4 class="text-mystic-600 font-bold font-serif">佐藤</h4>
                                     <p class="text-accent-600 text-xs font-bold">28歳 / OL</p>
                                 </div>
                             </div>
@@ -827,9 +798,14 @@
                                 営業の仕事に疲れ果てていた時に占いに出会い、人生が変わりました。論理的なカリキュラムのおかげで、男性の私でも理解しやすかったです。
                             </p>
                             <div class="flex items-center pt-6 border-t border-gray-50">
-                                <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=200&auto=format&fit=crop" alt="田中 健一" class="w-14 h-14 rounded-full object-cover border-2 border-accent-100 mr-4 shadow-sm">
+                                <div class="w-14 h-14 rounded-full bg-accent-200 border-2 border-accent-100 mr-4 shadow-sm flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-8 h-8 text-accent-600" fill="currentColor" viewBox="0 0 24 24">
+                                        <circle cx="12" cy="8" r="4" />
+                                        <path d="M6 21c0-3.314 2.686-6 6-6s6 2.686 6 6" />
+                                    </svg>
+                                </div>
                                 <div>
-                                    <h4 class="text-mystic-600 font-bold font-serif">田中 健一</h4>
+                                    <h4 class="text-mystic-600 font-bold font-serif">田中</h4>
                                     <p class="text-accent-600 text-xs font-bold">42歳 / 元営業職</p>
                                 </div>
                             </div>
@@ -843,9 +819,14 @@
                                 子育ての合間にオンラインで受講。自分のペースで学べるのが魅力でした。卒業後の集客サポートのおかげで、自宅サロンを開業できました。
                             </p>
                             <div class="flex items-center pt-6 border-t border-gray-50">
-                                <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?q=80&w=200&auto=format&fit=crop" alt="高橋 美穂" class="w-14 h-14 rounded-full object-cover border-2 border-accent-100 mr-4 shadow-sm">
+                                <div class="w-14 h-14 rounded-full bg-accent-200 border-2 border-accent-100 mr-4 shadow-sm flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-8 h-8 text-accent-600" fill="currentColor" viewBox="0 0 24 24">
+                                        <circle cx="12" cy="8" r="4" />
+                                        <path d="M6 21c0-3.314 2.686-6 6-6s6 2.686 6 6" />
+                                    </svg>
+                                </div>
                                 <div>
-                                    <h4 class="text-mystic-600 font-bold font-serif">高橋 美穂</h4>
+                                    <h4 class="text-mystic-600 font-bold font-serif">伊藤</h4>
                                     <p class="text-accent-600 text-xs font-bold">35歳 / 主婦</p>
                                 </div>
                             </div>
@@ -879,10 +860,10 @@
                                     <div class="flex flex-col md:items-end md:text-right">
                                         <h3 class="text-xl font-serif font-bold text-mystic-600 mb-3 flex items-center gap-3">
                                             <span class="md:hidden inline-block px-3 py-1 bg-accent-400 text-white text-xs font-bold rounded-full">01</span>
-                                            無料カウンセリング
+                                            公式LINEにて無料カウンセリング
                                         </h3>
                                         <p class="text-gray-500 text-sm leading-relaxed font-mincho">
-                                            まずは専門スタッフがあなたの適性や目標をヒアリングし、最適なコースをご提案します。
+                                            専門スタッフがあなたの適性や目標をヒアリングし、最適なコースをご提案します。
                                         </p>
                                     </div>
                                 </div>
@@ -955,10 +936,10 @@
                                     <div class="flex flex-col md:items-end md:text-right">
                                         <h3 class="text-xl font-serif font-bold text-mystic-600 mb-3 flex items-center gap-3">
                                             <span class="md:hidden inline-block px-3 py-1 bg-accent-400 text-white text-xs font-bold rounded-full">05</span>
-                                            プロデビュー認定
+                                            占い師デビュー
                                         </h3>
                                         <p class="text-gray-500 text-sm leading-relaxed font-mincho">
-                                            卒業試験に合格後、認定証を発行。プロとしての第一歩をキャリアサポートと共に踏み出します。
+                                            占い師としての第一歩をキャリアサポートと共に踏み出します。
                                         </p>
                                     </div>
                                 </div>
@@ -1026,8 +1007,8 @@
              <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16 border-b border-accent-100 pb-12">
                     <div class="lg:col-span-2">
-                        <h3 class="text-2xl font-serif font-bold text-mystic-600 mb-6 flex items-center gap-2">
-                            <span class="text-accent-400">✦</span> Lutina Academy
+                        <h3 class="text-2xl font-mincho font-bold text-mystic-600 mb-6 flex items-center gap-2">
+                            <span class="text-accent-400"></span> Lutina Academy
                         </h3>
                         <p class="text-gray-500 mb-8 leading-relaxed max-w-md font-mincho text-sm">
                             あなたの持つ潜在的な能力を開花させ、新しい未来を切り拓くお手伝いをさせていただきます。
@@ -1053,16 +1034,12 @@
                                 <span class="text-gray-500 font-serif tracking-wider text-sm font-bold">03-1234-5678</span>
                                 <span class="ml-2 text-xs text-gray-400">(平日 10:00 - 18:00)</span>
                             </div>
-                            <div class="flex items-center group">
-                                <i data-lucide="mail" class="w-5 h-5 text-accent-500 mr-4 flex-shrink-0"></i>
-                                <span class="text-gray-500 font-serif tracking-wider text-sm font-bold">info@lutina-academy.com</span>
-                            </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="text-center">
-                    <p class="text-gray-400 text-xs font-serif tracking-widest">
+                    <p class="text-gray-400 text-xs font-mincho tracking-widest">
                         &copy; <?php echo date('Y'); ?> Lutina Academy. All rights reserved.
                     </p>
                 </div>
@@ -1071,8 +1048,8 @@
 
         <!-- Mobile Sticky CTA Button -->
         <div class="fixed bottom-0 left-0 w-full z-50 md:hidden p-4 bg-gradient-to-t from-mystic-950 via-mystic-950/90 to-transparent">
-            <a href="#" class="counseling-btn block w-full py-4 bg-gradient-to-r from-accent-600 via-accent-400 to-accent-600 text-mystic-950 text-center font-serif font-bold tracking-widest rounded shadow-[0_0_20px_rgba(199,176,205,0.4)] hover:shadow-[0_0_30px_rgba(199,176,205,0.6)] transition-all duration-300">
-                無料相談する
+            <a href="https://lin.ee/NmIGh0t" target="_blank" rel="noopener noreferrer" class="counseling-btn block w-full py-4 bg-gradient-to-r from-accent-600 via-accent-400 to-accent-600 text-mystic-950 text-center font-serif font-bold tracking-widest rounded shadow-[0_0_20px_rgba(199,176,205,0.4)] hover:shadow-[0_0_30px_rgba(199,176,205,0.6)] transition-all duration-300">
+                公式LINEで無料相談する
             </a>
         </div>
     </div>

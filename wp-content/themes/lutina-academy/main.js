@@ -94,23 +94,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Alert Actions
-    const counselingButtons = document.querySelectorAll('.counseling-btn');
-    counselingButtons.forEach(btn => {
-        btn.addEventListener('click', (e) => {
-            e.preventDefault();
-            alert('無料相談の申し込みページへ遷移します');
-        });
-    });
-
-    const detailsButtons = document.querySelectorAll('.view-details-btn');
-    detailsButtons.forEach(btn => {
-        btn.addEventListener('click', (e) => {
-            e.preventDefault();
-            alert('詳細情報を表示します');
-        });
-    });
-
     // Scroll Animations (Intersection Observer)
     const observerOptions = {
         threshold: 0.1,
