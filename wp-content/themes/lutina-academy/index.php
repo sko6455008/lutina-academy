@@ -111,14 +111,18 @@
     <div class="min-h-screen bg-mystic-900 text-white font-sans selection:bg-accent-400 selection:text-mystic-950 pb-20 md:pb-0">
         
         <!-- Navbar -->
-        <nav class="fixed w-full z-50 transition-all duration-500 bg-transparent py-4">
+        <nav class="fixed w-full z-50 bg-white py-4">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="flex items-center justify-between h-16">
-                    <div class="logo-area flex-shrink-0 flex items-center gap-3 cursor-pointer group" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">
+                    <div class="logo-area flex-shrink-0 flex items-center cursor-pointer group" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">
                         <div class="relative">
-                            <div class="absolute inset-0 bg-accent-400 blur-md opacity-20 group-hover:opacity-40 transition-opacity duration-300"></div>
+                            <img 
+                                src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.webp" 
+                                alt="Lutina Academy Logo" 
+                                class="w-[80px] h-[80px] md:w-[80px] md:h-[80px] object-contain"
+                            >
                         </div>
-                        <span class="text-xl font-mincho font-bold text-mystic-600 tracking-wider group-hover:text-accent-600 transition-colors">
+                        <span class="text-lg md:text-xl font-mincho font-bold text-mystic-600 tracking-wider group-hover:text-accent-600 transition-colors">
                             Lutina Academy
                         </span>
                     </div>
@@ -165,7 +169,7 @@
             </div>
 
             <!-- Mobile menu -->
-            <div id="mobile-menu" class="lg:hidden transition-all duration-300 ease-in-out overflow-hidden max-h-0 opacity-0 bg-white border-b border-accent-100">
+            <div id="mobile-menu" class="lg:hidden transition-all duration-300 ease-in-out overflow-y-auto max-h-0 opacity-0 bg-white border-b border-accent-100">
                 <div class="px-4 pt-4 pb-6 space-y-2">
                     <a href="#reasons" class="text-gray-600 hover:text-accent-600 block px-3 py-3 rounded-md text-base font-mincho font-medium border-b border-gray-50">選ばれる理由</a>
                     <a href="#earnings" class="text-gray-600 hover:text-accent-600 block px-3 py-3 rounded-md text-base font-mincho font-medium border-b border-gray-50">将来像</a>
@@ -175,17 +179,13 @@
                     <a href="#testimonials" class="text-gray-600 hover:text-accent-600 block px-3 py-3 rounded-md text-base font-mincho font-medium border-b border-gray-50">受講生の声</a>
                     <a href="#flow" class="text-gray-600 hover:text-accent-600 block px-3 py-3 rounded-md text-base font-mincho font-medium border-b border-gray-50">受講の流れ</a>
                     <a href="#faq" class="text-gray-600 hover:text-accent-600 block px-3 py-3 rounded-md text-base font-mincho font-medium border-b border-gray-50">Q&A</a>
-                    
-                    <a href="https://lin.ee/NmIGh0t" target="_blank" rel="noopener noreferrer" class="counseling-btn text-white bg-accent-400 hover:bg-accent-500 block px-3 py-3 rounded-md text-base font-serif text-center mt-6 font-bold shadow-md">
-                        無料相談する
-                    </a>
                 </div>
             </div>
         </nav>
 
         <main>
             <!-- 1. Hero -->
-            <section class="relative flex items-center justify-center bg-mystic-950">
+            <section class="relative flex items-center justify-center bg-mystic-950 pt-20">
                 <div class="w-full mx-auto">
                     <div class="w-full">
                         <img
@@ -312,7 +312,7 @@
                                 <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-16 h-1 bg-accent-400"></div>
                                 <h3 class="text-xl font-serif font-bold text-mystic-600 mb-4 text-center group-hover:text-accent-600 transition-colors tracking-wide">充実の開業サポート</h3>
                                 <p class="text-gray-500 leading-relaxed font-mincho text-sm text-center group-hover:text-gray-700 transition-colors">
-                                    卒業後は提携サロンへの紹介や、独立開業のためのマーケティング、集客ノウハウまで徹底的にサポートします。
+                                    独立開業のためのマーケティング、集客ノウハウ、お仕事の取り方まで習得できます。
                                 </p>
                             </div>
                         </div>
@@ -532,8 +532,8 @@
                                 'tag' => 'Network'
                             ],
                             [
-                                'title' => '就職支援',
-                                'desc' => '就職するまでの履歴書・面接対策などのアドバイスを行います。',
+                                'title' => '開業サポート',
+                                'desc' => 'お仕事の取り方、SNS運用、集客の仕方のような開業に必要なノウハウを習得可能です。',
                                 'image' => get_template_directory_uri() . '/assets/images/feature6.webp',
                                 'tag' => 'License'
                             ]
@@ -593,10 +593,9 @@
                     </div>
 
                     <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
-                        <!-- Tarot -->
                         <div class="animate-on-scroll flex flex-col h-full bg-white border border-accent-100 rounded-lg overflow-hidden transition-all duration-500 group shadow-sm hover:shadow-2xl relative">
                             <div class="h-64 overflow-hidden relative">
-                                <img src="https://images.unsplash.com/photo-1446776653964-20c1d3a81b06?q=80&w=800&auto=format&fit=crop" alt="タロットプロフェッショナル講座" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-1000">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/course1.webp" alt="タロットプロフェッショナル講座" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-1000">
                             </div>
                             <div class="p-8 flex-1 flex flex-col relative bg-white">
                                 <h3 class="text-2xl font-serif font-bold text-mystic-600 mb-4 group-hover:text-accent-600 transition-colors">タロットプロフェッショナル講座</h3>
@@ -619,10 +618,9 @@
                             </div>
                         </div>
 
-                        <!-- Astrology -->
                         <div class="animate-on-scroll delay-100 flex flex-col h-full bg-white border border-accent-100 rounded-lg overflow-hidden transition-all duration-500 group shadow-sm hover:shadow-2xl relative">
                             <div class="h-64 overflow-hidden relative">
-                                <img src="https://images.unsplash.com/photo-1532968961962-8a0cb3a2d4f5?q=80&w=800&auto=format&fit=crop" alt="西洋占星術マスターコース" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-1000">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/course2.webp" alt="西洋占星術マスターコース" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-1000">
                             </div>
                             <div class="p-8 flex-1 flex flex-col relative bg-white">
                                 <h3 class="text-2xl font-serif font-bold text-mystic-600 mb-4 group-hover:text-accent-600 transition-colors">西洋占星術マスターコース</h3>
@@ -645,10 +643,9 @@
                             </div>
                         </div>
 
-                        <!-- Palmistry -->
                         <div class="animate-on-scroll delay-200 flex flex-col h-full bg-white border border-accent-100 rounded-lg overflow-hidden transition-all duration-500 group shadow-sm hover:shadow-2xl relative">
                             <div class="h-64 overflow-hidden relative">
-                                <img src="https://images.unsplash.com/photo-1462331940025-496dfbfc7564?q=80&w=800&auto=format&fit=crop" alt="手相・人相・観相学統合コース" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-1000">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/course3.webp" alt="手相・人相・観相学統合コース" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-1000">
                             </div>
                             <div class="p-8 flex-1 flex flex-col relative bg-white">
                                 <h3 class="text-2xl font-serif font-bold text-mystic-600 mb-4 group-hover:text-accent-600 transition-colors">手相・人相・観相学統合コース</h3>
@@ -709,7 +706,15 @@
                                         <span class="w-8 h-[1px] bg-accent-400"></span>
                                         メッセージ
                                     </h4>
-                                    <p class="text-gray-600 font-mincho leading-loose whitespace-pre-wrap text-justify">鑑定歴15年。</p>
+                                    <div class="text-gray-600 font-mincho leading-loose text-justify space-y-4">
+                                        <p>ご覧頂きありがとうございます。タロット講座の講師を努めさせて頂きまするみかです。</p>
+                                        <p>タロットカードはただ意味を暗記するものではなく、引いたカードから「今、その人に必要なメッセージ」を読み取るためのとても奥深いツールです。私自身、霊感霊視を中心とした鑑定を行なっていますが、その中でタロットカードは霊視で受け取った感覚やメッセージを「目にみえる形」「言葉にしやすい形」にしてくれる大切な存在です。</p>
+                                        <p>この講座では、カード1枚1枚の基本的な意味、スプレッドの使い方、占いとしての読み方だけでなく、カードをどう感じ、どう受け取るか、相談者にどう伝えるか、といった実践的で感覚的な部分も大切にお伝えします。</p>
+                                        <p>霊感がないとできない、特別な人だけの講座ではありません。霊感は誰の中にも眠っている感覚であり、タロットカードはその感覚を安全に確実に目覚めさせてくれます。</p>
+                                        <p>タロットカードと向き合い、経験を重ねていくことで誰でも少しずつ「自分なりの読み方」「直感でカードを受け取る感覚」を育てていくことができます。</p>
+                                        <p>タロットに興味がある、自分や身近な人を占えるようになりたい、将来占いを仕事にしたい、感覚的にカードを読む力を身につけたい、そんな方に向けた丁寧に学べるタロットカード講座です。</p>
+                                        <p>タロットカードを通して、新しい扉を開くお手伝いができれば幸いです。</p>
+                                    </div>
                                 </div>
 
                                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
@@ -719,10 +724,19 @@
                                             使用占術
                                         </h4>
                                         <div class="flex flex-wrap gap-2">
-                                            <span class="px-3 py-1 bg-mystic-900 border border-accent-100 text-accent-600 text-xs tracking-wider font-bold">チャネリング</span>
-                                            <span class="px-3 py-1 bg-mystic-900 border border-accent-100 text-accent-600 text-xs tracking-wider font-bold">霊感霊視</span>
                                             <span class="px-3 py-1 bg-mystic-900 border border-accent-100 text-accent-600 text-xs tracking-wider font-bold">タロット</span>
+                                            <span class="px-3 py-1 bg-mystic-900 border border-accent-100 text-accent-600 text-xs tracking-wider font-bold">ルノルマンカード</span>
+                                            <span class="px-3 py-1 bg-mystic-900 border border-accent-100 text-accent-600 text-xs tracking-wider font-bold">九星気学</span>
+                                            <span class="px-3 py-1 bg-mystic-900 border border-accent-100 text-accent-600 text-xs tracking-wider font-bold">西洋占星術</span>
                                             <span class="px-3 py-1 bg-mystic-900 border border-accent-100 text-accent-600 text-xs tracking-wider font-bold">写真鑑定</span>
+                                            <span class="px-3 py-1 bg-mystic-900 border border-accent-100 text-accent-600 text-xs tracking-wider font-bold">守護霊チャネリング</span>
+                                            <span class="px-3 py-1 bg-mystic-900 border border-accent-100 text-accent-600 text-xs tracking-wider font-bold">スピリチュアルリーディングを組み合わせた綜合鑑定</span>
+                                            <span class="px-3 py-1 bg-mystic-900 border border-accent-100 text-accent-600 text-xs tracking-wider font-bold">恋愛</span>
+                                            <span class="px-3 py-1 bg-mystic-900 border border-accent-100 text-accent-600 text-xs tracking-wider font-bold">人間関係</span>
+                                            <span class="px-3 py-1 bg-mystic-900 border border-accent-100 text-accent-600 text-xs tracking-wider font-bold">仕事</span>
+                                            <span class="px-3 py-1 bg-mystic-900 border border-accent-100 text-accent-600 text-xs tracking-wider font-bold">人生相談</span>
+                                            <span class="px-3 py-1 bg-mystic-900 border border-accent-100 text-accent-600 text-xs tracking-wider font-bold">経営相談</span>
+                                            <span class="px-3 py-1 bg-mystic-900 border border-accent-100 text-accent-600 text-xs tracking-wider font-bold">霊的相談</span>
                                         </div>
                                     </div>
 
@@ -734,15 +748,31 @@
                                         <ul class="space-y-3">
                                             <li class="flex items-start gap-3 text-sm text-gray-500 font-mincho">
                                                 <i data-lucide="award" class="w-4 h-4 text-accent-500 mt-1 flex-shrink-0"></i>
-                                                <span>英国占星術協会 正会員</span>
+                                                <span>鑑定歴15年。</span>
                                             </li>
                                             <li class="flex items-start gap-3 text-sm text-gray-500 font-mincho">
                                                 <i data-lucide="award" class="w-4 h-4 text-accent-500 mt-1 flex-shrink-0"></i>
-                                                <span>大手占いサイト 年間指名ランキング1位獲得（2018-2022）</span>
+                                                <span>累計鑑定人数3万人以上</span>
                                             </li>
                                             <li class="flex items-start gap-3 text-sm text-gray-500 font-mincho">
                                                 <i data-lucide="award" class="w-4 h-4 text-accent-500 mt-1 flex-shrink-0"></i>
-                                                <span>鑑定実績 3万人以上</span>
+                                                <span>臼井式レイキヒーリング(サードディグリー修了)</span>
+                                            </li>
+                                            <li class="flex items-start gap-3 text-sm text-gray-500 font-mincho">
+                                                <i data-lucide="award" class="w-4 h-4 text-accent-500 mt-1 flex-shrink-0"></i>
+                                                <span>クンダリーニ覚醒修了</span>
+                                            </li>
+                                            <li class="flex items-start gap-3 text-sm text-gray-500 font-mincho">
+                                                <i data-lucide="award" class="w-4 h-4 text-accent-500 mt-1 flex-shrink-0"></i>
+                                                <span>ライトランゲージ伝授資格保有</span>
+                                            </li>
+                                            <li class="flex items-start gap-3 text-sm text-gray-500 font-mincho">
+                                                <i data-lucide="award" class="w-4 h-4 text-accent-500 mt-1 flex-shrink-0"></i>
+                                                <span>心理学を継続的に学び鑑定に活用</span>
+                                            </li>
+                                            <li class="flex items-start gap-3 text-sm text-gray-500 font-mincho">
+                                                <i data-lucide="award" class="w-4 h-4 text-accent-500 mt-1 flex-shrink-0"></i>
+                                                <span>アロマハンドFAB講師資格保有(手に施す封印解除)</span>
                                             </li>
                                         </ul>
                                     </div>
@@ -774,7 +804,7 @@
                                 <i data-lucide="quote" class="w-10 h-10 fill-current"></i>
                             </div>
                             <p class="text-gray-600 italic leading-relaxed mb-8 relative z-10 min-h-[100px] font-mincho">
-                                趣味から始めましたが、今では副業として週末だけ鑑定を行っています。先生方のサポートが手厚く、自信を持ってデビューできました。
+                                会社員を続けながら、本当にプロになれるか不安でした。でも、ここでは単なる知識だけでなく『相談者の心にどう届けるか』を徹底的に学べます。今では週末の副業だけで心に余裕が持てる収入を得られ、毎日が本当に楽しいです！
                             </p>
                             <div class="flex items-center pt-6 border-t border-gray-50">
                                 <div class="w-14 h-14 rounded-full bg-accent-200 border-2 border-accent-100 mr-4 shadow-sm flex items-center justify-center flex-shrink-0">
@@ -795,7 +825,7 @@
                                 <i data-lucide="quote" class="w-10 h-10 fill-current"></i>
                             </div>
                             <p class="text-gray-600 italic leading-relaxed mb-8 relative z-10 min-h-[100px] font-mincho">
-                                営業の仕事に疲れ果てていた時に占いに出会い、人生が変わりました。論理的なカリキュラムのおかげで、男性の私でも理解しやすかったです。
+                                占いは『特別な才能』が必要だと思っていましたが、ルティナアカデミーの講義は驚くほど体系的で納得感がありました。営業職で培った対話力と占術が結びつき、デビュー後すぐにリピーター様に恵まれたのは大きな自信になりました。
                             </p>
                             <div class="flex items-center pt-6 border-t border-gray-50">
                                 <div class="w-14 h-14 rounded-full bg-accent-200 border-2 border-accent-100 mr-4 shadow-sm flex items-center justify-center flex-shrink-0">
@@ -816,7 +846,7 @@
                                 <i data-lucide="quote" class="w-10 h-10 fill-current"></i>
                             </div>
                             <p class="text-gray-600 italic leading-relaxed mb-8 relative z-10 min-h-[100px] font-mincho">
-                                子育ての合間にオンラインで受講。自分のペースで学べるのが魅力でした。卒業後の集客サポートのおかげで、自宅サロンを開業できました。
+                                育児の合間に受講しました。技術はもちろん、SNSでの集客や自分自身の整え方まで教えていただけたおかげで、占い師デビューすることができました。相談者様から『救われました』と言っていただける、今の仕事が誇りです。
                             </p>
                             <div class="flex items-center pt-6 border-t border-gray-50">
                                 <div class="w-14 h-14 rounded-full bg-accent-200 border-2 border-accent-100 mr-4 shadow-sm flex items-center justify-center flex-shrink-0">
@@ -868,7 +898,8 @@
                                     </div>
                                 </div>
                                 <div class="relative z-10 flex-shrink-0 w-12 h-12 rounded-full bg-white border-2 border-accent-400 flex items-center justify-center shadow-lg">
-                                    <span class="text-sm font-serif font-bold text-accent-600">01</span>
+                                    <span class="hidden md:block text-sm font-serif font-bold text-accent-600">01</span>
+                                    <i data-lucide="chevron-down" class="md:hidden w-6 h-6 text-accent-600"></i>
                                 </div>
                                 <div class="hidden md:block w-5/12"></div>
                             </div>
@@ -887,7 +918,8 @@
                                     </div>
                                 </div>
                                 <div class="relative z-10 flex-shrink-0 w-12 h-12 rounded-full bg-white border-2 border-accent-400 flex items-center justify-center shadow-lg">
-                                    <span class="text-sm font-serif font-bold text-accent-600">02</span>
+                                    <span class="hidden md:block text-sm font-serif font-bold text-accent-600">02</span>
+                                    <i data-lucide="chevron-down" class="md:hidden w-6 h-6 text-accent-600"></i>
                                 </div>
                                 <div class="hidden md:block w-5/12"></div>
                             </div>
@@ -906,7 +938,8 @@
                                     </div>
                                 </div>
                                 <div class="relative z-10 flex-shrink-0 w-12 h-12 rounded-full bg-white border-2 border-accent-400 flex items-center justify-center shadow-lg">
-                                    <span class="text-sm font-serif font-bold text-accent-600">03</span>
+                                    <span class="hidden md:block text-sm font-serif font-bold text-accent-600">03</span>
+                                    <i data-lucide="chevron-down" class="md:hidden w-6 h-6 text-accent-600"></i>
                                 </div>
                                 <div class="hidden md:block w-5/12"></div>
                             </div>
@@ -925,7 +958,8 @@
                                     </div>
                                 </div>
                                 <div class="relative z-10 flex-shrink-0 w-12 h-12 rounded-full bg-white border-2 border-accent-400 flex items-center justify-center shadow-lg">
-                                    <span class="text-sm font-serif font-bold text-accent-600">04</span>
+                                    <span class="hidden md:block text-sm font-serif font-bold text-accent-600">04</span>
+                                    <i data-lucide="chevron-down" class="md:hidden w-6 h-6 text-accent-600"></i>
                                 </div>
                                 <div class="hidden md:block w-5/12"></div>
                             </div>
@@ -943,7 +977,7 @@
                                         </p>
                                     </div>
                                 </div>
-                                <div class="relative z-10 flex-shrink-0 w-12 h-12 rounded-full bg-white border-2 border-accent-400 flex items-center justify-center shadow-lg">
+                                <div class="hidden md:flex relative z-10 flex-shrink-0 w-12 h-12 rounded-full bg-white border-2 border-accent-400 items-center justify-center shadow-lg">
                                     <span class="text-sm font-serif font-bold text-accent-600">05</span>
                                 </div>
                                 <div class="hidden md:block w-5/12"></div>
@@ -973,7 +1007,7 @@
                         $faqs = [
                             ['q' => '占いの経験が全くない初心者でも大丈夫ですか？', 'a' => 'はい、当アカデミーの受講生の約8割が完全未経験からのスタートです。基礎から丁寧に指導しますのでご安心ください。'],
                             ['q' => '働きながら受講することは可能ですか？', 'a' => 'もちろんです。オンライン講座は24時間視聴可能で、対面講座も土日や夜間に開催しています。ライフスタイルに合わせて学べます。'],
-                            ['q' => '卒業後に仕事の紹介はありますか？', 'a' => 'はい、提携している電話占い会社や対面占い館への推薦制度があります。また、独立開業のためのマーケティング講座も実施しています。'],
+                            ['q' => '卒業後に仕事の紹介はありますか？', 'a' => 'はい、卒業後の状況や適性に応じて、提携先の占いの館にご案内することがあります。また、独立開業のためのマーケティング講座も実施しています。'],
                             ['q' => '受講料の分割払いは可能ですか？', 'a' => 'はい、最大24回までの分割払いに対応しております。クレジットカードや教育ローンのご利用も可能です。'],
                             ['q' => 'オンライン授業と対面授業の違いは何ですか？', 'a' => 'カリキュラム内容は同一です。対面は講師から直接手技を学べるメリットがあり、オンラインは場所を選ばず繰り返し復習できるメリットがあります。'],
                             ['q' => '年齢制限はありますか？', 'a' => 'いいえ、年齢制限はございません。20代から70代まで幅広い年齢層の方が学ばれています。'],
@@ -1014,16 +1048,10 @@
                             あなたの持つ潜在的な能力を開花させ、新しい未来を切り拓くお手伝いをさせていただきます。
                             星々が示す道筋を、共に歩みましょう。
                         </p>
-                        <div class="flex space-x-4">
-                            <a href="#" class="p-3 bg-mystic-900 rounded-full hover:bg-accent-400 hover:text-white text-accent-600 transition-all duration-300 shadow-sm"><i data-lucide="instagram" class="w-[18px] h-[18px]"></i></a>
-                            <a href="#" class="p-3 bg-mystic-900 rounded-full hover:bg-accent-400 hover:text-white text-accent-600 transition-all duration-300 shadow-sm"><i data-lucide="twitter" class="w-[18px] h-[18px]"></i></a>
-                            <a href="#" class="p-3 bg-mystic-900 rounded-full hover:bg-accent-400 hover:text-white text-accent-600 transition-all duration-300 shadow-sm"><i data-lucide="facebook" class="w-[18px] h-[18px]"></i></a>
-                            <a href="#" class="p-3 bg-mystic-900 rounded-full hover:bg-accent-400 hover:text-white text-accent-600 transition-all duration-300 shadow-sm"><i data-lucide="youtube" class="w-[18px] h-[18px]"></i></a>
-                        </div>
                     </div>
 
                     <div class="lg:col-span-2 space-y-6">
-                        <h4 class="text-sm font-bold text-mystic-600 uppercase tracking-wider mb-6 border-b-2 border-accent-400 inline-block pb-1">Information</h4>
+                        <h4 class="text-sm font-bold text-mystic-600 uppercase tracking-wider border-b-2 border-accent-400 inline-block pb-1">Information</h4>
                         <div class="space-y-5">
                             <div class="flex items-start group">
                                 <i data-lucide="map-pin" class="w-5 h-5 text-accent-500 mt-1 mr-4 flex-shrink-0"></i>

@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
             menuButton.setAttribute('aria-expanded', !isExpanded);
             
             // Toggle Icon
-            const icon = menuButton.querySelector('i');
+            const icon = menuButton.querySelector('[data-lucide]');
             if (icon) {
                 icon.setAttribute('data-lucide', isExpanded ? 'menu' : 'x');
                 lucide.createIcons();
@@ -24,9 +24,9 @@ document.addEventListener('DOMContentLoaded', () => {
             // Toggle Menu Visibility
             if (!isExpanded) {
                 mobileMenu.classList.remove('max-h-0', 'opacity-0');
-                mobileMenu.classList.add('max-h-96', 'opacity-100');
+                mobileMenu.classList.add('max-h-[1000px]', 'opacity-100');
             } else {
-                mobileMenu.classList.remove('max-h-96', 'opacity-100');
+                mobileMenu.classList.remove('max-h-[1000px]', 'opacity-100');
                 mobileMenu.classList.add('max-h-0', 'opacity-0');
             }
         });
@@ -35,28 +35,17 @@ document.addEventListener('DOMContentLoaded', () => {
         mobileMenuLinks.forEach(link => {
             link.addEventListener('click', () => {
                 menuButton.setAttribute('aria-expanded', 'false');
-                const icon = menuButton.querySelector('i');
+                const icon = menuButton.querySelector('[data-lucide]');
                 if (icon) {
                     icon.setAttribute('data-lucide', 'menu');
                     lucide.createIcons();
                 }
-                mobileMenu.classList.remove('max-h-96', 'opacity-100');
+                mobileMenu.classList.remove('max-h-[1000px]', 'opacity-100');
                 mobileMenu.classList.add('max-h-0', 'opacity-0');
             });
         });
     }
 
-    // Navbar Scroll Effect
-    const navbar = document.querySelector('nav');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            navbar.classList.add('bg-white/80', 'backdrop-blur-md', 'shadow-sm', 'border-b', 'border-accent-200', 'py-2');
-            navbar.classList.remove('bg-transparent', 'py-4');
-        } else {
-            navbar.classList.remove('bg-white/80', 'backdrop-blur-md', 'shadow-sm', 'border-b', 'border-accent-200', 'py-2');
-            navbar.classList.add('bg-transparent', 'py-4');
-        }
-    });
 
     // Smooth Scroll to Top
     const logoArea = document.querySelector('.logo-area');
