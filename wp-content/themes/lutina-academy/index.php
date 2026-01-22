@@ -199,13 +199,6 @@
 
             <!-- 2. Our Identity (About) -->
             <section id="about" class="py-32 bg-white overflow-hidden relative">
-                <!-- Background Decorative Text -->
-                <div class="absolute inset-0 flex items-center justify-center pointer-events-none select-none overflow-hidden">
-                    <span class="text-[250px] md:text-[400px] font-mincho font-bold text-accent-100/20 leading-none whitespace-nowrap transform translate-y-20">
-                        Lutina Academy
-                    </span>
-                </div>
-
                 <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                     <div class="flex flex-col items-center text-center">
                         
@@ -604,11 +597,11 @@
                                 </p>
                                 <div class="space-y-4 mb-8 border-t border-accent-100 pt-6">
                                     <div class="flex justify-between items-center text-sm">
-                                        <span class="text-gray-400 font-serif font-bold tracking-wider">DURATION</span>
+                                        <span class="text-gray-400 font-serif font-bold tracking-wider">期間</span>
                                         <span class="text-mystic-600 font-mincho font-bold">6ヶ月（全24回）</span>
                                     </div>
                                     <div class="flex justify-between items-center text-sm">
-                                        <span class="text-gray-400 font-serif font-bold tracking-wider">PRICE</span>
+                                        <span class="text-gray-400 font-serif font-bold tracking-wider">料金</span>
                                         <span class="text-xl text-accent-600 font-serif font-bold">¥380,000</span>
                                     </div>
                                 </div>
@@ -629,11 +622,11 @@
                                 </p>
                                 <div class="space-y-4 mb-8 border-t border-accent-100 pt-6">
                                     <div class="flex justify-between items-center text-sm">
-                                        <span class="text-gray-400 font-serif font-bold tracking-wider">DURATION</span>
+                                        <span class="text-gray-400 font-serif font-bold tracking-wider">期間</span>
                                         <span class="text-mystic-600 font-mincho font-bold">12ヶ月（全48回）</span>
                                     </div>
                                     <div class="flex justify-between items-center text-sm">
-                                        <span class="text-gray-400 font-serif font-bold tracking-wider">PRICE</span>
+                                        <span class="text-gray-400 font-serif font-bold tracking-wider">料金</span>
                                         <span class="text-xl text-accent-600 font-serif font-bold">¥550,000</span>
                                     </div>
                                 </div>
@@ -654,11 +647,11 @@
                                 </p>
                                 <div class="space-y-4 mb-8 border-t border-accent-100 pt-6">
                                     <div class="flex justify-between items-center text-sm">
-                                        <span class="text-gray-400 font-serif font-bold tracking-wider">DURATION</span>
+                                        <span class="text-gray-400 font-serif font-bold tracking-wider">期間</span>
                                         <span class="text-mystic-600 font-mincho font-bold">4ヶ月（全16回）</span>
                                     </div>
                                     <div class="flex justify-between items-center text-sm">
-                                        <span class="text-gray-400 font-serif font-bold tracking-wider">PRICE</span>
+                                        <span class="text-gray-400 font-serif font-bold tracking-wider">料金</span>
                                         <span class="text-xl text-accent-600 font-serif font-bold">¥280,000</span>
                                     </div>
                                 </div>
@@ -1051,7 +1044,6 @@
                     </div>
 
                     <div class="lg:col-span-2 space-y-6">
-                        <h4 class="text-sm font-bold text-mystic-600 uppercase tracking-wider border-b-2 border-accent-400 inline-block pb-1">Information</h4>
                         <div class="space-y-5">
                             <div class="flex items-start group">
                                 <i data-lucide="map-pin" class="w-5 h-5 text-accent-500 mt-1 mr-4 flex-shrink-0"></i>
