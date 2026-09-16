@@ -212,21 +212,17 @@
                             </div>
                             
                             <h2 class="text-4xl md:text-6xl font-serif text-mystic-600 mb-12 leading-[1.3] tracking-tight">
-                                光と叡智が交差する<br />
-                                <span class="text-accent-500 italic">学びの聖域</span>
+                                <span class="text-accent-500 italic">ルティナとは</span>
                             </h2>
                             
                             <div class="space-y-8 text-gray-500 font-mincho leading-[2.2] text-base md:text-lg max-w-2xl mx-auto mb-16">
                                 <p>
-                                    Lutina（ルティナ）は、ラテン語で「光」を意味する言葉から名付けられました。<br class="hidden md:block" />
-                                    占いとは単なる予言ではなく、人生という暗闇を照らす「灯火」であるべきだと私たちは考えます。
+                                    Lutina（ルティナ）は、東京・池袋に2店舗を展開する、実力派占い師による本格的な占いの館です。
+                                    霊感霊視、タロット、姓名判断、占星術などで人気の実力派占い師が多数在籍しています。
                                 </p>
                                 <p>
-                                    当アカデミーは、受講生が心穏やかに、かつ集中して叡智に触れられるよう、<br class="hidden md:block" />
-                                    静寂と光が調和した、最高の学習環境を提供することをお約束します。
-                                </p>
-                                <p class="italic font-serif text-accent-700 text-xl md:text-2xl mt-12 py-4 border-y border-accent-100/50">
-                                    "一流の導き手となるための、最高の環境を。"
+                                    単なる運勢鑑定だけでなく、心理学やカウンセリングの要素を取り入れ、ご相談者様の悩みに深く寄り添う鑑定に定評があります。<br class="hidden md:block" />
+                                    占いの激戦区・池袋で選ばれ続け、これまで築き上げた「信頼」と「的中実績」は、私たちの何よりの誇りです。
                                 </p>
                             </div>
 
@@ -244,7 +240,7 @@
                                 <div class="mt-6 flex flex-col items-center gap-2">
                                     <div class="h-8 w-px bg-gradient-to-b from-accent-400 to-transparent"></div>
                                     <span class="text-[9px] text-accent-400 tracking-[0.5em] uppercase font-bold">
-                                        Academy Atmosphere
+                                        アカデミーの雰囲気
                                     </span>
                                 </div>
                             </div>
@@ -997,16 +993,19 @@
 
                     <div class="space-y-4">
                         <?php
-                        $faqs = [
-                            ['q' => '占いの経験が全くない初心者でも大丈夫ですか？', 'a' => 'はい、当アカデミーの受講生の約8割が完全未経験からのスタートです。基礎から丁寧に指導しますのでご安心ください。'],
-                            ['q' => '働きながら受講することは可能ですか？', 'a' => 'もちろんです。オンライン講座は24時間視聴可能で、対面講座も土日や夜間に開催しています。ライフスタイルに合わせて学べます。'],
-                            ['q' => '卒業後に仕事の紹介はありますか？', 'a' => 'はい、卒業後の状況や適性に応じて、提携先の占いの館にご案内することがあります。また、独立開業のためのマーケティング講座も実施しています。'],
-                            ['q' => '受講料の分割払いは可能ですか？', 'a' => 'はい、最大24回までの分割払いに対応しております。クレジットカードや教育ローンのご利用も可能です。'],
-                            ['q' => 'オンライン授業と対面授業の違いは何ですか？', 'a' => 'カリキュラム内容は同一です。対面は講師から直接手技を学べるメリットがあり、オンラインは場所を選ばず繰り返し復習できるメリットがあります。'],
-                            ['q' => '年齢制限はありますか？', 'a' => 'いいえ、年齢制限はございません。20代から70代まで幅広い年齢層の方が学ばれています。'],
-                            ['q' => '途中でコースを変更することはできますか？', 'a' => '受講開始から1ヶ月以内であれば、コースの変更や追加が可能です。事務局までご相談ください。'],
-                            ['q' => '霊感がないと占い師にはなれませんか？', 'a' => 'いいえ。タロットや占星術は「命・卜・相」という学問に基づいた技術ですので、霊感は必要ありません。正しい知識と技術で誰でも習得可能です。']
-                        ];
+                        // Q&A投稿（管理画面のQ&Aメニューで登録・更新・削除。並び順は「順序」昇順）
+                        $faq_posts = get_posts(array(
+                            'post_type'      => 'qa',
+                            'posts_per_page' => -1,
+                            'orderby'        => array('menu_order' => 'ASC', 'date' => 'ASC'),
+                        ));
+                        $faqs = [];
+                        foreach ($faq_posts as $faq_post) {
+                            $faqs[] = [
+                                'q' => esc_html($faq_post->post_title),
+                                'a' => wpautop($faq_post->post_content),
+                            ];
+                        }
                         foreach ($faqs as $i => $faq) : ?>
                             <div class="animate-on-scroll border border-accent-100 rounded-2xl overflow-hidden bg-white shadow-sm">
                                 <button class="faq-button w-full px-8 py-6 flex items-center justify-between text-left focus:outline-none hover:bg-mystic-950 transition-colors">
