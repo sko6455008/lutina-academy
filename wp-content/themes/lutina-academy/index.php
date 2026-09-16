@@ -8,7 +8,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lutina Academy | ルティナ占いアカデミー</title>
+    <title>ICA 池袋キャリアアカデミー | 池袋の占いアカデミー</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -41,7 +41,7 @@
               }
             },
             backgroundImage: {
-              'hero-light': "url('<?php echo get_template_directory_uri(); ?>/assets/images/top.webp')",
+              'hero-light': "url('<?php echo get_template_directory_uri(); ?>/assets/images/top.png')",
             },
             animation: {
               'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
@@ -97,6 +97,9 @@
       .delay-400 { transition-delay: 400ms; }
       .delay-500 { transition-delay: 500ms; }
 
+      /* カリキュラムの強調ポイント */
+      .curriculum-highlight { color: #B4487A; font-weight: 700; }
+
       /* Accordion transition */
       .accordion-content {
           transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
@@ -117,18 +120,18 @@
                     <div class="logo-area flex-shrink-0 flex items-center cursor-pointer group" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">
                         <div class="relative">
                             <img 
-                                src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.webp" 
-                                alt="Lutina Academy Logo" 
+                                src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png?v=20260916" 
+                                alt="ICA 池袋キャリアアカデミー ロゴ" 
                                 class="w-[80px] h-[80px] md:w-[80px] md:h-[80px] object-contain"
                             >
                         </div>
-                        <span class="text-lg md:text-xl font-mincho font-bold text-mystic-600 tracking-wider group-hover:text-accent-600 transition-colors">
-                            Lutina Academy
+                        <span class="text-[15px] md:text-lg font-mincho font-bold text-mystic-600 tracking-wider group-hover:text-accent-600 transition-colors">
+                            池袋キャリアアカデミー
                         </span>
                     </div>
                     
                     <div class="hidden lg:block">
-                        <div class="ml-10 flex items-center space-x-8">
+                        <div class="ml-8 flex items-center space-x-6">
                             <a href="#reasons" class="text-gray-500 hover:text-accent-600 text-sm font-mincho font-medium transition-colors duration-300 tracking-wider relative group">
                                 選ばれる理由<span class="absolute -bottom-1 left-0 w-0 h-[1.5px] bg-accent-400 transition-all duration-300 group-hover:w-full"></span>
                             </a>
@@ -189,67 +192,15 @@
                 <div class="w-full mx-auto">
                     <div class="w-full">
                         <img
-                            src="<?php echo get_template_directory_uri(); ?>/assets/images/top.webp"
-                            alt="Lutina Academy Hero"
+                            src="<?php echo get_template_directory_uri(); ?>/assets/images/top.png?v=20260916"
+                            alt="ICA 池袋キャリアアカデミー メインビジュアル"
                             class="w-full h-auto mx-auto"
                         >
                     </div>
                 </div>
             </section>
 
-            <!-- 2. Our Identity (About) -->
-            <section id="about" class="py-32 bg-white overflow-hidden relative">
-                <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                    <div class="flex flex-col items-center text-center">
-                        
-                        <div class="animate-on-scroll bg-white/40 backdrop-blur-sm p-8 md:p-16 border border-accent-100/50 shadow-sm w-full">
-                            <div class="inline-flex items-center gap-4 mb-8">
-                                <div class="h-px w-8 bg-accent-400"></div>
-                                <span class="text-accent-600 font-serif tracking-[0.4em] text-xs uppercase font-bold">
-                                    私たちについて
-                                </span>
-                                <div class="h-px w-8 bg-accent-400"></div>
-                            </div>
-                            
-                            <h2 class="text-4xl md:text-6xl font-serif text-mystic-600 mb-12 leading-[1.3] tracking-tight">
-                                <span class="text-accent-500 italic">ルティナとは</span>
-                            </h2>
-                            
-                            <div class="space-y-8 text-gray-500 font-mincho leading-[2.2] text-base md:text-lg max-w-2xl mx-auto mb-16">
-                                <p>
-                                    Lutina（ルティナ）は、東京・池袋に2店舗を展開する、実力派占い師による本格的な占いの館です。
-                                    霊感霊視、タロット、姓名判断、占星術などで人気の実力派占い師が多数在籍しています。
-                                </p>
-                                <p>
-                                    単なる運勢鑑定だけでなく、心理学やカウンセリングの要素を取り入れ、ご相談者様の悩みに深く寄り添う鑑定に定評があります。<br class="hidden md:block" />
-                                    占いの激戦区・池袋で選ばれ続け、これまで築き上げた「信頼」と「的中実績」は、私たちの何よりの誇りです。
-                                </p>
-                            </div>
-
-                            <!-- Atmosphere Image -->
-                            <div class="animate-on-scroll delay-200 mt-4">
-                                <div class="relative aspect-[16/9] overflow-hidden rounded-sm shadow-xl border border-accent-100 p-1 bg-white">
-                                    <img 
-                                        src="<?php echo get_template_directory_uri(); ?>/assets/images/hero.webp"
-                                        alt="Academy Atmosphere" 
-                                        class="w-full h-full object-cover grayscale-[10%] hover:grayscale-0 transition-all duration-700"
-                                    />
-                                    <div class="absolute inset-0 bg-gradient-to-t from-mystic-600/10 to-transparent"></div>
-                                </div>
-                                
-                                <div class="mt-6 flex flex-col items-center gap-2">
-                                    <div class="h-8 w-px bg-gradient-to-b from-accent-400 to-transparent"></div>
-                                    <span class="text-[9px] text-accent-400 tracking-[0.5em] uppercase font-bold">
-                                        アカデミーの雰囲気
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- 3. Reasons (選ばれる理由) -->
+            <!-- 2. Reasons (選ばれる理由) -->
             <section id="reasons" class="py-32 bg-white relative">
                 <div class="absolute inset-0 bg-gradient-to-b from-mystic-950 via-white to-white pointer-events-none"></div>
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -295,7 +246,7 @@
                         <!-- Feature 3 -->
                         <div class="animate-on-scroll delay-400 group bg-white border border-accent-100 rounded-2xl overflow-hidden transition-all duration-500 shadow-sm hover:shadow-xl hover:-translate-y-2 flex flex-col">
                             <div class="h-56 relative overflow-hidden">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/reason3.webp" alt="充実の開業サポート" class="w-full h-full object-cover object-ceneter transform group-hover:scale-110 transition-transform duration-1000">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/course2.webp" alt="充実の開業サポート" class="w-full h-full object-cover object-ceneter transform group-hover:scale-110 transition-transform duration-1000">
                             </div>
                             <div class="p-8 relative">
                                 <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-16 h-1 bg-accent-400"></div>
@@ -309,7 +260,7 @@
                 </div>
             </section>
 
-            <!-- 4. TargetAudience (こんな方にオススメ) -->
+            <!-- 3. TargetAudience (こんな方にオススメ) -->
             <section id="target" class="py-32 bg-mystic-950 relative overflow-hidden">
                 <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                     
@@ -395,12 +346,12 @@
 
                     <!-- Caption -->
                     <p class="animate-on-scroll delay-500 mt-12 text-center text-gray-400 font-mincho text-sm tracking-widest italic">
-                        Lutina Academyは、あなたの「なりたい」を全力でサポートします。
+                        ICA 池袋キャリアアカデミーは、あなたの「なりたい」を全力でサポートします。
                     </p>
                 </div>
             </section>
 
-            <!-- 5. Earnings (占い師になってどのくらい稼げるの？) -->
+            <!-- 4. Earnings (占い師になってどのくらい稼げるの？) -->
             <section id="earnings" class="py-32 bg-mystic-900 relative">
                 <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div class="text-center mb-20 relative z-10 animate-on-scroll">
@@ -472,13 +423,13 @@
                 </div>
             </section>
 
-            <!-- 6. Lutinaの特徴 (CourseStrengths) -->
+            <!-- 5. ICA 池袋キャリアアカデミーの特徴 (CourseStrengths) -->
             <section id="features" class="py-32 bg-white relative">
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div class="text-center mb-20 relative z-10 animate-on-scroll">
                         <div class="flex flex-col items-center">
                             <span class="block text-accent-600 font-serif tracking-[0.3em] mb-3 text-xs md:text-sm uppercase font-bold">— Strengths —</span>
-                            <h2 class="text-3xl md:text-4xl lg:text-5xl font-mincho text-mystic-600 tracking-wide leading-relaxed drop-shadow-sm">Lutina Academyの特徴</h2>
+                            <h2 class="text-3xl md:text-4xl lg:text-5xl font-mincho text-mystic-600 tracking-wide leading-relaxed drop-shadow-sm">ICA 池袋キャリアアカデミーの特徴</h2>
                             <div class="mt-6 flex items-center justify-center gap-4">
                                 <div class="h-[1px] w-12 bg-gradient-to-r from-transparent to-accent-400"></div>
                                 <div class="w-2 h-2 rotate-45 border border-accent-400 bg-white"></div>
@@ -523,7 +474,7 @@
                             [
                                 'title' => '開業サポート',
                                 'desc' => 'お仕事の取り方、SNS運用、集客の仕方のような開業に必要なノウハウを習得可能です。',
-                                'image' => get_template_directory_uri() . '/assets/images/feature6.webp',
+                                'image' => get_template_directory_uri() . '/assets/images/feature6.webp?v=20260916',
                                 'tag' => 'License'
                             ]
                         ];
@@ -566,7 +517,7 @@
                 </div>
             </section>
 
-            <!-- 7. Courses -->
+            <!-- 6. Courses（講座カリキュラム：コースは1つ） -->
             <section id="courses" class="py-32 bg-mystic-900 relative overflow-hidden">
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                     <div class="text-center mb-20 relative z-10 animate-on-scroll">
@@ -581,86 +532,131 @@
                         </div>
                     </div>
 
-                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
-                        <div class="animate-on-scroll flex flex-col h-full bg-white border border-accent-100 rounded-lg overflow-hidden transition-all duration-500 group shadow-sm hover:shadow-2xl relative">
-                            <div class="h-64 overflow-hidden relative">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/course1.webp" alt="タロットプロフェッショナル講座" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-1000">
-                            </div>
-                            <div class="p-8 flex-1 flex flex-col relative bg-white">
-                                <h3 class="text-2xl font-serif font-bold text-mystic-600 mb-4 group-hover:text-accent-600 transition-colors">タロットプロフェッショナル講座</h3>
-                                <p class="text-gray-500 text-sm font-mincho leading-loose mb-8 flex-grow">
-                                    78枚のカードが織りなす神秘の物語を読み解き、深層心理にアクセスする技術を習得します。
-                                </p>
-                                <div class="space-y-4 mb-8 border-t border-accent-100 pt-6">
-                                    <div class="flex justify-between items-center text-sm">
-                                        <span class="text-gray-400 font-serif font-bold tracking-wider">期間</span>
-                                        <span class="text-mystic-600 font-mincho font-bold">6ヶ月（全24回）</span>
-                                    </div>
-                                    <div class="flex justify-between items-center text-sm">
-                                        <span class="text-gray-400 font-serif font-bold tracking-wider">料金</span>
-                                        <span class="text-xl text-accent-600 font-serif font-bold">¥380,000</span>
-                                    </div>
+                    <div class="max-w-6xl mx-auto animate-on-scroll bg-white border border-accent-100 rounded-lg overflow-hidden shadow-sm">
+                        <!-- コース画像 -->
+                        <div class="h-48 md:h-64 overflow-hidden relative">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/course1.webp" alt="講座カリキュラム" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-mystic-600/30 to-transparent"></div>
+                        </div>
+
+                        <!-- 講座名・回数・料金 -->
+                        <div class="px-6 md:px-12 pt-10 pb-8 text-center border-b border-accent-100">
+                            <h3 class="text-2xl md:text-3xl font-serif font-bold text-mystic-600 tracking-wide mb-4">講座カリキュラム</h3>
+                            <p class="text-lg md:text-2xl font-serif font-bold text-mystic-600 tracking-wider">
+                                全8回24時間<span class="mx-2 text-accent-400 font-normal">／</span><span class="text-accent-600">478,000円-</span>
+                            </p>
+                        </div>
+
+                        <!-- カリキュラム（3ブロック） -->
+                        <div class="p-6 md:p-12 grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8">
+                            <div class="animate-on-scroll  flex flex-col bg-mystic-950 border border-accent-100 rounded-lg overflow-hidden">
+                                <div class="flex items-center gap-3 bg-mystic-800 px-5 py-4">
+                                    <span class="inline-block px-3 py-1 rounded bg-accent-400 text-white text-sm font-serif font-bold tracking-wider whitespace-nowrap">1〜3回</span>
+                                    <h4 class="text-base md:text-lg font-mincho font-bold text-mystic-600">基礎リーディングを学ぶ</h4>
                                 </div>
-                                <a href="https://lin.ee/NmIGh0t" target="_blank" rel="noopener noreferrer" class="view-details-btn w-full block text-center py-4 bg-mystic-900 hover:bg-accent-400 text-accent-600 hover:text-white text-xs font-serif font-bold tracking-[0.2em] transition-all duration-300 rounded border border-accent-200">
-                                    無料相談する
-                                </a>
+                                <ul class="p-5 md:p-6 space-y-3 text-sm md:text-[15px] text-gray-600 font-mincho leading-relaxed">
+                                    <li class="flex items-start gap-3">
+                                        <span class="mt-[0.55em] w-2 h-2 rotate-45 bg-accent-400 flex-shrink-0"></span>
+                                        <span>大アルカナ／小アルカナの基本</span>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <span class="mt-[0.55em] w-2 h-2 rotate-45 bg-accent-400 flex-shrink-0"></span>
+                                        <span>絵柄を読み取る練習</span>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <span class="mt-[0.55em] w-2 h-2 rotate-45 bg-accent-400 flex-shrink-0"></span>
+                                        <span>逆位置カードへの声のかけ方</span>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <span class="mt-[0.55em] w-2 h-2 rotate-45 bg-accent-400 flex-shrink-0"></span>
+                                        <span><span class="curriculum-highlight">初心者がつまずきやすいポイント</span>の解説</span>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <span class="mt-[0.55em] w-2 h-2 rotate-45 bg-accent-400 flex-shrink-0"></span>
+                                        <span>カードに対する直感力を育てるワーク</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="animate-on-scroll delay-100 flex flex-col bg-mystic-950 border border-accent-100 rounded-lg overflow-hidden">
+                                <div class="flex items-center gap-3 bg-mystic-800 px-5 py-4">
+                                    <span class="inline-block px-3 py-1 rounded bg-accent-500 text-white text-sm font-serif font-bold tracking-wider whitespace-nowrap">4〜5回</span>
+                                    <h4 class="text-base md:text-lg font-mincho font-bold text-mystic-600">応用リーディングを学ぶ</h4>
+                                </div>
+                                <ul class="p-5 md:p-6 space-y-3 text-sm md:text-[15px] text-gray-600 font-mincho leading-relaxed">
+                                    <li class="flex items-start gap-3">
+                                        <span class="mt-[0.55em] w-2 h-2 rotate-45 bg-accent-500 flex-shrink-0"></span>
+                                        <span>3枚引き／ケルト十字／ヘキサグラムなど</span>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <span class="mt-[0.55em] w-2 h-2 rotate-45 bg-accent-500 flex-shrink-0"></span>
+                                        <span><span class="curriculum-highlight">スクール独自のオリジナル技法</span></span>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <span class="mt-[0.55em] w-2 h-2 rotate-45 bg-accent-500 flex-shrink-0"></span>
+                                        <span>ネガティブな結果の言い換え技術</span>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <span class="mt-[0.55em] w-2 h-2 rotate-45 bg-accent-500 flex-shrink-0"></span>
+                                        <span>相談者との<span class="curriculum-highlight">距離感・メンタルケア</span></span>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <span class="mt-[0.55em] w-2 h-2 rotate-45 bg-accent-500 flex-shrink-0"></span>
+                                        <span>実践を想定したロールプレイ鑑定</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="animate-on-scroll delay-200 flex flex-col bg-mystic-950 border border-accent-100 rounded-lg overflow-hidden">
+                                <div class="flex items-center gap-3 bg-mystic-800 px-5 py-4">
+                                    <span class="inline-block px-3 py-1 rounded bg-accent-600 text-white text-sm font-serif font-bold tracking-wider whitespace-nowrap">6〜8回</span>
+                                    <h4 class="text-base md:text-lg font-mincho font-bold text-mystic-600">応用リーディングを学ぶ</h4>
+                                </div>
+                                <ul class="p-5 md:p-6 space-y-3 text-sm md:text-[15px] text-gray-600 font-mincho leading-relaxed">
+                                    <li class="flex items-start gap-3">
+                                        <span class="mt-[0.55em] w-2 h-2 rotate-45 bg-accent-600 flex-shrink-0"></span>
+                                        <span>モデルを使った実践リーディング</span>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <span class="mt-[0.55em] w-2 h-2 rotate-45 bg-accent-600 flex-shrink-0"></span>
+                                        <span><span class="curriculum-highlight">個別フィードバック</span></span>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <span class="mt-[0.55em] w-2 h-2 rotate-45 bg-accent-600 flex-shrink-0"></span>
+                                        <span>声のトーン／あいづち／間の取り方</span>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <span class="mt-[0.55em] w-2 h-2 rotate-45 bg-accent-600 flex-shrink-0"></span>
+                                        <span>安心する空気・信頼関係の作り方</span>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <span class="mt-[0.55em] w-2 h-2 rotate-45 bg-accent-600 flex-shrink-0"></span>
+                                        <span>深掘り質問の組み立て方</span>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <span class="mt-[0.55em] w-2 h-2 rotate-45 bg-accent-600 flex-shrink-0"></span>
+                                        <span>鑑定結果を<span class="curriculum-highlight">言語化する</span>トレーニング</span>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <span class="mt-[0.55em] w-2 h-2 rotate-45 bg-accent-600 flex-shrink-0"></span>
+                                        <span><span class="curriculum-highlight">価格設定・リピート獲得</span>の考え方</span>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <span class="mt-[0.55em] w-2 h-2 rotate-45 bg-accent-600 flex-shrink-0"></span>
+                                        <span><span class="curriculum-highlight">個人で稼ぐ占い師のマインドセット</span></span>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
 
-                        <div class="animate-on-scroll delay-100 flex flex-col h-full bg-white border border-accent-100 rounded-lg overflow-hidden transition-all duration-500 group shadow-sm hover:shadow-2xl relative">
-                            <div class="h-64 overflow-hidden relative">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/course2.webp" alt="西洋占星術マスターコース" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-1000">
-                            </div>
-                            <div class="p-8 flex-1 flex flex-col relative bg-white">
-                                <h3 class="text-2xl font-serif font-bold text-mystic-600 mb-4 group-hover:text-accent-600 transition-colors">西洋占星術マスターコース</h3>
-                                <p class="text-gray-500 text-sm font-mincho leading-loose mb-8 flex-grow">
-                                    星々の配置から運命を読み解く、論理的かつ神秘的な占星術の奥義を学びます。
-                                </p>
-                                <div class="space-y-4 mb-8 border-t border-accent-100 pt-6">
-                                    <div class="flex justify-between items-center text-sm">
-                                        <span class="text-gray-400 font-serif font-bold tracking-wider">期間</span>
-                                        <span class="text-mystic-600 font-mincho font-bold">12ヶ月（全48回）</span>
-                                    </div>
-                                    <div class="flex justify-between items-center text-sm">
-                                        <span class="text-gray-400 font-serif font-bold tracking-wider">料金</span>
-                                        <span class="text-xl text-accent-600 font-serif font-bold">¥550,000</span>
-                                    </div>
-                                </div>
-                                <a href="https://lin.ee/NmIGh0t" target="_blank" rel="noopener noreferrer" class="view-details-btn w-full block text-center py-4 bg-mystic-900 hover:bg-accent-400 text-accent-600 hover:text-white text-xs font-serif font-bold tracking-[0.2em] transition-all duration-300 rounded border border-accent-200">
-                                    無料相談する
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="animate-on-scroll delay-200 flex flex-col h-full bg-white border border-accent-100 rounded-lg overflow-hidden transition-all duration-500 group shadow-sm hover:shadow-2xl relative">
-                            <div class="h-64 overflow-hidden relative">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/course3.webp" alt="手相・人相・観相学統合コース" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-1000">
-                            </div>
-                            <div class="p-8 flex-1 flex flex-col relative bg-white">
-                                <h3 class="text-2xl font-serif font-bold text-mystic-600 mb-4 group-hover:text-accent-600 transition-colors">手相・人相・観相学統合コース</h3>
-                                <p class="text-gray-500 text-sm font-mincho leading-loose mb-8 flex-grow">
-                                    掌や顔に刻まれた人生の地図を読み解き、開運へと導く実践的な技術を伝授します。
-                                </p>
-                                <div class="space-y-4 mb-8 border-t border-accent-100 pt-6">
-                                    <div class="flex justify-between items-center text-sm">
-                                        <span class="text-gray-400 font-serif font-bold tracking-wider">期間</span>
-                                        <span class="text-mystic-600 font-mincho font-bold">4ヶ月（全16回）</span>
-                                    </div>
-                                    <div class="flex justify-between items-center text-sm">
-                                        <span class="text-gray-400 font-serif font-bold tracking-wider">料金</span>
-                                        <span class="text-xl text-accent-600 font-serif font-bold">¥280,000</span>
-                                    </div>
-                                </div>
-                                <a href="https://lin.ee/NmIGh0t" target="_blank" rel="noopener noreferrer" class="view-details-btn w-full block text-center py-4 bg-mystic-900 hover:bg-accent-400 text-accent-600 hover:text-white text-xs font-serif font-bold tracking-[0.2em] transition-all duration-300 rounded border border-accent-200">
-                                    無料相談する
-                                </a>
-                            </div>
+                        <div class="px-6 md:px-12 pb-10">
+                            <a href="https://lin.ee/NmIGh0t" target="_blank" rel="noopener noreferrer" class="view-details-btn max-w-md mx-auto block text-center py-4 bg-mystic-900 hover:bg-accent-400 text-accent-600 hover:text-white text-xs font-serif font-bold tracking-[0.2em] transition-all duration-300 rounded border border-accent-200">
+                                無料相談する
+                            </a>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- 8. Instructors -->
+            <!-- 7. Instructors -->
             <section id="instructors" class="py-32 bg-white relative overflow-hidden">
                 <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                     <div class="text-center mb-20 relative z-10 animate-on-scroll">
@@ -686,7 +682,7 @@
                         <div class="w-full md:w-7/12 flex flex-col justify-center">
                             <div class="mb-8 border-b border-accent-100 pb-6">
                                 <h3 class="text-4xl lg:text-5xl font-serif font-bold text-mystic-600 mb-3 tracking-wide">るみか先生</h3>
-                                <p class="text-accent-600 text-sm lg:text-base tracking-[0.2em] uppercase font-mincho font-bold">Lutina Academy 講師 / 占い師</p>
+                                <p class="text-accent-600 text-sm lg:text-base tracking-[0.2em] uppercase font-mincho font-bold">ICA 池袋キャリアアカデミー 講師 / 占い師</p>
                             </div>
 
                             <div class="space-y-8">
@@ -772,7 +768,7 @@
                 </div>
             </section>
 
-            <!-- 9. Testimonials -->
+            <!-- 8. Testimonials -->
             <section id="testimonials" class="py-24 bg-mystic-900 relative">
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                     <div class="text-center mb-20 relative z-10 animate-on-scroll">
@@ -814,7 +810,7 @@
                                 <i data-lucide="quote" class="w-10 h-10 fill-current"></i>
                             </div>
                             <p class="text-gray-600 italic leading-relaxed mb-8 relative z-10 min-h-[100px] font-mincho">
-                                占いは『特別な才能』が必要だと思っていましたが、ルティナアカデミーの講義は驚くほど体系的で納得感がありました。営業職で培った対話力と占術が結びつき、デビュー後すぐにリピーター様に恵まれたのは大きな自信になりました。
+                                占いは『特別な才能』が必要だと思っていましたが、ICA 池袋キャリアアカデミーの講義は驚くほど体系的で納得感がありました。営業職で培った対話力と占術が結びつき、デビュー後すぐにリピーター様に恵まれたのは大きな自信になりました。
                             </p>
                             <div class="flex items-center pt-6 border-t border-gray-50">
                                 <div class="w-14 h-14 rounded-full bg-accent-200 border-2 border-accent-100 mr-4 shadow-sm flex items-center justify-center flex-shrink-0">
@@ -854,7 +850,7 @@
                 </div>
             </section>
 
-            <!-- 10. Flow -->
+            <!-- 9. Flow -->
             <section id="flow" class="py-24 bg-white">
                 <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
                      <div class="text-center mb-20 relative z-10 animate-on-scroll">
@@ -976,6 +972,43 @@
                 </div>
             </section>
 
+            <!-- 10. Sister Academy (姉妹アカデミーはこちら) -->
+            <section id="sister" class="py-24 bg-mystic-950 relative overflow-hidden">
+                <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                    <div class="text-center mb-16 relative z-10 animate-on-scroll">
+                        <div class="flex flex-col items-center">
+                            <span class="block text-accent-600 font-serif tracking-[0.3em] mb-3 text-xs md:text-sm uppercase font-bold">— Sister Academy —</span>
+                            <h2 class="text-3xl md:text-4xl lg:text-5xl font-serif text-mystic-600 tracking-wide leading-relaxed drop-shadow-sm">姉妹アカデミーはこちら</h2>
+                            <div class="mt-6 flex items-center justify-center gap-4">
+                                <div class="h-[1px] w-12 bg-gradient-to-r from-transparent to-accent-400"></div>
+                                <div class="w-2 h-2 rotate-45 border border-accent-400 bg-white"></div>
+                                <div class="h-[1px] w-12 bg-gradient-to-l from-transparent to-accent-400"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 姉妹校カード（カード全体がリンク） -->
+                    <a href="https://nail-school-tokyo.com/" target="_blank" rel="noopener noreferrer" class="animate-on-scroll delay-200 group block bg-white border border-accent-100 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-500 overflow-hidden">
+                        <div class="flex flex-col md:flex-row items-center gap-8 p-8 md:p-12">
+                            
+                            <div class="flex-1 text-center md:text-left">
+                                <h3 class="text-xl md:text-2xl font-mincho font-bold text-mystic-600 mb-3 group-hover:text-accent-600 transition-colors">ICA 池袋キャリアアカデミー</h3>
+                                <p class="text-gray-500 text-sm md:text-base leading-relaxed font-mincho">
+                                    プロのネイリストを目指す方のための、東京・池袋の姉妹アカデミーです。<br class="hidden md:block" />
+                                    ネイルにご興味のある方は、姉妹校の公式サイトもぜひご覧ください。
+                                </p>
+                            </div>
+                            <div class="flex-shrink-0">
+                                <span class="inline-flex items-center gap-2 bg-accent-500/10 border border-accent-400 group-hover:bg-accent-400 group-hover:text-white text-accent-600 px-6 py-3 rounded-sm text-sm font-serif tracking-wider transition-all duration-300 whitespace-nowrap">
+                                    サイトを見る
+                                    <i data-lucide="external-link" class="w-4 h-4"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </section>
+
             <!-- 11. FAQ -->
             <section id="faq" class="py-24 bg-mystic-900">
                 <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1034,7 +1067,7 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16 border-b border-accent-100 pb-12">
                     <div class="lg:col-span-2">
                         <h3 class="text-2xl font-mincho font-bold text-mystic-600 mb-6 flex items-center gap-2">
-                            <span class="text-accent-400"></span> Lutina Academy
+                            <span class="text-accent-400"></span> ICA 池袋キャリアアカデミー
                         </h3>
                         <p class="text-gray-500 mb-8 leading-relaxed max-w-md font-mincho text-sm">
                             あなたの持つ潜在的な能力を開花させ、新しい未来を切り拓くお手伝いをさせていただきます。
@@ -1059,7 +1092,7 @@
 
                 <div class="text-center">
                     <p class="text-gray-400 text-xs font-mincho tracking-widest">
-                        &copy; <?php echo date('Y'); ?> Lutina Academy. All rights reserved.
+                        &copy; <?php echo date('Y'); ?> ICA 池袋キャリアアカデミー. All rights reserved.
                     </p>
                 </div>
             </div>
