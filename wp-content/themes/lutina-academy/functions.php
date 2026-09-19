@@ -8,6 +8,32 @@ function lutina_academy_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'lutina_academy_scripts' );
 
+// 表記ページを初回のみ作成。固定ページとして登録し、通常のパーマリンクで表示する。
+function lutina_academy_setup_tokushoho_page() {
+    if ( get_option( 'lutina_academy_tokushoho_page_id' ) ) {
+        return;
+    }
+
+    $page = get_page_by_path( 'tokushoho' );
+    $page_id = $page ? $page->ID : wp_insert_post( array(
+        'post_type'    => 'page',
+        'post_status'  => 'publish',
+        'post_title'   => '特定商取引法に基づく表記',
+        'post_name'    => 'tokushoho',
+        'post_content' => '',
+    ), true );
+
+    if ( ! is_wp_error( $page_id ) && $page_id ) {
+        update_option( 'lutina_academy_tokushoho_page_id', $page_id );
+    }
+}
+add_action( 'init', 'lutina_academy_setup_tokushoho_page' );
+
+function lutina_academy_tokushoho_url() {
+    $page_id = (int) get_option( 'lutina_academy_tokushoho_page_id' );
+    return $page_id ? get_permalink( $page_id ) : home_url( '/tokushoho/' );
+}
+
 // カスタム投稿タイプ: Q&A（タイトル=質問、本文=回答。並び順は「ページ属性 > 順序」で管理）
 function lutina_academy_register_qa_post_type() {
     register_post_type( 'qa', array(
