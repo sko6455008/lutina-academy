@@ -106,3 +106,4 @@
     <?php wp_head(); ?>
   </head>
   <body class="bg-mystic-950 text-mystic-600 font-sans antialiased overflow-x-hidden selection:bg-accent-200 selection:text-mystic-600">
+    <?php wp_body_open(); ?>

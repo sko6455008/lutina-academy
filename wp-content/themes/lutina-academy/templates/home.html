@@ -1,0 +1,1095 @@
+
+    <div class="min-h-screen bg-mystic-900 text-white font-sans selection:bg-accent-400 selection:text-mystic-950 pb-20 md:pb-0">
+        
+        <!-- Navbar -->
+        <nav class="fixed w-full z-50 bg-white py-4">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center justify-between h-16">
+                    <div class="logo-area flex-shrink-0 flex items-center cursor-pointer group" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">
+                        <div class="relative">
+                            <img 
+                                src="{{attr:header_01}}" 
+                                alt="{{attr:header_02}}" 
+                                class="w-[80px] h-[80px] md:w-[80px] md:h-[80px] object-contain"
+                            >
+                        </div>
+                        <span class="text-[15px] md:text-lg font-mincho font-bold text-mystic-600 tracking-wider group-hover:text-accent-600 transition-colors">
+                            {{field:header_04}}
+                        </span>
+                    </div>
+                    
+                    <div class="hidden lg:block">
+                        <div class="ml-8 flex items-center space-x-6">
+                            <a href="#reasons" class="text-gray-500 hover:text-accent-600 text-sm font-mincho font-medium transition-colors duration-300 tracking-wider relative group">
+                                {{field:header_05}}<span class="absolute -bottom-1 left-0 w-0 h-[1.5px] bg-accent-400 transition-all duration-300 group-hover:w-full"></span>
+                            </a>
+                            <a href="#earnings" class="text-gray-500 hover:text-accent-600 text-sm font-mincho font-medium transition-colors duration-300 tracking-wider relative group">
+                                {{field:header_06}}<span class="absolute -bottom-1 left-0 w-0 h-[1.5px] bg-accent-400 transition-all duration-300 group-hover:w-full"></span>
+                            </a>
+                            <a href="#features" class="text-gray-500 hover:text-accent-600 text-sm font-mincho font-medium transition-colors duration-300 tracking-wider relative group">
+                                {{field:header_07}}<span class="absolute -bottom-1 left-0 w-0 h-[1.5px] bg-accent-400 transition-all duration-300 group-hover:w-full"></span>
+                            </a>
+                            <a href="#courses" class="text-gray-500 hover:text-accent-600 text-sm font-mincho font-medium transition-colors duration-300 tracking-wider relative group">
+                                {{field:header_08}}<span class="absolute -bottom-1 left-0 w-0 h-[1.5px] bg-accent-400 transition-all duration-300 group-hover:w-full"></span>
+                            </a>
+                            <a href="#instructors" class="text-gray-500 hover:text-accent-600 text-sm font-mincho font-medium transition-colors duration-300 tracking-wider relative group">
+                                {{field:header_09}}<span class="absolute -bottom-1 left-0 w-0 h-[1.5px] bg-accent-400 transition-all duration-300 group-hover:w-full"></span>
+                            </a>
+                            <a href="#testimonials" class="text-gray-500 hover:text-accent-600 text-sm font-mincho font-medium transition-colors duration-300 tracking-wider relative group">
+                                {{field:header_10}}<span class="absolute -bottom-1 left-0 w-0 h-[1.5px] bg-accent-400 transition-all duration-300 group-hover:w-full"></span>
+                            </a>
+                            <a href="#flow" class="text-gray-500 hover:text-accent-600 text-sm font-mincho font-medium transition-colors duration-300 tracking-wider relative group">
+                                {{field:header_11}}<span class="absolute -bottom-1 left-0 w-0 h-[1.5px] bg-accent-400 transition-all duration-300 group-hover:w-full"></span>
+                            </a>
+                            <a href="#faq" class="text-gray-500 hover:text-accent-600 text-sm font-mincho font-medium transition-colors duration-300 tracking-wider relative group">
+                                {{field:header_12}}<span class="absolute -bottom-1 left-0 w-0 h-[1.5px] bg-accent-400 transition-all duration-300 group-hover:w-full"></span>
+                            </a>
+                            
+                            <a href="{{attr:header_03}}" target="_blank" rel="noopener noreferrer" class="counseling-btn bg-accent-500/10 border border-accent-400 hover:bg-accent-400 hover:text-white text-accent-600 px-6 py-2 rounded-sm text-sm font-serif transition-all duration-300 tracking-wider shadow-sm">
+                                {{field:header_13}}
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="-mr-2 flex lg:hidden">
+                        <button id="mobile-menu-button" aria-expanded="false" class="inline-flex items-center justify-center p-2 text-accent-600 hover:text-accent-400 focus:outline-none">
+                            <i data-lucide="menu" class="w-6 h-6"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mobile menu -->
+            <div id="mobile-menu" class="lg:hidden transition-all duration-300 ease-in-out overflow-y-auto max-h-0 opacity-0 bg-white border-b border-accent-100">
+                <div class="px-4 pt-4 pb-6 space-y-2">
+                    <a href="#reasons" class="text-gray-600 hover:text-accent-600 block px-3 py-3 rounded-md text-base font-mincho font-medium border-b border-gray-50">{{field:header_05}}</a>
+                    <a href="#earnings" class="text-gray-600 hover:text-accent-600 block px-3 py-3 rounded-md text-base font-mincho font-medium border-b border-gray-50">{{field:header_06}}</a>
+                    <a href="#features" class="text-gray-600 hover:text-accent-600 block px-3 py-3 rounded-md text-base font-mincho font-medium border-b border-gray-50">{{field:header_07}}</a>
+                    <a href="#courses" class="text-gray-600 hover:text-accent-600 block px-3 py-3 rounded-md text-base font-mincho font-medium border-b border-gray-50">{{field:header_08}}</a>
+                    <a href="#instructors" class="text-gray-600 hover:text-accent-600 block px-3 py-3 rounded-md text-base font-mincho font-medium border-b border-gray-50">{{field:header_09}}</a>
+                    <a href="#testimonials" class="text-gray-600 hover:text-accent-600 block px-3 py-3 rounded-md text-base font-mincho font-medium border-b border-gray-50">{{field:header_10}}</a>
+                    <a href="#flow" class="text-gray-600 hover:text-accent-600 block px-3 py-3 rounded-md text-base font-mincho font-medium border-b border-gray-50">{{field:header_11}}</a>
+                    <a href="#faq" class="text-gray-600 hover:text-accent-600 block px-3 py-3 rounded-md text-base font-mincho font-medium border-b border-gray-50">{{field:header_12}}</a>
+                </div>
+            </div>
+        </nav>
+
+        <main>
+            <!-- 1. Hero -->
+            <section class="relative flex items-center justify-center bg-mystic-950 pt-20">
+                <div class="w-full mx-auto">
+                    <div class="w-full">
+                        <img
+                            src="{{attr:hero_01}}"
+                            alt="{{attr:hero_02}}"
+                            class="w-full h-auto mx-auto"
+                        >
+                    </div>
+                </div>
+            </section>
+
+            <!-- 2. Reasons (選ばれる理由) -->
+            <section id="reasons" class="py-32 bg-white relative">
+                <div class="absolute inset-0 bg-gradient-to-b from-mystic-950 via-white to-white pointer-events-none"></div>
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                    <div class="text-center mb-20 relative z-10 animate-on-scroll">
+                        <div class="flex flex-col items-center">
+                            <span class="block text-accent-600 font-serif tracking-[0.3em] mb-3 text-xs md:text-sm uppercase font-bold">{{field:reasons_10}}</span>
+                            <h2 class="text-3xl md:text-4xl lg:text-5xl font-serif text-mystic-600 tracking-wide leading-relaxed drop-shadow-sm">{{field:reasons_11}}</h2>
+                            <div class="mt-6 flex items-center justify-center gap-4">
+                                <div class="h-[1px] w-12 bg-gradient-to-r from-transparent to-accent-400"></div>
+                                <div class="w-2 h-2 rotate-45 border border-accent-400 bg-white"></div>
+                                <div class="h-[1px] w-12 bg-gradient-to-l from-transparent to-accent-400"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                        <!-- Feature 1 -->
+                        <div class="animate-on-scroll group bg-white border border-accent-100 rounded-2xl overflow-hidden transition-all duration-500 shadow-sm hover:shadow-xl hover:-translate-y-2 flex flex-col">
+                            <div class="h-56 relative overflow-hidden">
+                                <img src="{{attr:reasons_04}}" alt="{{attr:reasons_05}}" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-1000">
+                            </div>
+                            <div class="p-8 relative">
+                                <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-16 h-1 bg-accent-400"></div>
+                                <h3 class="text-xl font-serif font-bold text-mystic-600 mb-4 text-center group-hover:text-accent-600 transition-colors tracking-wide">{{field:reasons_12}}</h3>
+                                <p class="text-gray-500 leading-relaxed font-mincho text-sm text-center group-hover:text-gray-700 transition-colors">{{field:reasons_01}}</p>
+                            </div>
+                        </div>
+                        <!-- Feature 2 -->
+                        <div class="animate-on-scroll delay-200 group bg-white border border-accent-100 rounded-2xl overflow-hidden transition-all duration-500 shadow-sm hover:shadow-xl hover:-translate-y-2 flex flex-col">
+                            <div class="h-56 relative overflow-hidden">
+                                <img src="{{attr:reasons_06}}" alt="{{attr:reasons_07}}" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-1000">
+                            </div>
+                            <div class="p-8 relative">
+                                <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-16 h-1 bg-accent-400"></div>
+                                <h3 class="text-xl font-serif font-bold text-mystic-600 mb-4 text-center group-hover:text-accent-600 transition-colors tracking-wide">{{field:reasons_13}}</h3>
+                                <p class="text-gray-500 leading-relaxed font-mincho text-sm text-center group-hover:text-gray-700 transition-colors">{{field:reasons_02}}</p>
+                            </div>
+                        </div>
+                        <!-- Feature 3 -->
+                        <div class="animate-on-scroll delay-400 group bg-white border border-accent-100 rounded-2xl overflow-hidden transition-all duration-500 shadow-sm hover:shadow-xl hover:-translate-y-2 flex flex-col">
+                            <div class="h-56 relative overflow-hidden">
+                                <img src="{{attr:reasons_08}}" alt="{{attr:reasons_09}}" class="w-full h-full object-cover object-ceneter transform group-hover:scale-110 transition-transform duration-1000">
+                            </div>
+                            <div class="p-8 relative">
+                                <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-16 h-1 bg-accent-400"></div>
+                                <h3 class="text-xl font-serif font-bold text-mystic-600 mb-4 text-center group-hover:text-accent-600 transition-colors tracking-wide">{{field:reasons_14}}</h3>
+                                <p class="text-gray-500 leading-relaxed font-mincho text-sm text-center group-hover:text-gray-700 transition-colors">{{field:reasons_03}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 3. TargetAudience (こんな方にオススメ) -->
+            <section id="target" class="py-32 bg-mystic-950 relative overflow-hidden">
+                <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                    
+                    <!-- Main Frame Container -->
+                    <div class="animate-on-scroll relative bg-white border-[3px] border-accent-200 p-8 md:p-16 shadow-lg">
+                        <!-- Ornamental Corners (SVG) -->
+                        <div class="absolute top-2 left-2 w-16 h-16 md:w-24 md:h-24 text-accent-400 opacity-60">
+                            <svg viewBox="0 0 100 100" fill="currentColor">
+                                <path d="M0,0 L40,0 Q20,0 20,20 L20,40 Q20,20 0,20 Z" />
+                                <circle cx="15" cy="15" r="2" />
+                                <path d="M10,30 Q10,10 30,10" fill="none" stroke="currentColor" strokeWidth="1" />
+                            </svg>
+                        </div>
+                        <div class="absolute top-2 right-2 w-16 h-16 md:w-24 md:h-24 text-accent-400 opacity-60 rotate-90">
+                            <svg viewBox="0 0 100 100" fill="currentColor">
+                                <path d="M0,0 L40,0 Q20,0 20,20 L20,40 Q20,20 0,20 Z" />
+                                <circle cx="15" cy="15" r="2" />
+                                <path d="M10,30 Q10,10 30,10" fill="none" stroke="currentColor" strokeWidth="1" />
+                            </svg>
+                        </div>
+                        <div class="absolute bottom-2 left-2 w-16 h-16 md:w-24 md:h-24 text-accent-400 opacity-60 -rotate-90">
+                            <svg viewBox="0 0 100 100" fill="currentColor">
+                                <path d="M0,0 L40,0 Q20,0 20,20 L20,40 Q20,20 0,20 Z" />
+                                <circle cx="15" cy="15" r="2" />
+                                <path d="M10,30 Q10,10 30,10" fill="none" stroke="currentColor" strokeWidth="1" />
+                            </svg>
+                        </div>
+                        <div class="absolute bottom-2 right-2 w-16 h-16 md:w-24 md:h-24 text-accent-400 opacity-60 rotate-180">
+                            <svg viewBox="0 0 100 100" fill="currentColor">
+                                <path d="M0,0 L40,0 Q20,0 20,20 L20,40 Q20,20 0,20 Z" />
+                                <circle cx="15" cy="15" r="2" />
+                                <path d="M10,30 Q10,10 30,10" fill="none" stroke="currentColor" strokeWidth="1" />
+                            </svg>
+                        </div>
+
+                        <!-- Content -->
+                        <div class="relative z-10 text-center">
+                            <h2 class="text-3xl md:text-5xl font-mincho font-bold text-accent-600 mb-6 tracking-tight">
+                                {{field:target_02}}
+                            </h2>
+
+                            <!-- Decorative Divider -->
+                            <div class="flex items-center justify-center gap-4 mb-12">
+                                <div class="h-[1px] w-12 md:w-24 bg-accent-400"></div>
+                                <div class="text-accent-500">
+                                    <svg width="60" height="20" viewBox="0 0 60 20" fill="currentColor">
+                                        <path d="M30,0 Q35,10 45,10 T60,10 M30,0 Q25,10 15,10 T0,10" fill="none" stroke="currentColor" strokeWidth="1" />
+                                        <path d="M30,5 L33,10 L30,15 L27,10 Z" />
+                                    </svg>
+                                </div>
+                                <div class="h-[1px] w-12 md:w-24 bg-accent-400"></div>
+                            </div>
+
+                            <!-- Checklist -->
+                            <div class="max-w-lg mx-auto text-left space-y-8">
+                                                                    <div class="animate-on-scroll delay-0 flex items-start gap-4 group">
+                                        <div class="mt-1 flex-shrink-0 border border-accent-400 p-0.5 rounded-sm">
+                                            <i data-lucide="check" class="w-[18px] h-[18px] text-accent-600" stroke-width="3"></i>
+                                        </div>
+                                        <p class="text-lg md:text-2xl font-mincho font-medium text-mystic-600 leading-snug">
+                                            {{field:target_03}}                                            <span class="relative inline-block">
+                                                {{field:target_04}}                                                <span class="absolute bottom-0 left-0 w-full h-[2px] bg-accent-400/60"></span>
+                                            </span>
+                                                                                    </p>
+                                    </div>
+                                                                    <div class="animate-on-scroll delay-100 flex items-start gap-4 group">
+                                        <div class="mt-1 flex-shrink-0 border border-accent-400 p-0.5 rounded-sm">
+                                            <i data-lucide="check" class="w-[18px] h-[18px] text-accent-600" stroke-width="3"></i>
+                                        </div>
+                                        <p class="text-lg md:text-2xl font-mincho font-medium text-mystic-600 leading-snug">
+                                            {{field:target_05}}                                            <span class="relative inline-block">
+                                                {{field:target_06}}                                                <span class="absolute bottom-0 left-0 w-full h-[2px] bg-accent-400/60"></span>
+                                            </span>
+                                                                                    </p>
+                                    </div>
+                                                                    <div class="animate-on-scroll delay-200 flex items-start gap-4 group">
+                                        <div class="mt-1 flex-shrink-0 border border-accent-400 p-0.5 rounded-sm">
+                                            <i data-lucide="check" class="w-[18px] h-[18px] text-accent-600" stroke-width="3"></i>
+                                        </div>
+                                        <p class="text-lg md:text-2xl font-mincho font-medium text-mystic-600 leading-snug">
+                                            {{field:target_07}}                                            <span class="relative inline-block">
+                                                {{field:target_08}}                                                <span class="absolute bottom-0 left-0 w-full h-[2px] bg-accent-400/60"></span>
+                                            </span>
+                                                                                    </p>
+                                    </div>
+                                                                    <div class="animate-on-scroll delay-300 flex items-start gap-4 group">
+                                        <div class="mt-1 flex-shrink-0 border border-accent-400 p-0.5 rounded-sm">
+                                            <i data-lucide="check" class="w-[18px] h-[18px] text-accent-600" stroke-width="3"></i>
+                                        </div>
+                                        <p class="text-lg md:text-2xl font-mincho font-medium text-mystic-600 leading-snug">
+                                                                                        <span class="relative inline-block">
+                                                {{field:target_09}}                                                <span class="absolute bottom-0 left-0 w-full h-[2px] bg-accent-400/60"></span>
+                                            </span>
+                                                                                    </p>
+                                    </div>
+                                                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Caption -->
+                    <p class="animate-on-scroll delay-500 mt-12 text-center text-gray-400 font-mincho text-sm tracking-widest italic">{{field:target_01}}</p>
+                </div>
+            </section>
+
+            <!-- 4. Earnings (占い師になってどのくらい稼げるの？) -->
+            <section id="earnings" class="py-32 bg-mystic-900 relative">
+                <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-20 relative z-10 animate-on-scroll">
+                        <div class="flex flex-col items-center">
+                            <span class="block text-accent-600 font-serif tracking-[0.3em] mb-3 text-xs md:text-sm uppercase font-bold">{{field:earnings_03}}</span>
+                            <h2 class="text-3xl md:text-4xl lg:text-5xl font-serif text-mystic-600 tracking-wide leading-relaxed drop-shadow-sm">{{field:earnings_04}}</h2>
+                            <div class="mt-6 flex items-center justify-center gap-4">
+                                <div class="h-[1px] w-12 bg-gradient-to-r from-transparent to-accent-400"></div>
+                                <div class="w-2 h-2 rotate-45 border border-accent-400 bg-white"></div>
+                                <div class="h-[1px] w-12 bg-gradient-to-l from-transparent to-accent-400"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Card Grid -->
+                    <div class="grid grid-cols-2 gap-4 md:gap-8 mb-16">
+                                                    <div class="animate-on-scroll delay-0 bg-white border border-accent-200 overflow-hidden shadow-sm">
+                                <!-- Top Section: Icon & Name -->
+                                <div class="p-6 md:p-10 flex flex-col items-center justify-center relative min-h-[160px] md:min-h-[200px]">
+                                    <div class="mb-4 text-accent-300">
+                                                                                    <div class="relative">
+                                                <i data-lucide="user" class="w-[64px] h-[64px] md:w-24 md:h-24 stroke-[1]"></i>
+                                                <div class="absolute inset-0 bg-accent-100/20 rounded-full blur-xl"></div>
+                                            </div>
+                                                                            </div>
+                                    <div class="text-gray-500 font-serif text-xs md:text-sm tracking-widest absolute bottom-4 right-4">
+                                        {{field:earnings_05}}                                    </div>
+                                </div>
+
+                                <!-- Bottom Section: Income Bar -->
+                                <div class="bg-accent-600 py-3 md:py-5 px-2 text-center text-white">
+                                    <div class="flex items-baseline justify-center gap-1">
+                                        <span class="text-xs md:text-sm font-mincho opacity-90">{{field:earnings_06}}</span>
+                                        <span class="text-2xl md:text-4xl font-serif font-bold tracking-tighter leading-none">{{field:earnings_07}}</span>
+                                        <span class="text-xs md:text-sm font-mincho">{{field:earnings_08}}</span>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <div class="animate-on-scroll delay-100 bg-white border border-accent-200 overflow-hidden shadow-sm">
+                                <!-- Top Section: Icon & Name -->
+                                <div class="p-6 md:p-10 flex flex-col items-center justify-center relative min-h-[160px] md:min-h-[200px]">
+                                    <div class="mb-4 text-accent-300">
+                                                                                    <div class="relative">
+                                                <i data-lucide="user-round" class="w-[64px] h-[64px] md:w-24 md:h-24 stroke-[1]"></i>
+                                                <div class="absolute inset-0 bg-accent-100/20 rounded-full blur-xl"></div>
+                                            </div>
+                                                                            </div>
+                                    <div class="text-gray-500 font-serif text-xs md:text-sm tracking-widest absolute bottom-4 right-4">
+                                        {{field:earnings_09}}                                    </div>
+                                </div>
+
+                                <!-- Bottom Section: Income Bar -->
+                                <div class="bg-accent-600 py-3 md:py-5 px-2 text-center text-white">
+                                    <div class="flex items-baseline justify-center gap-1">
+                                        <span class="text-xs md:text-sm font-mincho opacity-90">{{field:earnings_06}}</span>
+                                        <span class="text-2xl md:text-4xl font-serif font-bold tracking-tighter leading-none">{{field:earnings_10}}</span>
+                                        <span class="text-xs md:text-sm font-mincho">{{field:earnings_11}}</span>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <div class="animate-on-scroll delay-200 bg-white border border-accent-200 overflow-hidden shadow-sm">
+                                <!-- Top Section: Icon & Name -->
+                                <div class="p-6 md:p-10 flex flex-col items-center justify-center relative min-h-[160px] md:min-h-[200px]">
+                                    <div class="mb-4 text-accent-300">
+                                                                                    <div class="relative">
+                                                <i data-lucide="user" class="w-[64px] h-[64px] md:w-24 md:h-24 stroke-[1]"></i>
+                                                <div class="absolute inset-0 bg-accent-100/20 rounded-full blur-xl"></div>
+                                            </div>
+                                                                            </div>
+                                    <div class="text-gray-500 font-serif text-xs md:text-sm tracking-widest absolute bottom-4 right-4">
+                                        {{field:earnings_12}}                                    </div>
+                                </div>
+
+                                <!-- Bottom Section: Income Bar -->
+                                <div class="bg-accent-600 py-3 md:py-5 px-2 text-center text-white">
+                                    <div class="flex items-baseline justify-center gap-1">
+                                        <span class="text-xs md:text-sm font-mincho opacity-90">{{field:earnings_06}}</span>
+                                        <span class="text-2xl md:text-4xl font-serif font-bold tracking-tighter leading-none">{{field:earnings_13}}</span>
+                                        <span class="text-xs md:text-sm font-mincho">{{field:earnings_14}}</span>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <div class="animate-on-scroll delay-300 bg-white border border-accent-200 overflow-hidden shadow-sm">
+                                <!-- Top Section: Icon & Name -->
+                                <div class="p-6 md:p-10 flex flex-col items-center justify-center relative min-h-[160px] md:min-h-[200px]">
+                                    <div class="mb-4 text-accent-300">
+                                                                                    <div class="relative">
+                                                <i data-lucide="user" class="w-[64px] h-[64px] md:w-24 md:h-24 stroke-[1]"></i>
+                                                <div class="absolute inset-0 bg-accent-100/20 rounded-full blur-xl"></div>
+                                            </div>
+                                                                            </div>
+                                    <div class="text-gray-500 font-serif text-xs md:text-sm tracking-widest absolute bottom-4 right-4">
+                                        {{field:earnings_15}}                                    </div>
+                                </div>
+
+                                <!-- Bottom Section: Income Bar -->
+                                <div class="bg-accent-600 py-3 md:py-5 px-2 text-center text-white">
+                                    <div class="flex items-baseline justify-center gap-1">
+                                        <span class="text-xs md:text-sm font-mincho opacity-90">{{field:earnings_06}}</span>
+                                        <span class="text-2xl md:text-4xl font-serif font-bold tracking-tighter leading-none">{{field:earnings_16}}</span>
+                                        <span class="text-xs md:text-sm font-mincho">{{field:earnings_17}}</span>
+                                    </div>
+                                </div>
+                            </div>
+                                            </div>
+
+                    <!-- Footer Text -->
+                    <div class="animate-on-scroll delay-500 text-center space-y-2">
+                        <p class="text-gray-500 font-mincho text-sm md:text-lg leading-relaxed">{{field:earnings_01}}</p>
+                        <p class="text-gray-500 font-mincho text-sm md:text-lg leading-relaxed">{{field:earnings_02}}</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5. ICA 池袋キャリアアカデミーの特徴 (CourseStrengths) -->
+            <section id="features" class="py-32 bg-white relative">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-20 relative z-10 animate-on-scroll">
+                        <div class="flex flex-col items-center">
+                            <span class="block text-accent-600 font-serif tracking-[0.3em] mb-3 text-xs md:text-sm uppercase font-bold">{{field:features_19}}</span>
+                            <h2 class="text-3xl md:text-4xl lg:text-5xl font-mincho text-mystic-600 tracking-wide leading-relaxed drop-shadow-sm">{{field:features_20}}</h2>
+                            <div class="mt-6 flex items-center justify-center gap-4">
+                                <div class="h-[1px] w-12 bg-gradient-to-r from-transparent to-accent-400"></div>
+                                <div class="w-2 h-2 rotate-45 border border-accent-400 bg-white"></div>
+                                <div class="h-[1px] w-12 bg-gradient-to-l from-transparent to-accent-400"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border-t border-l border-accent-100">
+                                                    <div class="animate-on-scroll delay-0 group transition-all duration-500 bg-white border-r border-b border-accent-100 flex flex-col items-start relative overflow-hidden">
+                                <!-- Image Header -->
+                                <div class="w-full aspect-[16/10] overflow-hidden bg-mystic-900">
+                                    <img 
+                                        src="{{attr:features_07}}" 
+                                        alt="{{attr:features_08}}"
+                                        class="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 scale-100 group-hover:scale-110 transition-all duration-1000 ease-out"
+                                    />
+                                </div>
+
+                                <!-- Content Area -->
+                                <div class="p-8 md:p-10 flex flex-col flex-1">
+                                    <!-- Tag -->
+                                    <div class="mb-4">
+                                        <span class="text-[10px] font-serif tracking-[0.2em] text-accent-500 font-bold uppercase border-b border-accent-200 pb-1">
+                                            {{field:features_21}}                                        </span>
+                                    </div>
+
+                                    <h3 class="text-xl font-serif font-bold text-mystic-600 mb-4 tracking-wide group-hover:text-accent-600 transition-colors">
+                                        {{field:features_22}}                                    </h3>
+                                    
+                                    <p class="text-gray-500 font-mincho text-sm leading-loose group-hover:text-gray-700 transition-colors">{{field:features_01}}</p>
+
+                                    <div class="mt-8 overflow-hidden h-px w-0 group-hover:w-16 bg-accent-400 transition-all duration-500"></div>
+                                </div>
+                                
+                                <!-- Subtle hover overlay for the whole card -->
+                                <div class="absolute inset-0 bg-accent-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+                            </div>
+                                                    <div class="animate-on-scroll delay-100 group transition-all duration-500 bg-white border-r border-b border-accent-100 flex flex-col items-start relative overflow-hidden">
+                                <!-- Image Header -->
+                                <div class="w-full aspect-[16/10] overflow-hidden bg-mystic-900">
+                                    <img 
+                                        src="{{attr:features_09}}" 
+                                        alt="{{attr:features_10}}"
+                                        class="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 scale-100 group-hover:scale-110 transition-all duration-1000 ease-out"
+                                    />
+                                </div>
+
+                                <!-- Content Area -->
+                                <div class="p-8 md:p-10 flex flex-col flex-1">
+                                    <!-- Tag -->
+                                    <div class="mb-4">
+                                        <span class="text-[10px] font-serif tracking-[0.2em] text-accent-500 font-bold uppercase border-b border-accent-200 pb-1">
+                                            {{field:features_23}}                                        </span>
+                                    </div>
+
+                                    <h3 class="text-xl font-serif font-bold text-mystic-600 mb-4 tracking-wide group-hover:text-accent-600 transition-colors">
+                                        {{field:features_24}}                                    </h3>
+                                    
+                                    <p class="text-gray-500 font-mincho text-sm leading-loose group-hover:text-gray-700 transition-colors">{{field:features_02}}</p>
+
+                                    <div class="mt-8 overflow-hidden h-px w-0 group-hover:w-16 bg-accent-400 transition-all duration-500"></div>
+                                </div>
+                                
+                                <!-- Subtle hover overlay for the whole card -->
+                                <div class="absolute inset-0 bg-accent-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+                            </div>
+                                                    <div class="animate-on-scroll delay-200 group transition-all duration-500 bg-white border-r border-b border-accent-100 flex flex-col items-start relative overflow-hidden">
+                                <!-- Image Header -->
+                                <div class="w-full aspect-[16/10] overflow-hidden bg-mystic-900">
+                                    <img 
+                                        src="{{attr:features_11}}" 
+                                        alt="{{attr:features_12}}"
+                                        class="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 scale-100 group-hover:scale-110 transition-all duration-1000 ease-out"
+                                    />
+                                </div>
+
+                                <!-- Content Area -->
+                                <div class="p-8 md:p-10 flex flex-col flex-1">
+                                    <!-- Tag -->
+                                    <div class="mb-4">
+                                        <span class="text-[10px] font-serif tracking-[0.2em] text-accent-500 font-bold uppercase border-b border-accent-200 pb-1">
+                                            {{field:features_25}}                                        </span>
+                                    </div>
+
+                                    <h3 class="text-xl font-serif font-bold text-mystic-600 mb-4 tracking-wide group-hover:text-accent-600 transition-colors">
+                                        {{field:features_26}}                                    </h3>
+                                    
+                                    <p class="text-gray-500 font-mincho text-sm leading-loose group-hover:text-gray-700 transition-colors">{{field:features_03}}</p>
+
+                                    <div class="mt-8 overflow-hidden h-px w-0 group-hover:w-16 bg-accent-400 transition-all duration-500"></div>
+                                </div>
+                                
+                                <!-- Subtle hover overlay for the whole card -->
+                                <div class="absolute inset-0 bg-accent-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+                            </div>
+                                                    <div class="animate-on-scroll delay-300 group transition-all duration-500 bg-white border-r border-b border-accent-100 flex flex-col items-start relative overflow-hidden">
+                                <!-- Image Header -->
+                                <div class="w-full aspect-[16/10] overflow-hidden bg-mystic-900">
+                                    <img 
+                                        src="{{attr:features_13}}" 
+                                        alt="{{attr:features_14}}"
+                                        class="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 scale-100 group-hover:scale-110 transition-all duration-1000 ease-out"
+                                    />
+                                </div>
+
+                                <!-- Content Area -->
+                                <div class="p-8 md:p-10 flex flex-col flex-1">
+                                    <!-- Tag -->
+                                    <div class="mb-4">
+                                        <span class="text-[10px] font-serif tracking-[0.2em] text-accent-500 font-bold uppercase border-b border-accent-200 pb-1">
+                                            {{field:features_27}}                                        </span>
+                                    </div>
+
+                                    <h3 class="text-xl font-serif font-bold text-mystic-600 mb-4 tracking-wide group-hover:text-accent-600 transition-colors">
+                                        {{field:features_28}}                                    </h3>
+                                    
+                                    <p class="text-gray-500 font-mincho text-sm leading-loose group-hover:text-gray-700 transition-colors">{{field:features_04}}</p>
+
+                                    <div class="mt-8 overflow-hidden h-px w-0 group-hover:w-16 bg-accent-400 transition-all duration-500"></div>
+                                </div>
+                                
+                                <!-- Subtle hover overlay for the whole card -->
+                                <div class="absolute inset-0 bg-accent-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+                            </div>
+                                                    <div class="animate-on-scroll delay-400 group transition-all duration-500 bg-white border-r border-b border-accent-100 flex flex-col items-start relative overflow-hidden">
+                                <!-- Image Header -->
+                                <div class="w-full aspect-[16/10] overflow-hidden bg-mystic-900">
+                                    <img 
+                                        src="{{attr:features_15}}" 
+                                        alt="{{attr:features_16}}"
+                                        class="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 scale-100 group-hover:scale-110 transition-all duration-1000 ease-out"
+                                    />
+                                </div>
+
+                                <!-- Content Area -->
+                                <div class="p-8 md:p-10 flex flex-col flex-1">
+                                    <!-- Tag -->
+                                    <div class="mb-4">
+                                        <span class="text-[10px] font-serif tracking-[0.2em] text-accent-500 font-bold uppercase border-b border-accent-200 pb-1">
+                                            {{field:features_29}}                                        </span>
+                                    </div>
+
+                                    <h3 class="text-xl font-serif font-bold text-mystic-600 mb-4 tracking-wide group-hover:text-accent-600 transition-colors">
+                                        {{field:features_30}}                                    </h3>
+                                    
+                                    <p class="text-gray-500 font-mincho text-sm leading-loose group-hover:text-gray-700 transition-colors">{{field:features_05}}</p>
+
+                                    <div class="mt-8 overflow-hidden h-px w-0 group-hover:w-16 bg-accent-400 transition-all duration-500"></div>
+                                </div>
+                                
+                                <!-- Subtle hover overlay for the whole card -->
+                                <div class="absolute inset-0 bg-accent-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+                            </div>
+                                                    <div class="animate-on-scroll delay-500 group transition-all duration-500 bg-white border-r border-b border-accent-100 flex flex-col items-start relative overflow-hidden">
+                                <!-- Image Header -->
+                                <div class="w-full aspect-[16/10] overflow-hidden bg-mystic-900">
+                                    <img 
+                                        src="{{attr:features_17}}" 
+                                        alt="{{attr:features_18}}"
+                                        class="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 scale-100 group-hover:scale-110 transition-all duration-1000 ease-out"
+                                    />
+                                </div>
+
+                                <!-- Content Area -->
+                                <div class="p-8 md:p-10 flex flex-col flex-1">
+                                    <!-- Tag -->
+                                    <div class="mb-4">
+                                        <span class="text-[10px] font-serif tracking-[0.2em] text-accent-500 font-bold uppercase border-b border-accent-200 pb-1">
+                                            {{field:features_31}}                                        </span>
+                                    </div>
+
+                                    <h3 class="text-xl font-serif font-bold text-mystic-600 mb-4 tracking-wide group-hover:text-accent-600 transition-colors">
+                                        {{field:features_32}}                                    </h3>
+                                    
+                                    <p class="text-gray-500 font-mincho text-sm leading-loose group-hover:text-gray-700 transition-colors">{{field:features_06}}</p>
+
+                                    <div class="mt-8 overflow-hidden h-px w-0 group-hover:w-16 bg-accent-400 transition-all duration-500"></div>
+                                </div>
+                                
+                                <!-- Subtle hover overlay for the whole card -->
+                                <div class="absolute inset-0 bg-accent-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+                            </div>
+                                            </div>
+                </div>
+            </section>
+
+            <!-- 6. Courses（講座カリキュラム：コースは1つ） -->
+            <section id="courses" class="py-32 bg-mystic-900 relative overflow-hidden">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                    <div class="text-center mb-20 relative z-10 animate-on-scroll">
+                        <div class="flex flex-col items-center">
+                            <span class="block text-accent-600 font-serif tracking-[0.3em] mb-3 text-xs md:text-sm uppercase font-bold">{{field:courses_11}}</span>
+                            <h2 class="text-3xl md:text-4xl lg:text-5xl font-serif text-mystic-600 tracking-wide leading-relaxed drop-shadow-sm">{{field:courses_12}}</h2>
+                            <div class="mt-6 flex items-center justify-center gap-4">
+                                <div class="h-[1px] w-12 bg-gradient-to-r from-transparent to-accent-400"></div>
+                                <div class="w-2 h-2 rotate-45 border border-accent-400 bg-white"></div>
+                                <div class="h-[1px] w-12 bg-gradient-to-l from-transparent to-accent-400"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="max-w-6xl mx-auto animate-on-scroll bg-white border border-accent-100 rounded-lg overflow-hidden shadow-sm">
+                        <!-- コース画像 -->
+                        <div class="h-48 md:h-64 overflow-hidden relative">
+                            <img src="{{attr:courses_09}}" alt="{{attr:courses_10}}" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-mystic-600/30 to-transparent"></div>
+                        </div>
+
+                        <!-- 講座名・回数・料金 -->
+                        <div class="px-6 md:px-12 pt-10 pb-8 text-center border-b border-accent-100">
+                            <h3 class="text-2xl md:text-3xl font-serif font-bold text-mystic-600 tracking-wide mb-4">{{field:courses_13}}</h3>
+                            <p class="text-lg md:text-2xl font-serif font-bold text-mystic-600 tracking-wider">{{field:courses_01}}</p>
+                        </div>
+
+                        <!-- カリキュラム（3ブロック） -->
+                        <div class="p-6 md:p-12 grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8">
+                            <div class="animate-on-scroll  flex flex-col bg-mystic-950 border border-accent-100 rounded-lg overflow-hidden">
+                                <div class="flex items-center gap-3 bg-mystic-800 px-5 py-4">
+                                    <span class="inline-block px-3 py-1 rounded bg-accent-400 text-white text-sm font-serif font-bold tracking-wider whitespace-nowrap">{{field:courses_14}}</span>
+                                    <h4 class="text-base md:text-lg font-mincho font-bold text-mystic-600">{{field:courses_15}}</h4>
+                                </div>
+                                <ul class="p-5 md:p-6 space-y-3 text-sm md:text-[15px] text-gray-600 font-mincho leading-relaxed">
+                                    <li class="flex items-start gap-3">
+                                        <span class="mt-[0.55em] w-2 h-2 rotate-45 bg-accent-400 flex-shrink-0"></span>
+                                        <span>{{field:courses_16}}</span>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <span class="mt-[0.55em] w-2 h-2 rotate-45 bg-accent-400 flex-shrink-0"></span>
+                                        <span>{{field:courses_17}}</span>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <span class="mt-[0.55em] w-2 h-2 rotate-45 bg-accent-400 flex-shrink-0"></span>
+                                        <span>{{field:courses_18}}</span>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <span class="mt-[0.55em] w-2 h-2 rotate-45 bg-accent-400 flex-shrink-0"></span>
+                                        <span>{{field:courses_02}}</span>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <span class="mt-[0.55em] w-2 h-2 rotate-45 bg-accent-400 flex-shrink-0"></span>
+                                        <span>{{field:courses_19}}</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="animate-on-scroll delay-100 flex flex-col bg-mystic-950 border border-accent-100 rounded-lg overflow-hidden">
+                                <div class="flex items-center gap-3 bg-mystic-800 px-5 py-4">
+                                    <span class="inline-block px-3 py-1 rounded bg-accent-500 text-white text-sm font-serif font-bold tracking-wider whitespace-nowrap">{{field:courses_20}}</span>
+                                    <h4 class="text-base md:text-lg font-mincho font-bold text-mystic-600">{{field:courses_21}}</h4>
+                                </div>
+                                <ul class="p-5 md:p-6 space-y-3 text-sm md:text-[15px] text-gray-600 font-mincho leading-relaxed">
+                                    <li class="flex items-start gap-3">
+                                        <span class="mt-[0.55em] w-2 h-2 rotate-45 bg-accent-500 flex-shrink-0"></span>
+                                        <span>{{field:courses_22}}</span>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <span class="mt-[0.55em] w-2 h-2 rotate-45 bg-accent-500 flex-shrink-0"></span>
+                                        <span>{{field:courses_03}}</span>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <span class="mt-[0.55em] w-2 h-2 rotate-45 bg-accent-500 flex-shrink-0"></span>
+                                        <span>{{field:courses_23}}</span>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <span class="mt-[0.55em] w-2 h-2 rotate-45 bg-accent-500 flex-shrink-0"></span>
+                                        <span>{{field:courses_04}}</span>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <span class="mt-[0.55em] w-2 h-2 rotate-45 bg-accent-500 flex-shrink-0"></span>
+                                        <span>{{field:courses_24}}</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="animate-on-scroll delay-200 flex flex-col bg-mystic-950 border border-accent-100 rounded-lg overflow-hidden">
+                                <div class="flex items-center gap-3 bg-mystic-800 px-5 py-4">
+                                    <span class="inline-block px-3 py-1 rounded bg-accent-600 text-white text-sm font-serif font-bold tracking-wider whitespace-nowrap">{{field:courses_25}}</span>
+                                    <h4 class="text-base md:text-lg font-mincho font-bold text-mystic-600">{{field:courses_21}}</h4>
+                                </div>
+                                <ul class="p-5 md:p-6 space-y-3 text-sm md:text-[15px] text-gray-600 font-mincho leading-relaxed">
+                                    <li class="flex items-start gap-3">
+                                        <span class="mt-[0.55em] w-2 h-2 rotate-45 bg-accent-600 flex-shrink-0"></span>
+                                        <span>{{field:courses_26}}</span>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <span class="mt-[0.55em] w-2 h-2 rotate-45 bg-accent-600 flex-shrink-0"></span>
+                                        <span>{{field:courses_05}}</span>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <span class="mt-[0.55em] w-2 h-2 rotate-45 bg-accent-600 flex-shrink-0"></span>
+                                        <span>{{field:courses_27}}</span>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <span class="mt-[0.55em] w-2 h-2 rotate-45 bg-accent-600 flex-shrink-0"></span>
+                                        <span>{{field:courses_28}}</span>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <span class="mt-[0.55em] w-2 h-2 rotate-45 bg-accent-600 flex-shrink-0"></span>
+                                        <span>{{field:courses_29}}</span>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <span class="mt-[0.55em] w-2 h-2 rotate-45 bg-accent-600 flex-shrink-0"></span>
+                                        <span>{{field:courses_06}}</span>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <span class="mt-[0.55em] w-2 h-2 rotate-45 bg-accent-600 flex-shrink-0"></span>
+                                        <span>{{field:courses_07}}</span>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <span class="mt-[0.55em] w-2 h-2 rotate-45 bg-accent-600 flex-shrink-0"></span>
+                                        <span>{{field:courses_08}}</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="px-6 md:px-12 pb-10">
+                            <a href="{{attr:header_03}}" target="_blank" rel="noopener noreferrer" class="view-details-btn max-w-md mx-auto block text-center py-4 bg-mystic-900 hover:bg-accent-400 text-accent-600 hover:text-white text-xs font-serif font-bold tracking-[0.2em] transition-all duration-300 rounded border border-accent-200">
+                                {{field:courses_30}}
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 7. Instructors -->
+            <section id="instructors" class="py-32 bg-white relative overflow-hidden">
+                <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                    <div class="text-center mb-20 relative z-10 animate-on-scroll">
+                         <div class="flex flex-col items-center">
+                            <span class="block text-accent-600 font-serif tracking-[0.3em] mb-3 text-xs md:text-sm uppercase font-bold">{{field:instructors_11}}</span>
+                            <h2 class="text-3xl md:text-4xl lg:text-5xl font-serif text-mystic-600 tracking-wide leading-relaxed drop-shadow-sm">{{field:instructors_12}}</h2>
+                            <div class="mt-6 flex items-center justify-center gap-4">
+                                <div class="h-[1px] w-12 bg-gradient-to-r from-transparent to-accent-400"></div>
+                                <div class="w-2 h-2 rotate-45 border border-accent-400 bg-white"></div>
+                                <div class="h-[1px] w-12 bg-gradient-to-l from-transparent to-accent-400"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="animate-on-scroll flex flex-col md:flex-row gap-12 lg:gap-20 items-center md:items-start">
+                        <div class="w-full md:w-5/12 relative">
+                            <div class="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl">
+                                <img src="{{attr:instructors_09}}" alt="{{attr:instructors_10}}" class="w-full h-full object-cover">
+                                <div class="absolute inset-0 bg-gradient-to-t from-accent-600/20 to-transparent"></div>
+                            </div>
+                        </div>
+
+                        <div class="w-full md:w-7/12 flex flex-col justify-center">
+                            <div class="mb-8 border-b border-accent-100 pb-6">
+                                <h3 class="text-4xl lg:text-5xl font-serif font-bold text-mystic-600 mb-3 tracking-wide">{{field:instructors_13}}</h3>
+                                <p class="text-accent-600 text-sm lg:text-base tracking-[0.2em] uppercase font-mincho font-bold">{{field:instructors_01}}</p>
+                            </div>
+
+                            <div class="space-y-8">
+                                <div>
+                                    <h4 class="text-lg font-serif font-bold text-mystic-600 mb-4 flex items-center gap-3">
+                                        <span class="w-8 h-[1px] bg-accent-400"></span>
+                                        {{field:instructors_14}}
+                                    </h4>
+                                    <div class="text-gray-600 font-mincho leading-loose text-justify space-y-4">
+                                        <p>{{field:instructors_02}}</p>
+                                        <p>{{field:instructors_03}}</p>
+                                        <p>{{field:instructors_04}}</p>
+                                        <p>{{field:instructors_05}}</p>
+                                        <p>{{field:instructors_06}}</p>
+                                        <p>{{field:instructors_07}}</p>
+                                        <p>{{field:instructors_08}}</p>
+                                    </div>
+                                </div>
+
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                                    <div>
+                                        <h4 class="text-lg font-serif font-bold text-mystic-600 mb-4 flex items-center gap-3">
+                                            <span class="w-8 h-[1px] bg-accent-400"></span>
+                                            {{field:instructors_15}}
+                                        </h4>
+                                        <div class="flex flex-wrap gap-2">
+                                            <span class="px-3 py-1 bg-mystic-900 border border-accent-100 text-accent-600 text-xs tracking-wider font-bold">{{field:instructors_16}}</span>
+                                            <span class="px-3 py-1 bg-mystic-900 border border-accent-100 text-accent-600 text-xs tracking-wider font-bold">{{field:instructors_17}}</span>
+                                            <span class="px-3 py-1 bg-mystic-900 border border-accent-100 text-accent-600 text-xs tracking-wider font-bold">{{field:instructors_18}}</span>
+                                            <span class="px-3 py-1 bg-mystic-900 border border-accent-100 text-accent-600 text-xs tracking-wider font-bold">{{field:instructors_19}}</span>
+                                            <span class="px-3 py-1 bg-mystic-900 border border-accent-100 text-accent-600 text-xs tracking-wider font-bold">{{field:instructors_20}}</span>
+                                            <span class="px-3 py-1 bg-mystic-900 border border-accent-100 text-accent-600 text-xs tracking-wider font-bold">{{field:instructors_21}}</span>
+                                            <span class="px-3 py-1 bg-mystic-900 border border-accent-100 text-accent-600 text-xs tracking-wider font-bold">{{field:instructors_22}}</span>
+                                            <span class="px-3 py-1 bg-mystic-900 border border-accent-100 text-accent-600 text-xs tracking-wider font-bold">{{field:instructors_23}}</span>
+                                            <span class="px-3 py-1 bg-mystic-900 border border-accent-100 text-accent-600 text-xs tracking-wider font-bold">{{field:instructors_24}}</span>
+                                            <span class="px-3 py-1 bg-mystic-900 border border-accent-100 text-accent-600 text-xs tracking-wider font-bold">{{field:instructors_25}}</span>
+                                            <span class="px-3 py-1 bg-mystic-900 border border-accent-100 text-accent-600 text-xs tracking-wider font-bold">{{field:instructors_26}}</span>
+                                            <span class="px-3 py-1 bg-mystic-900 border border-accent-100 text-accent-600 text-xs tracking-wider font-bold">{{field:instructors_27}}</span>
+                                            <span class="px-3 py-1 bg-mystic-900 border border-accent-100 text-accent-600 text-xs tracking-wider font-bold">{{field:instructors_28}}</span>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <h4 class="text-lg font-serif font-bold text-mystic-600 mb-4 flex items-center gap-3">
+                                            <span class="w-8 h-[1px] bg-accent-400"></span>
+                                            {{field:instructors_29}}
+                                        </h4>
+                                        <ul class="space-y-3">
+                                            <li class="flex items-start gap-3 text-sm text-gray-500 font-mincho">
+                                                <i data-lucide="award" class="w-4 h-4 text-accent-500 mt-1 flex-shrink-0"></i>
+                                                <span>{{field:instructors_30}}</span>
+                                            </li>
+                                            <li class="flex items-start gap-3 text-sm text-gray-500 font-mincho">
+                                                <i data-lucide="award" class="w-4 h-4 text-accent-500 mt-1 flex-shrink-0"></i>
+                                                <span>{{field:instructors_31}}</span>
+                                            </li>
+                                            <li class="flex items-start gap-3 text-sm text-gray-500 font-mincho">
+                                                <i data-lucide="award" class="w-4 h-4 text-accent-500 mt-1 flex-shrink-0"></i>
+                                                <span>{{field:instructors_32}}</span>
+                                            </li>
+                                            <li class="flex items-start gap-3 text-sm text-gray-500 font-mincho">
+                                                <i data-lucide="award" class="w-4 h-4 text-accent-500 mt-1 flex-shrink-0"></i>
+                                                <span>{{field:instructors_33}}</span>
+                                            </li>
+                                            <li class="flex items-start gap-3 text-sm text-gray-500 font-mincho">
+                                                <i data-lucide="award" class="w-4 h-4 text-accent-500 mt-1 flex-shrink-0"></i>
+                                                <span>{{field:instructors_34}}</span>
+                                            </li>
+                                            <li class="flex items-start gap-3 text-sm text-gray-500 font-mincho">
+                                                <i data-lucide="award" class="w-4 h-4 text-accent-500 mt-1 flex-shrink-0"></i>
+                                                <span>{{field:instructors_35}}</span>
+                                            </li>
+                                            <li class="flex items-start gap-3 text-sm text-gray-500 font-mincho">
+                                                <i data-lucide="award" class="w-4 h-4 text-accent-500 mt-1 flex-shrink-0"></i>
+                                                <span>{{field:instructors_36}}</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 8. Testimonials -->
+            <section id="testimonials" class="py-24 bg-mystic-900 relative">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                    <div class="text-center mb-20 relative z-10 animate-on-scroll">
+                        <div class="flex flex-col items-center">
+                            <span class="block text-accent-600 font-serif tracking-[0.3em] mb-3 text-xs md:text-sm uppercase font-bold">{{field:testimonials_07}}</span>
+                            <h2 class="text-3xl md:text-4xl lg:text-5xl font-serif text-mystic-600 tracking-wide leading-relaxed drop-shadow-sm">{{field:testimonials_08}}</h2>
+                            <div class="mt-6 flex items-center justify-center gap-4">
+                                <div class="h-[1px] w-12 bg-gradient-to-r from-transparent to-accent-400"></div>
+                                <div class="w-2 h-2 rotate-45 border border-accent-400 bg-white"></div>
+                                <div class="h-[1px] w-12 bg-gradient-to-l from-transparent to-accent-400"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div class="animate-on-scroll bg-white p-10 rounded-3xl border border-accent-100 relative shadow-sm hover:shadow-xl transition-all duration-500">
+                            <div class="absolute top-6 left-6 text-accent-400 opacity-20">
+                                <i data-lucide="quote" class="w-10 h-10 fill-current"></i>
+                            </div>
+                            <p class="text-gray-600 italic leading-relaxed mb-8 relative z-10 min-h-[100px] font-mincho">{{field:testimonials_01}}</p>
+                            <div class="flex items-center pt-6 border-t border-gray-50">
+                                <div class="w-14 h-14 rounded-full bg-accent-200 border-2 border-accent-100 mr-4 shadow-sm flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-8 h-8 text-accent-600" fill="currentColor" viewBox="0 0 24 24">
+                                        <circle cx="12" cy="8" r="4" />
+                                        <path d="M6 21c0-3.314 2.686-6 6-6s6 2.686 6 6" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="text-mystic-600 font-bold font-serif">{{field:testimonials_09}}</h4>
+                                    <p class="text-accent-600 text-xs font-bold">{{field:testimonials_02}}</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="animate-on-scroll delay-100 bg-white p-10 rounded-3xl border border-accent-100 relative shadow-sm hover:shadow-xl transition-all duration-500">
+                            <div class="absolute top-6 left-6 text-accent-400 opacity-20">
+                                <i data-lucide="quote" class="w-10 h-10 fill-current"></i>
+                            </div>
+                            <p class="text-gray-600 italic leading-relaxed mb-8 relative z-10 min-h-[100px] font-mincho">{{field:testimonials_03}}</p>
+                            <div class="flex items-center pt-6 border-t border-gray-50">
+                                <div class="w-14 h-14 rounded-full bg-accent-200 border-2 border-accent-100 mr-4 shadow-sm flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-8 h-8 text-accent-600" fill="currentColor" viewBox="0 0 24 24">
+                                        <circle cx="12" cy="8" r="4" />
+                                        <path d="M6 21c0-3.314 2.686-6 6-6s6 2.686 6 6" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="text-mystic-600 font-bold font-serif">{{field:testimonials_10}}</h4>
+                                    <p class="text-accent-600 text-xs font-bold">{{field:testimonials_04}}</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="animate-on-scroll delay-200 bg-white p-10 rounded-3xl border border-accent-100 relative shadow-sm hover:shadow-xl transition-all duration-500">
+                            <div class="absolute top-6 left-6 text-accent-400 opacity-20">
+                                <i data-lucide="quote" class="w-10 h-10 fill-current"></i>
+                            </div>
+                            <p class="text-gray-600 italic leading-relaxed mb-8 relative z-10 min-h-[100px] font-mincho">{{field:testimonials_05}}</p>
+                            <div class="flex items-center pt-6 border-t border-gray-50">
+                                <div class="w-14 h-14 rounded-full bg-accent-200 border-2 border-accent-100 mr-4 shadow-sm flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-8 h-8 text-accent-600" fill="currentColor" viewBox="0 0 24 24">
+                                        <circle cx="12" cy="8" r="4" />
+                                        <path d="M6 21c0-3.314 2.686-6 6-6s6 2.686 6 6" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="text-mystic-600 font-bold font-serif">{{field:testimonials_11}}</h4>
+                                    <p class="text-accent-600 text-xs font-bold">{{field:testimonials_06}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 9. Flow -->
+            <section id="flow" class="py-24 bg-white">
+                <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                     <div class="text-center mb-20 relative z-10 animate-on-scroll">
+                        <div class="flex flex-col items-center">
+                            <span class="block text-accent-600 font-serif tracking-[0.3em] mb-3 text-xs md:text-sm uppercase font-bold">{{field:flow_06}}</span>
+                            <h2 class="text-3xl md:text-4xl lg:text-5xl font-serif text-mystic-600 tracking-wide leading-relaxed drop-shadow-sm">{{field:flow_07}}</h2>
+                            <div class="mt-6 flex items-center justify-center gap-4">
+                                <div class="h-[1px] w-12 bg-gradient-to-r from-transparent to-accent-400"></div>
+                                <div class="w-2 h-2 rotate-45 border border-accent-400 bg-white"></div>
+                                <div class="h-[1px] w-12 bg-gradient-to-l from-transparent to-accent-400"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relative">
+                        <div class="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-accent-200 transform -translate-x-1/2"></div>
+                        
+                        <div class="space-y-16">
+                            <!-- Step 1 -->
+                            <div class="animate-on-scroll flex flex-col md:flex-row items-center justify-between gap-8 md:flex-row-reverse">
+                                <div class="w-full md:w-5/12 text-center md:text-left">
+                                    <div class="flex flex-col md:items-end md:text-right">
+                                        <h3 class="text-xl font-serif font-bold text-mystic-600 mb-3 flex items-center gap-3">
+                                            <span class="md:hidden inline-block px-3 py-1 bg-accent-400 text-white text-xs font-bold rounded-full">01</span>
+                                            {{field:flow_08}}
+                                        </h3>
+                                        <p class="text-gray-500 text-sm leading-relaxed font-mincho">{{field:flow_01}}</p>
+                                    </div>
+                                </div>
+                                <div class="relative z-10 flex-shrink-0 w-12 h-12 rounded-full bg-white border-2 border-accent-400 flex items-center justify-center shadow-lg">
+                                    <span class="hidden md:block text-sm font-serif font-bold text-accent-600">01</span>
+                                    <i data-lucide="chevron-down" class="md:hidden w-6 h-6 text-accent-600"></i>
+                                </div>
+                                <div class="hidden md:block w-5/12"></div>
+                            </div>
+
+                            <!-- Step 2 -->
+                            <div class="animate-on-scroll flex flex-col md:flex-row items-center justify-between gap-8">
+                                <div class="w-full md:w-5/12 text-center md:text-left">
+                                    <div class="flex flex-col md:items-start">
+                                        <h3 class="text-xl font-serif font-bold text-mystic-600 mb-3 flex items-center gap-3">
+                                            <span class="md:hidden inline-block px-3 py-1 bg-accent-400 text-white text-xs font-bold rounded-full">02</span>
+                                            {{field:flow_09}}
+                                        </h3>
+                                        <p class="text-gray-500 text-sm leading-relaxed font-mincho">{{field:flow_02}}</p>
+                                    </div>
+                                </div>
+                                <div class="relative z-10 flex-shrink-0 w-12 h-12 rounded-full bg-white border-2 border-accent-400 flex items-center justify-center shadow-lg">
+                                    <span class="hidden md:block text-sm font-serif font-bold text-accent-600">02</span>
+                                    <i data-lucide="chevron-down" class="md:hidden w-6 h-6 text-accent-600"></i>
+                                </div>
+                                <div class="hidden md:block w-5/12"></div>
+                            </div>
+
+                             <!-- Step 3 -->
+                             <div class="animate-on-scroll flex flex-col md:flex-row items-center justify-between gap-8 md:flex-row-reverse">
+                                <div class="w-full md:w-5/12 text-center md:text-left">
+                                    <div class="flex flex-col md:items-end md:text-right">
+                                        <h3 class="text-xl font-serif font-bold text-mystic-600 mb-3 flex items-center gap-3">
+                                            <span class="md:hidden inline-block px-3 py-1 bg-accent-400 text-white text-xs font-bold rounded-full">03</span>
+                                            {{field:flow_10}}
+                                        </h3>
+                                        <p class="text-gray-500 text-sm leading-relaxed font-mincho">{{field:flow_03}}</p>
+                                    </div>
+                                </div>
+                                <div class="relative z-10 flex-shrink-0 w-12 h-12 rounded-full bg-white border-2 border-accent-400 flex items-center justify-center shadow-lg">
+                                    <span class="hidden md:block text-sm font-serif font-bold text-accent-600">03</span>
+                                    <i data-lucide="chevron-down" class="md:hidden w-6 h-6 text-accent-600"></i>
+                                </div>
+                                <div class="hidden md:block w-5/12"></div>
+                            </div>
+
+                            <!-- Step 4 -->
+                            <div class="animate-on-scroll flex flex-col md:flex-row items-center justify-between gap-8">
+                                <div class="w-full md:w-5/12 text-center md:text-left">
+                                    <div class="flex flex-col md:items-start">
+                                        <h3 class="text-xl font-serif font-bold text-mystic-600 mb-3 flex items-center gap-3">
+                                            <span class="md:hidden inline-block px-3 py-1 bg-accent-400 text-white text-xs font-bold rounded-full">04</span>
+                                            {{field:flow_11}}
+                                        </h3>
+                                        <p class="text-gray-500 text-sm leading-relaxed font-mincho">{{field:flow_04}}</p>
+                                    </div>
+                                </div>
+                                <div class="relative z-10 flex-shrink-0 w-12 h-12 rounded-full bg-white border-2 border-accent-400 flex items-center justify-center shadow-lg">
+                                    <span class="hidden md:block text-sm font-serif font-bold text-accent-600">04</span>
+                                    <i data-lucide="chevron-down" class="md:hidden w-6 h-6 text-accent-600"></i>
+                                </div>
+                                <div class="hidden md:block w-5/12"></div>
+                            </div>
+
+                             <!-- Step 5 -->
+                             <div class="animate-on-scroll flex flex-col md:flex-row items-center justify-between gap-8 md:flex-row-reverse">
+                                <div class="w-full md:w-5/12 text-center md:text-left">
+                                    <div class="flex flex-col md:items-end md:text-right">
+                                        <h3 class="text-xl font-serif font-bold text-mystic-600 mb-3 flex items-center gap-3">
+                                            <span class="md:hidden inline-block px-3 py-1 bg-accent-400 text-white text-xs font-bold rounded-full">05</span>
+                                            {{field:flow_12}}
+                                        </h3>
+                                        <p class="text-gray-500 text-sm leading-relaxed font-mincho">{{field:flow_05}}</p>
+                                    </div>
+                                </div>
+                                <div class="hidden md:flex relative z-10 flex-shrink-0 w-12 h-12 rounded-full bg-white border-2 border-accent-400 items-center justify-center shadow-lg">
+                                    <span class="text-sm font-serif font-bold text-accent-600">05</span>
+                                </div>
+                                <div class="hidden md:block w-5/12"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 10. Sister Academy (姉妹アカデミーはこちら) -->
+            <section id="sister" class="py-24 bg-mystic-950 relative overflow-hidden">
+                <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                    <div class="text-center mb-16 relative z-10 animate-on-scroll">
+                        <div class="flex flex-col items-center">
+                            <span class="block text-accent-600 font-serif tracking-[0.3em] mb-3 text-xs md:text-sm uppercase font-bold">{{field:sister_03}}</span>
+                            <h2 class="text-3xl md:text-4xl lg:text-5xl font-serif text-mystic-600 tracking-wide leading-relaxed drop-shadow-sm">{{field:sister_04}}</h2>
+                            <div class="mt-6 flex items-center justify-center gap-4">
+                                <div class="h-[1px] w-12 bg-gradient-to-r from-transparent to-accent-400"></div>
+                                <div class="w-2 h-2 rotate-45 border border-accent-400 bg-white"></div>
+                                <div class="h-[1px] w-12 bg-gradient-to-l from-transparent to-accent-400"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 姉妹校カード（カード全体がリンク） -->
+                    <a href="{{attr:sister_02}}" target="_blank" rel="noopener noreferrer" class="animate-on-scroll delay-200 group block bg-white border border-accent-100 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-500 overflow-hidden">
+                        <div class="flex flex-col md:flex-row items-center gap-8 p-8 md:p-12">
+                            
+                            <div class="flex-1 text-center md:text-left">
+                                <h3 class="text-xl md:text-2xl font-mincho font-bold text-mystic-600 mb-3 group-hover:text-accent-600 transition-colors">{{field:sister_05}}</h3>
+                                <p class="text-gray-500 text-sm md:text-base leading-relaxed font-mincho">{{field:sister_01}}</p>
+                            </div>
+                            <div class="flex-shrink-0">
+                                <span class="inline-flex items-center gap-2 bg-accent-500/10 border border-accent-400 group-hover:bg-accent-400 group-hover:text-white text-accent-600 px-6 py-3 rounded-sm text-sm font-serif tracking-wider transition-all duration-300 whitespace-nowrap">
+                                    {{field:sister_06}}
+                                    <i data-lucide="external-link" class="w-4 h-4"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </section>
+
+            <!-- 11. FAQ -->
+            <section id="faq" class="py-24 bg-mystic-900">
+                <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+                     <div class="text-center mb-20 relative z-10 animate-on-scroll">
+                        <div class="flex flex-col items-center">
+                            <span class="block text-accent-600 font-serif tracking-[0.3em] mb-3 text-xs md:text-sm uppercase font-bold">{{field:faq_01}}</span>
+                            <h2 class="text-3xl md:text-4xl lg:text-5xl font-serif text-mystic-600 tracking-wide leading-relaxed drop-shadow-sm">{{field:faq_02}}</h2>
+                            <div class="mt-6 flex items-center justify-center gap-4">
+                                <div class="h-[1px] w-12 bg-gradient-to-r from-transparent to-accent-400"></div>
+                                <div class="w-2 h-2 rotate-45 border border-accent-400 bg-white"></div>
+                                <div class="h-[1px] w-12 bg-gradient-to-l from-transparent to-accent-400"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="space-y-4">
+                        {{faq}}
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- ContactFooter -->
+        <footer id="contact" class="bg-white border-t border-accent-100 pt-20 pb-10 relative overflow-hidden">
+             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16 border-b border-accent-100 pb-12">
+                    <div class="lg:col-span-2">
+                        <h3 class="text-2xl font-mincho font-bold text-mystic-600 mb-6 flex items-center gap-2">
+                            <span class="text-accent-400"></span> {{field:contact_03}}
+                        </h3>
+                        <p class="text-gray-500 mb-8 leading-relaxed max-w-md font-mincho text-sm">{{field:contact_01}}</p>
+                    </div>
+
+                    <div class="lg:col-span-2 space-y-6">
+                        <div class="space-y-5">
+                            <div class="flex items-start group">
+                                <i data-lucide="map-pin" class="w-5 h-5 text-accent-500 mt-1 mr-4 flex-shrink-0"></i>
+                                <span class="text-gray-500 font-mincho text-sm leading-relaxed">{{field:contact_02}}</span>
+                            </div>
+                            <div class="flex items-center group">
+                                <i data-lucide="phone" class="w-5 h-5 text-accent-500 mr-4 flex-shrink-0"></i>
+                                <span class="text-gray-500 font-serif tracking-wider text-sm font-bold">{{field:contact_04}}</span>
+                                <span class="ml-2 text-xs text-gray-400">{{field:contact_05}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <p class="text-gray-400 text-xs font-mincho tracking-widest">
+                        &copy; {{year}} ICA 池袋キャリアアカデミー. All rights reserved.
+                    </p>
+                    <a href="{{legal_url}}" class="inline-block mt-3 py-2 text-xs font-mincho text-gray-500 underline underline-offset-4 decoration-gray-400 hover:text-accent-600 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent-600">
+                        {{field:contact_06}}
+                    </a>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Mobile Sticky CTA Button -->
+        <div class="fixed bottom-0 left-0 w-full z-50 md:hidden p-4 bg-gradient-to-t from-mystic-950 via-mystic-950/90 to-transparent">
+            <a href="{{attr:header_03}}" target="_blank" rel="noopener noreferrer" class="counseling-btn block w-full py-4 bg-gradient-to-r from-accent-600 via-accent-400 to-accent-600 text-mystic-950 text-center font-serif font-bold tracking-widest rounded shadow-[0_0_20px_rgba(199,176,205,0.4)] hover:shadow-[0_0_30px_rgba(199,176,205,0.6)] transition-all duration-300">
+                {{field:sticky_01}}
+            </a>
+        </div>
+    </div>
