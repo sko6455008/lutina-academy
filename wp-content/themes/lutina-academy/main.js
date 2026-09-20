@@ -1,4 +1,16 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // On small screens WordPress's toolbar scrolls away; only reserve its visible height.
+    const siteHeader = document.getElementById('site-header');
+    const adminBar = document.getElementById('wpadminbar');
+    if (siteHeader && adminBar) {
+        const updateHeaderPosition = () => {
+            siteHeader.style.top = `${Math.max(0, adminBar.getBoundingClientRect().bottom)}px`;
+        };
+        updateHeaderPosition();
+        window.addEventListener('scroll', updateHeaderPosition, { passive: true });
+        window.addEventListener('resize', updateHeaderPosition);
+    }
+
     // Initialize Lucide Icons
     if (typeof lucide !== 'undefined') {
         lucide.createIcons();

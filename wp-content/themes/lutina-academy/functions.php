@@ -4,7 +4,7 @@ function lutina_academy_scripts() {
     wp_enqueue_style( 'lutina-style', get_stylesheet_uri() );
 
     // Enqueue main script
-    wp_enqueue_script( 'lutina-main', get_template_directory_uri() . '/main.js', array(), '1.0.0', true );
+    wp_enqueue_script( 'lutina-main', get_template_directory_uri() . '/main.js', array(), filemtime( get_template_directory() . '/main.js' ), true );
 }
 add_action( 'wp_enqueue_scripts', 'lutina_academy_scripts' );
 
