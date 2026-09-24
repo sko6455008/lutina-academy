@@ -190,8 +190,6 @@
       {"key": "contact_03", "group": "contact", "label": "見出し：ICA 池袋キャリアアカデミー", "type": "text", "default": "ICA 池袋キャリアアカデミー"},
       {"key": "contact_01", "group": "contact", "label": "文章：あなたの持つ潜在的な能力を開花させ、新しい未来を切り拓くお手", "type": "textarea", "default": "あなたの持つ潜在的な能力を開花させ、新しい未来を切り拓くお手伝いをさせていただきます。 星々が示す道筋を、共に歩みましょう。"},
       {"key": "contact_02", "group": "contact", "label": "住所・郵便番号", "type": "rich", "default": "〒171-0014<br />東京都豊島区池袋2丁目53-12 中條ビル7F"},
-      {"key": "contact_04", "group": "contact", "label": "電話番号", "type": "text", "default": "03-1234-5678"},
-      {"key": "contact_05", "group": "contact", "label": "電話受付時間", "type": "text", "default": "(平日 10:00 - 18:00)"},
       {"key": "contact_06", "group": "contact", "label": "テキスト：特定商取引法に基づく表記", "type": "text", "default": "特定商取引法に基づく表記"},
       {"key": "sticky_01", "group": "sticky", "label": "テキスト：公式LINEで無料相談する", "type": "text", "default": "公式LINEで無料相談する"}
     ]
