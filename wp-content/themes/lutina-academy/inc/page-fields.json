@@ -1,7 +1,7 @@
 {
   "home": {
     "title": "LP（トップページ）",
-    "groups": {"header": "ヘッダー・メニュー", "hero": "メイン画像", "reasons": "選ばれる理由", "target": "こんな方にオススメ", "earnings": "収入例", "features": "アカデミーの特徴", "courses": "コース紹介", "instructors": "講師", "testimonials": "受講生の声", "flow": "受講の流れ", "sister": "姉妹アカデミー", "faq": "Q&A", "contact": "フッター・お問い合わせ", "sticky": "スマートフォンの相談ボタン"},
+    "groups": {"header": "ヘッダー・メニュー", "hero": "メイン画像", "reasons": "選ばれる理由", "target": "こんな方にオススメ", "earnings": "収入例", "features": "アカデミーの特徴", "courses": "コース紹介", "instructors": "講師", "testimonials": "受講生の声", "flow": "受講の流れ", "faq": "Q&A", "contact": "フッター・お問い合わせ", "sticky": "スマートフォンの相談ボタン"},
     "fields": [
       {"key": "header_01", "group": "header", "label": "画像：ICA 池袋キャリアアカデミー ロゴ", "type": "image", "default": "{{theme_url}}/assets/images/logo.png?v=20260916"},
       {"key": "header_02", "group": "header", "label": "画像の説明：ICA 池袋キャリアアカデミー ロゴ", "type": "text", "default": "ICA 池袋キャリアアカデミー ロゴ"},
@@ -179,12 +179,6 @@
       {"key": "flow_04", "group": "flow", "label": "文章：講師とのマンツーマン指導やグループワークで、知識を「使える技", "type": "textarea", "default": "講師とのマンツーマン指導やグループワークで、知識を「使える技術」へと昇華させます。"},
       {"key": "flow_12", "group": "flow", "label": "見出し：占い師デビュー", "type": "text", "default": "占い師デビュー"},
       {"key": "flow_05", "group": "flow", "label": "文章：占い師としての第一歩をキャリアサポートと共に踏み出します。", "type": "text", "default": "占い師としての第一歩をキャリアサポートと共に踏み出します。"},
-      {"key": "sister_03", "group": "sister", "label": "テキスト：— Sister Academy —", "type": "text", "default": "— Sister Academy —"},
-      {"key": "sister_04", "group": "sister", "label": "見出し：姉妹アカデミーはこちら", "type": "text", "default": "姉妹アカデミーはこちら"},
-      {"key": "sister_02", "group": "sister", "label": "リンク先：ICA 池袋キャリアアカデミー プロのネイリストを目指す方の", "type": "url", "default": "https://nail-school-tokyo.com/"},
-      {"key": "sister_05", "group": "sister", "label": "見出し：ICA 池袋キャリアアカデミー", "type": "text", "default": "ICA 池袋キャリアアカデミー"},
-      {"key": "sister_01", "group": "sister", "label": "文章：プロのネイリストを目指す方のための、東京・池袋の姉妹アカデミ", "type": "rich", "default": "プロのネイリストを目指す方のための、東京・池袋の姉妹アカデミーです。<br class=\"hidden md:block\" />\n                                    ネイルにご興味のある方は、姉妹校の公式サイトもぜひご覧ください。"},
-      {"key": "sister_06", "group": "sister", "label": "テキスト：サイトを見る", "type": "text", "default": "サイトを見る"},
       {"key": "faq_01", "group": "faq", "label": "テキスト：— Q & A —", "type": "text", "default": "— Q & A —"},
       {"key": "faq_02", "group": "faq", "label": "見出し：よくある質問", "type": "text", "default": "よくある質問"},
       {"key": "contact_03", "group": "contact", "label": "見出し：ICA 池袋キャリアアカデミー", "type": "text", "default": "ICA 池袋キャリアアカデミー"},
