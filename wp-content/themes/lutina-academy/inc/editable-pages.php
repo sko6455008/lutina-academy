@@ -8,6 +8,7 @@ function lutina_academy_page_schemas() {
     static $schemas;
     if ( null === $schemas ) {
         $schemas = json_decode( file_get_contents( __DIR__ . '/page-fields.json' ), true );
+        $schemas['landing'] = json_decode( file_get_contents( __DIR__ . '/landing-fields.json' ), true );
     }
     return $schemas;
 }
@@ -32,7 +33,8 @@ function lutina_academy_render_page_block( $type, $attributes ) {
     $rich_tags = array(
         'span'   => array( 'class' => true ),
         'br'     => array( 'class' => true ),
-        'strong' => array(),
+        'strong' => array( 'class' => true ),
+        'small'  => array(),
         'b'      => array(),
         'em'     => array(),
         'i'      => array(),
@@ -73,6 +75,11 @@ function lutina_academy_render_page_block( $type, $attributes ) {
         get_template_part( 'template-parts/faq' );
         $tokens['{{faq}}'] = ob_get_clean();
     }
+    if ( 'landing' === $type ) {
+        ob_start();
+        get_template_part( 'template-parts/landing-faq' );
+        $tokens['{{faq}}'] = ob_get_clean();
+    }
 
     // strtr substitutes once; text entered by an editor cannot introduce template tokens.
     return strtr( file_get_contents( get_template_directory() . '/templates/' . $type . '.html' ), $tokens );
@@ -96,9 +103,10 @@ function lutina_academy_register_page_blocks() {
     wp_add_inline_script( 'lutina-page-editor', 'window.lutinaPageEditor = ' . wp_json_encode( array(
         'schemas' => $schemas,
         'faqUrl'  => admin_url( 'edit.php?post_type=qa' ),
+        'landingFaqUrl' => admin_url( 'edit.php?post_type=lutina_faq' ),
     ) ) . ';', 'before' );
 
-    foreach ( array( 'home', 'legal' ) as $type ) {
+    foreach ( array( 'home', 'legal', 'landing' ) as $type ) {
         register_block_type( 'lutina/' . $type, array(
             'api_version'     => 3,
             'attributes'      => array( 'fields' => array( 'type' => 'object', 'default' => array() ) ),
@@ -175,7 +183,7 @@ function lutina_academy_setup_editable_pages() {
 add_action( 'init', 'lutina_academy_setup_editable_pages', 30 );
 
 function lutina_academy_page_editor_settings( $settings, $context ) {
-    if ( ! empty( $context->post ) && ( has_block( 'lutina/home', $context->post ) || has_block( 'lutina/legal', $context->post ) ) ) {
+    if ( ! empty( $context->post ) && ( has_block( 'lutina/home', $context->post ) || has_block( 'lutina/legal', $context->post ) || has_block( 'lutina/landing', $context->post ) ) ) {
         $settings['templateLock'] = 'all';
         $settings['canLockBlocks'] = false;
         $settings['codeEditingEnabled'] = false;

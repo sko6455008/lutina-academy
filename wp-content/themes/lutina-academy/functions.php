@@ -3,12 +3,19 @@ function lutina_academy_scripts() {
     // Enqueue main stylesheet
     wp_enqueue_style( 'lutina-style', get_stylesheet_uri() );
 
+    if ( lutina_academy_is_landing() ) {
+        wp_enqueue_style( 'lutina-landing', get_template_directory_uri() . '/landing.css', array(), filemtime( get_template_directory() . '/landing.css' ) );
+        wp_enqueue_style( 'lutina-landing-desktop', get_template_directory_uri() . '/landing-desktop.css', array( 'lutina-landing' ), filemtime( get_template_directory() . '/landing-desktop.css' ), '(min-width: 900px)' );
+        wp_enqueue_style( 'lutina-landing-refinements', get_template_directory_uri() . '/landing-refinements.css', array( 'lutina-landing-desktop' ), filemtime( get_template_directory() . '/landing-refinements.css' ) );
+        return;
+    }
     // Enqueue main script
     wp_enqueue_script( 'lutina-main', get_template_directory_uri() . '/main.js', array(), filemtime( get_template_directory() . '/main.js' ), true );
 }
 add_action( 'wp_enqueue_scripts', 'lutina_academy_scripts' );
 
 require_once get_template_directory() . '/inc/editable-pages.php';
+require_once get_template_directory() . '/inc/landing.php';
 
 function lutina_academy_tokushoho_url() {
     $page_id = (int) get_option( 'lutina_academy_tokushoho_page_id' );

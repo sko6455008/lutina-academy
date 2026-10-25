@@ -33,3 +33,14 @@ wp-content/themes/*
 node_modules/
 .vscode/
 .idea/
+
+# Local design previews and one-off asset import tools
+wp-content/themes/lutina-academy/tests/artifacts/
+wp-content/themes/lutina-academy/tests/apply-*.php
+wp-content/themes/lutina-academy/tests/build-landing.py
+wp-content/themes/lutina-academy/tests/refine-hero-v4.py
+wp-content/themes/lutina-academy/tests/landing-reference.css
+wp-content/themes/lutina-academy/tests/landing-v1-fields.json
+wp-content/themes/lutina-academy/tests/v2-assets.json
+wp-content/themes/lutina-academy/tests/v2-more-assets.json
+.tmp/

@@ -45,24 +45,24 @@
 
         return el('div', blockProps,
             el('div', { className: 'lutina-editor-intro' },
-                el('p', { className: 'lutina-editor-eyebrow' }, 'ICA 池袋キャリアアカデミー'),
+                el('p', { className: 'lutina-editor-eyebrow' }, type === 'landing' ? 'Lutina Academy' : 'ICA 池袋キャリアアカデミー'),
                 el('h2', null, schema.title + 'の編集'),
                 el('p', null, '変更したい項目を開いて編集し、画面右上の「保存」で反映します。プレビューで公開前の表示も確認できます。'),
                 el('p', { className: 'lutina-editor-note' }, '配置・配色はそのままに、文章・画像・リンクを変更できます。変更履歴から以前の内容に戻すこともできます。')
             ),
-            type === 'home' && el(TextControl, { label: '編集項目を検索', placeholder: '例：料金、講師、住所', value: search, onChange: setSearch }),
+            type !== 'legal' && el(TextControl, { label: '編集項目を検索', placeholder: '例：料金、講師、住所', value: search, onChange: setSearch }),
             ...Object.entries(schema.groups).map(([group, title], index) => {
                 const visible = schema.fields.filter(field => field.group === group && (!search || (title + field.label + valueOf(field)).toLowerCase().includes(search.toLowerCase())));
                 if (!visible.length) return null;
                 return el(PanelBody, { title, initialOpen: type === 'legal' || index === 0, ...(search ? { opened: true } : {}), key: group + (search ? '-search' : '') },
                     ...visible.map(control),
-                    group === 'faq' && el(Notice, { status: 'info', isDismissible: false }, '質問・回答は既存のQ&A管理画面と連動しています。', el('a', { href: config.faqUrl, target: '_blank', rel: 'noopener noreferrer' }, 'Q&Aを編集する'))
+                    group === 'faq' && el(Notice, { status: 'info', isDismissible: false }, '質問・回答の追加・編集・削除と「順序」の変更はこちら。', el('a', { href: type === 'landing' ? config.landingFaqUrl : config.faqUrl, target: '_blank', rel: 'noopener noreferrer' }, 'FAQを編集する'))
                 );
             })
         );
     }
 
-    ['home', 'legal'].forEach(type => wp.blocks.registerBlockType('lutina/' + type, {
+    ['home', 'legal', 'landing'].forEach(type => wp.blocks.registerBlockType('lutina/' + type, {
         apiVersion: 3,
         title: config.schemas[type].title,
         icon: type === 'home' ? 'welcome-widgets-menus' : 'media-text',

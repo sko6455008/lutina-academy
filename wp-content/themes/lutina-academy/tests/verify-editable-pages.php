@@ -19,7 +19,8 @@ $original_user = get_current_user_id();
 try {
     $home_id = (int) get_option( 'page_on_front' );
     $legal_id = (int) get_option( 'lutina_academy_tokushoho_page_id' );
-    lutina_check( 'page' === get_option( 'show_on_front' ) && has_block( 'lutina/home', $home_id ), 'Top page uses editable WordPress content' );
+    $landing = has_block( 'lutina/landing', $home_id );
+    lutina_check( 'page' === get_option( 'show_on_front' ) && ( $landing || has_block( 'lutina/home', $home_id ) ), 'Top page uses editable WordPress content' );
     lutina_check( has_block( 'lutina/legal', $legal_id ), 'Legal page uses editable WordPress content' );
 
     $home_before = get_post_field( 'post_content', $home_id );
@@ -79,10 +80,10 @@ try {
     lutina_check( ! str_contains( $html, '12:00～22:00' ), 'Intentionally empty fields remain empty' );
 
     $home_blocks = parse_blocks( $home_before );
-    $home_blocks[0]['attrs']['fields']['hero_01'] = home_url( '/test-image.jpg' );
+    $home_blocks[0]['attrs']['fields'][ $landing ? 'hero_banner_pc' : 'hero_01' ] = home_url( '/test-image.jpg' );
     $home_html = render_block( $home_blocks[0] );
     lutina_check( str_contains( $home_html, home_url( '/test-image.jpg' ) ), 'LP image edits render correctly' );
-    lutina_check( substr_count( $home_html, 'class="faq-button ' ) === count( get_posts( array( 'post_type' => 'qa', 'numberposts' => -1 ) ) ), 'Existing Q&A records remain connected' );
+    lutina_check( substr_count( $home_html, $landing ? 'class="lp-faq-item"' : 'class="faq-button ' ) === count( get_posts( array( 'post_type' => $landing ? 'lutina_faq' : 'qa', 'numberposts' => -1 ) ) ), 'Q&A records remain connected' );
     lutina_check( ! preg_match( '/\{\{(?:field|attr):/', $home_html ), 'All editable content placeholders resolve' );
     echo "All editable-page checks passed.\n";
 } finally {
