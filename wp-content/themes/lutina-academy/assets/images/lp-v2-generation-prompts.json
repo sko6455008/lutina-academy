@@ -1,0 +1,56 @@
+[
+  {
+    "asset": "lp-hero-v2.webp",
+    "mode": "built-in image_gen",
+    "reference": "01_0216.png",
+    "prompt": "Use case: background-extraction. Extract and reconstruct ONLY the full hero photograph from the TOP of the reference landing page: same smiling Japanese woman with long wavy brown hair wearing cream knit, seated at a tarot table, soft ivory silver-gold bokeh room. Remove EVERY headline, all text, top text panel, red circular badge, buttons, other sections. Preserve her face, pose, tarot cards and atmospheric background faithfully. Reconstruct clean photographic background where text/badge were. Portrait 2:3 framing, woman's head in upper-middle right, her hands and tarot table in lower third, ample soft ivory negative space at top and left to overlay live HTML text. No lettering, no logos, no graphic frames. High quality natural photography; not illustration."
+  },
+  {
+    "asset": "lp-voice1-v2.webp",
+    "mode": "built-in image_gen",
+    "reference": "08_0216.png",
+    "prompt": "Use case: illustration-story. Generate ONLY the FIRST testimonial woman from reference as a separate full bust asset. Faithful clean Japanese manga black ink outline, white fill inside character, transparent exterior. Cheerful Japanese adult woman in her 30s, shoulder-length wavy hair with bangs, business blazer over blouse, small encouraging raised fist beside shoulder, friendly open mouth smile. Match first portrait's sparse thin smooth black lines, large manga eyes and hairstyle. Waist-up, whole head, arms and torso inside frame. Pure black and white only, no color, no gray wash, no shading, no gradient, no realistic skin, no text or background."
+  },
+  {
+    "asset": "lp-voice2-v2.webp",
+    "mode": "built-in image_gen",
+    "reference": "08_0216.png",
+    "prompt": "Use case: illustration-story. Generate ONLY the SECOND testimonial woman from reference as a separate full bust asset. Faithful clean Japanese manga black ink outline, white fill inside character, transparent exterior. Japanese adult woman in her40s with short layered bob haircut and thin round glasses, understated necklace and crewneck blouse, holding smartphone in one hand at chest height, slight friendly smile. Match second portrait's sparse thin smooth black lines, large manga eyes, exact pose. Waist-up whole head arms and torso inside frame. Pure black and white only, no color, no gray wash or shading, no gradient, no realistic skin, no text or background."
+  },
+  {
+    "asset": "lp-voice3-v2.webp",
+    "mode": "built-in image_gen",
+    "reference": "08_0216.png",
+    "prompt": "Use case: illustration-story. Generate ONLY the THIRD testimonial woman from reference as a separate full bust asset. Faithful clean Japanese manga black ink outline, white fill inside character, transparent exterior. Japanese adult woman in her50s with softly waved shoulder length bob, side-parted hair, small drop earrings, star-pattern scarf tied at neck over plain top, gentle confident closed mouth smile. Match third portrait's sparse thin smooth black lines and large manga eyes. Waist-up whole head and torso inside frame. Pure black and white only, no color, no gray wash or shading, no gradient, no realistic skin, no text or background."
+  },
+  {
+    "asset": "lp-zodiac-bg.webp",
+    "mode": "built-in image_gen",
+    "reference": "01_0216.png",
+    "prompt": "Use case: background-extraction. Produce only the decorative background from the middle concern section of this reference, silver-white very pale gray background with delicate WHITE celestial lineart: astrology sun faces, crescent moons, constellation lines, fine stars and little diamond sparkles. Portrait 2:3 wallpaper. Spread motifs across composition, fine low contrast lines. Match reference faithfully. Remove ALL people, all text, borders, buttons, hexagonal cards. No lettering or zodiac labels. Flat elegant pale silver-white celestial wallpaper only."
+  },
+  {
+    "asset": "lp-marble-bg.webp",
+    "mode": "built-in image_gen",
+    "reference": "04_0216.png",
+    "prompt": "Use case: background-extraction. Generate a clean background texture matching ONLY the ivory cream subtle marble plaster background of the upper lecturer profile section in reference. Fine natural beige-gold veins, subtle paper-like plaster grain, very light ivory overall, sparse veins near edges, low contrast central space. Square seamless-looking natural texture. No people, no text, no frames, no icons, no pink panel. Elegant understated creamy marble."
+  },
+  {
+    "asset": "lp-faq-bg.webp",
+    "mode": "built-in image_gen",
+    "reference": "09_0216.png",
+    "prompt": "Use case: background-extraction. Recreate ONLY the soft background of this FAQ landing page reference. Very pale blush pink, ivory cream and warm beige blurred translucent flowing fabric/light bands, diffuse diagonal soft highlights, quiet elegant airy background. Portrait 2:3. Very low contrast for white FAQ cards overlaid later. Remove all text, all white/purple cards, all borders and flourishes. No objects, no people, no lettering, no new symbols."
+  },
+  {
+    "asset": "lp-worry-v2.webp",
+    "mode": "built-in image_gen",
+    "reference": "01_0216.png",
+    "prompt": "Use case: illustration-story. Generate ONLY the worried manga woman near lower middle of reference as a separate bust asset. Faithful thin black ink manga line drawing on white-filled character with transparent exterior. Japanese adult woman with shoulder length hair and bangs, hand at cheek, other hand holding pen, thoughtful concerned expression, small questionmark above shoulder. Exact sparse black outline style as original, no color, no gray fills, no shading, no realistic skin. Head hands and bust fully visible. No text except a single question mark."
+  },
+  {
+    "asset": "lp-feature-main-v2.webp",
+    "mode": "built-in image_gen",
+    "reference": "02_0216.png",
+    "prompt": "Use case: background-extraction. Extract and reconstruct ONLY the large photographic image just below the heading of reference. Same smiling Japanese woman long brown hair and bangs in cream knit sweater, looking down at an open tarot textbook, holding pendulum, tarot cards on table, softly blurred bright classroom with another person distant. Horizontal3:2 photograph. Preserve woman's appearance, pose and original photographic scene. Straight rectangular photo, reconstruct corners where original curved crop masks them. No text, no banners, no curved mask, no frames. Photorealistic."
+  }
+]

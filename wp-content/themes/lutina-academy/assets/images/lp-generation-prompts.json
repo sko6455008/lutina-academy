@@ -1,0 +1,25 @@
+{
+  "mode": "Built-in image_gen",
+  "assets": [
+    {
+      "asset": "heroPrompt",
+      "prompt": "Use case: photorealistic-natural. Asset type: text-free hero photograph for a Japanese women's tarot academy website. Create a warm elegant editorial photograph of a fictional Japanese woman in her early 30s, long softly waved brown hair, cream knit blouse, smiling naturally at camera while seated at a champagne beige table with a fan of tarot cards. Waist-up portrait, hands and cards visible at bottom. Subject slightly right of center so a circular text badge can overlay empty area at left; full head visible with headroom. Cream curtains, softly blurred champagne gold bokeh, pale blush flowers at edge, refined welcoming atmosphere, luminous soft daylight, photographic skin detail. Landscape 3:2 composition, also usable in a square crop. No text, typography, badges, logos, watermarks, graphic borders. This is an illustrative model, not a portrait of the actual instructor."
+    },
+    {
+      "asset": "illustrationPrompt",
+      "prompt": "Use case: illustration-story. Asset type: single decorative line-art portrait for a Japanese women's education landing page, transparent background. A friendly adult Japanese woman in her 30s with shoulder-length softly wavy hair, shown from waist up, slightly tilted head, one hand touching her cheek thoughtfully, subtle worried but approachable expression. Elegant clean fine dark-brown ink linework, editorial manga-inspired but realistic adult facial proportions, minimal soft blush pink and ivory fills. White/ivory blouse, delicate necklace. Isolated single person, ample padding all around, no shadow background, no text, no lettering, no speech bubble, no icons, no border, no watermark. True transparent alpha background."
+    },
+    {
+      "asset": "lessonPrompt",
+      "prompt": "Use case: photorealistic-natural. Asset type: text-free Japanese tarot academy lesson illustration photograph. Landscape 3:2 editorial photo, warmly lit elegant bright cream classroom, two adult Japanese women, a friendly instructor in her 40s wearing a muted dusty rose blouse explaining a spread of tarot cards to a woman student in her 30s in cream knit seated across a light wood table. Both looking attentively at the cards and notebook, natural candid smiles, clear hand gestures, cards and notebook visible. Soft beige curtains and white flowers in background, pale pink and champagne palette, natural skin texture, inviting professional learning environment. No readable text, no logos, no watermark. Fictional illustrative models, not actual instructor or students."
+    },
+    {
+      "asset": "voice2Prompt",
+      "prompt": "Use case: illustration-story. Asset: single transparent-background editorial illustration for a Japanese tarot school testimonial. A Japanese woman in her 40s with short neat bob haircut and thin round eyeglasses, softly smiling with confident friendly expression, wearing a modest pale rose blouse, waist up, hands loosely joined. Delicate dark brown ink contours, mostly white and ivory fills with very subtle blush shading, refined clean Japanese editorial line illustration, adult realistic proportions. Isolated person with ample padding, transparent alpha background. No text, no speech bubble, no logos, no symbols. Fictional illustration."
+    },
+    {
+      "asset": "voice3Prompt",
+      "prompt": "Use case: illustration-story. Asset: single editorial line-art portrait, transparent background, for a Japanese tarot academy testimonial. Japanese woman in her 50s, shoulder-length softly curled dark hair with a few natural gray strands, mature friendly face, warm relieved smile, simple elegant cream cardigan and subtle beaded necklace, waist-up standing pose with relaxed hands. Fine dark brown ink lines, mostly white and ivory coloring and light blush shading, understated Japanese women's magazine illustration, natural adult proportions. Isolated person on genuinely transparent alpha background, no background glow or shadow, no text, no lettering, no icons, no speech bubble, no logo. Fictional illustrative person."
+    }
+  ]
+}

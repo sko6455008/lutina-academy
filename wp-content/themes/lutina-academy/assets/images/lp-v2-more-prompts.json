@@ -1,0 +1,44 @@
+[
+  {
+    "asset": "lp-gold-zodiac-bg.webp",
+    "mode": "built-in image_gen",
+    "reference": "01_0216.png",
+    "prompt": "Extract and recreate ONLY the background from the very BOTTOM of this LP reference below the worried woman. White background with extremely delicate pale GOLD celestial sun faces, moons, stars, constellations and crystals, soft sparse composition, clean center space. Horizontal 3:2 wallpaper. No text, people, panels, borders or buttons. Elegant fine pale gold line drawings, warm-white background, very low contrast. Match the original bottom background faithfully."
+  },
+  {
+    "asset": "lp-policy-bg-v2.webp",
+    "mode": "built-in image_gen",
+    "reference": "03_0216.png",
+    "prompt": "Extract and reconstruct ONLY the photographic BACKGROUND of the supplied teaching-policy reference. Tall portrait 2:3 photograph, Japanese female tarot teacher short brown hair wearing pale pink knit cardigan sitting across a student in softly lit ivory classroom, tarot cards and textbooks on white table foreground. Very soft bright natural windowlight. Remove every text, all white overlay panels, all numbers and pink ribbons; reconstruct natural photograph underneath. No text, logos, panels or diagrams. Match the original photographic background's pale neutral colors."
+  },
+  {
+    "asset": "lp-flow1-v2.webp",
+    "mode": "built-in image_gen",
+    "reference": "06_0216.png",
+    "prompt": "Extract only the FIRST small photograph from reference, matching original scene. Horizontal4:3 photograph: female Japanese seminar speaker with straight dark long hair, ivory suit, standing left gesturing towards projected presentation, two female attendees with backs to camera right foreground. Bright professional small meeting room. No landing page, titles, buttons or surrounding graphics. Full-bleed single photo, same framing and natural lighting as original; projected chart can be abstract without lettering."
+  },
+  {
+    "asset": "lp-flow2-v2.webp",
+    "mode": "built-in image_gen",
+    "reference": "06_0216.png",
+    "prompt": "Extract only the SECOND small photograph from reference, matching original scene. Horizontal4:3 photo: Japanese woman30s with side-parted short brown bob smiling down at smartphone held right hand, open paper diary/planner in other hand on cream desk, wearing light beige cardigan. Airy warm cream home, soft white curtain, spring flowers, natural daylight. No landing page, words, banners, buttons or surrounding graphics. Full-bleed single photorealistic photo matching original framing."
+  },
+  {
+    "asset": "lp-flow3-v2.webp",
+    "mode": "built-in image_gen",
+    "reference": "06_0216.png",
+    "prompt": "Extract only the THIRD small photograph from reference, matching original scene. Horizontal4:3 photo: Japanese female tarot teacher40s short dark hair, navy blazer over cream blouse, seated right behind wood desk facing two adult Japanese women students seen from back on left. Purple mat with tarot cards, bright professional ivory classroom with window. No landingpage, words, banners or graphics. Full-bleed single natural photograph matching original framing."
+  },
+  {
+    "asset": "lp-notes-v2.webp",
+    "mode": "built-in image_gen",
+    "reference": "02_0216.png",
+    "prompt": "Extract and reconstruct ONLY the photo INSIDE the circular thumbnail beside feature number TWO in reference. Make square full-bleed photo: close-up open handwritten study notebook with colored Japanese handwritten notes, underlines and simple tarot symbols, black pen diagonally across paper on warm cream desk. Cropped close, no people, no surrounding LP text, no circle clipping. Natural editorial photography, match original thumbnail. Notebook marks may be indistinct, do not add headline."
+  },
+  {
+    "asset": "lp-consult-v2.webp",
+    "mode": "built-in image_gen",
+    "reference": "02_0216.png",
+    "prompt": "Extract and reconstruct ONLY photo INSIDE circular thumbnail beside feature number THREE in reference. Square full-bleed photo: two Japanese adult women face each other across tarot table, one left with long dark hair wearing ivory, one right wearing cream blouse, both smiling warmly, hands together reassuringly above table, soft golden windowlight and delicate bokeh. Bright ivory room. No text, no circle clipping, no LP elements. Natural editorial photography, same composition as reference thumbnail."
+  }
+]
