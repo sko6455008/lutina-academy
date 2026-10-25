@@ -131,3 +131,35 @@
  .lp-fv-badge {width:118px;font-size:11px;padding:18px 5px}
  .lp-fv-badge em {font-size:16px}
 }
+
+/* Editable trial offer, visually separate from the full curriculum. */
+.lp .lp-academy-intro {max-width:850px;margin:24px auto 30px;font-size:15px;line-height:2;padding-inline:8px}
+.lp-trial {position:relative;display:grid;gap:22px;padding:30px 20px;margin:0 0 36px;border:1px solid #c7a77e;background:linear-gradient(135deg,#fffaf6ee,#fff5f8ef),url('assets/images/lp-marble-bg.webp') center/cover;box-shadow:0 8px 24px #7e4e3810;isolation:isolate}
+.lp-trial::before {content:'';position:absolute;inset:5px;border:1px solid #d9c4a980;pointer-events:none;z-index:-1}
+.lp .lp-trial-lead {font-size:13px;font-weight:600;color:#885a49;text-align:center;line-height:1.8}
+.lp .lp-trial h3 {margin:8px 0 14px;font:700 32px/1.5 var(--lp-serif);color:#b7365b;text-align:center}
+.lp .lp-trial-description {font-size:15px;line-height:1.9}
+.lp-trial-offer {align-self:center;text-align:center;min-width:0}
+.lp .lp-trial-price {display:flex;flex-wrap:wrap;align-items:baseline;justify-content:center;gap:8px;margin-bottom:18px;color:#764b3c;font:700 24px/1.5 var(--lp-serif)}
+.lp-trial-price strong {font-size:32px;color:#b7365b;font-weight:700}
+.lp-trial-price-divider {font-size:20px;color:var(--lp-gold)}
+.lp .lp-trial-link {width:100%;max-width:460px;min-height:80px;margin:0 auto;padding:18px 26px;background-image:url('assets/images/lp-cta-frame-flex.svg')}
+.lp-trial-label {font-size:20px;font-weight:900;letter-spacing:.03em;line-height:1.4;text-shadow:0 1px 2px #b8435a;text-wrap:balance;overflow-wrap:anywhere}
+.lp .lp-trial-link:focus-visible {outline:3px solid var(--lp-purple);outline-offset:5px}
+.lp-main-course-heading {text-align:center;padding:18px 0 0;border-top:1px solid #d6b99d}
+.lp .lp-main-course-heading h3 {font:700 27px/1.6 var(--lp-serif);color:#8b563d;margin-bottom:8px}
+@media(min-width:900px) {
+ .lp .lp-academy-intro {font-size:19px;line-height:2;margin:28px auto 40px;padding:0}
+ .lp-trial {grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;padding:42px 48px;margin-bottom:48px;align-items:center}
+ .lp .lp-trial-lead,.lp .lp-trial h3 {text-align:left}
+ .lp .lp-trial-lead {font-size:17px}
+ .lp .lp-trial h3 {font-size:40px;margin:8px 0 18px}
+ .lp .lp-trial-description {font-size:18px}
+ .lp-trial-offer {padding-left:36px;border-left:1px solid #d6b99d}
+ .lp .lp-trial-price {font-size:30px;gap:12px;margin-bottom:24px}
+ .lp-trial-price strong {font-size:42px}
+ .lp .lp-trial-link {min-height:92px}
+ .lp-trial-label {font-size:24px}
+ .lp .lp-main-course-heading h3 {font-size:34px;margin-bottom:10px}
+ .lp-main-course-heading {padding-top:30px}
+}

@@ -751,6 +751,69 @@
       "default": "講座カリキュラム"
     },
     {
+      "key": "academy_intro",
+      "group": "courses",
+      "label": "アカデミーの説明",
+      "type": "textarea",
+      "default": "Lutina Academyは、タロットの知識だけでなく、読み解いた内容を言葉にし、相談者に伝える力を育てるスクールです。実践を通して、占いを仕事にするための技術と姿勢を学びます。"
+    },
+    {
+      "key": "trial_lead",
+      "group": "courses",
+      "label": "お試し体験：導入文",
+      "type": "text",
+      "default": "まずは90分、アカデミーの学びを体験"
+    },
+    {
+      "key": "trial_title",
+      "group": "courses",
+      "label": "お試し体験：見出し",
+      "type": "text",
+      "default": "お試し体験"
+    },
+    {
+      "key": "trial_description",
+      "group": "courses",
+      "label": "お試し体験：説明・体験内容",
+      "type": "textarea",
+      "default": "まずは90分のお試し体験から。内容や日程については、LINEでお気軽にご相談ください。"
+    },
+    {
+      "key": "trial_duration",
+      "group": "courses",
+      "label": "お試し体験：時間",
+      "type": "text",
+      "default": "90分"
+    },
+    {
+      "key": "trial_price",
+      "group": "courses",
+      "label": "お試し体験：料金",
+      "type": "text",
+      "default": "33,000円"
+    },
+    {
+      "key": "trial_cta_label",
+      "group": "courses",
+      "label": "お試し体験：ボタン文言",
+      "type": "text",
+      "default": "無料相談する"
+    },
+    {
+      "key": "trial_url",
+      "group": "courses",
+      "label": "お試し体験：相談リンク",
+      "type": "url",
+      "default": "https://lin.ee/Ub7dXw5"
+    },
+    {
+      "key": "main_course_label",
+      "group": "courses",
+      "label": "本講座：見出し",
+      "type": "text",
+      "default": "本講座"
+    },
+    {
       "key": "course_duration",
       "group": "courses",
       "label": "受講回数・時間",
