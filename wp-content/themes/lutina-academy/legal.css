@@ -1,0 +1,43 @@
+/* Shared LP colors, fonts and decorative assets. */
+.lp.lp-legal {min-height:100svh;display:flex;flex-direction:column;padding:0;font-size:17px;line-height:1.9;background:linear-gradient(#fffaf6ed,#fff9f6ed),url('assets/images/lp-marble-bg.webp') center/640px auto}
+.lp-legal-header {padding:24px;text-align:center;border-bottom:1px solid #e6d8ca;background:#ffffffd9}
+.lp-legal-header a {font:700 30px/1.4 Georgia,serif;letter-spacing:.025em;color:#a47dca;text-decoration:none}
+.lp-legal-main {width:calc(100% - 48px);max-width:1080px;margin:0 auto;padding:64px 0 72px;flex:1}
+.lp-legal-heading {position:relative;text-align:center;padding:40px 12px 48px;margin:0 auto 40px;max-width:850px}
+.lp-legal-heading::before,.lp-legal-heading::after {content:'';position:absolute;left:0;right:0;height:26px;background:url('assets/images/lp-flourish.svg') center/100% 100% no-repeat}
+.lp-legal-heading::before {top:0}.lp-legal-heading::after {bottom:0;transform:rotate(180deg)}
+.lp .lp-legal-heading p {font:600 16px/1.5 Georgia,serif;letter-spacing:.12em;color:#987b61;margin-bottom:12px}
+.lp .lp-legal-heading h1 {font:700 clamp(23px,3vw,38px)/1.7 var(--lp-serif);color:#b7365b;letter-spacing:.025em}
+.lp-legal-details {margin:0;padding:8px 38px;background:#fffffff5;border:1px solid #e4d3c2;box-shadow:0 8px 30px #7953330b}
+.lp-legal-row {display:grid;grid-template-columns:170px minmax(0,1fr);gap:30px;padding:26px 0}
+.lp-legal-row+.lp-legal-row {border-top:1px solid #ecdeda}
+.lp-legal-row dt {font:700 18px/1.9 var(--lp-serif);color:#79563f}
+.lp-legal-row dd {margin:0;min-width:0;overflow-wrap:anywhere}
+.lp-legal a:focus-visible {outline:3px solid #57406f;outline-offset:5px}
+.lp-legal-row a {color:#aa3157;text-underline-offset:4px}
+.lp-legal-row a:hover {color:#6e2943}
+.lp-legal-prices {list-style:none;padding:0;margin:0}
+.lp-legal-prices li {display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 24px;padding:17px 22px;background:#fcf1f3;border-left:3px solid #c9aa83}
+.lp-legal-prices li+li {margin-top:12px}
+.lp-legal-prices strong {display:block;font-weight:600}
+.lp-legal-prices span {display:block;font-size:15px;color:#6d605b}
+.lp-legal-prices b {font:700 27px/1.6 var(--lp-serif);color:#b7365b;overflow-wrap:anywhere}
+.lp .lp-legal-price-note {margin-top:18px;font-size:15px}
+.lp-legal-back {display:flex;gap:16px;align-items:center;justify-content:center;max-width:340px;margin:38px auto 0;padding:16px 22px;border:1px solid #b79a79;color:#87533d;background:#fff9f4;text-decoration:none;font:700 17px/1.7 var(--lp-serif)}
+.lp-legal-back:hover {background:#f9e9ee;color:#a93155}
+.lp-legal .lp-footer {padding:30px 20px;background:#f7ebf0}
+.lp-legal .lp-footer-brand {font:700 26px/1.6 Georgia,serif;color:#9875b5}
+@media(max-width:699px) {
+ .lp.lp-legal {font-size:15px}
+ .lp-legal-header {padding:18px}.lp-legal-header a {font-size:26px}
+ .lp-legal-main {width:calc(100% - 32px);padding:30px 0 42px}
+ .lp-legal-heading {padding:34px 4px 38px;margin-bottom:26px}
+ .lp .lp-legal-heading h1 {font-size:23px;letter-spacing:0}
+ .lp-legal-heading::before,.lp-legal-heading::after {height:19px}
+ .lp-legal-details {padding:0 20px}
+ .lp-legal-row {grid-template-columns:minmax(0,1fr);gap:7px;padding:20px 0}
+ .lp-legal-row dt {font-size:17px}
+ .lp-legal-prices li {padding:14px 16px;gap:8px 16px}
+ .lp-legal-prices b {font-size:24px}
+ .lp-legal-prices span {font-size:14px}
+}

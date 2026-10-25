@@ -70,6 +70,27 @@ function lutina_academy_render_page_block( $type, $attributes ) {
         }
     }
 
+    if ( 'legal' === $type ) {
+        // Use the published LP's editable prices as the single source of truth.
+        $landing_fields = array();
+        $pending_blocks = parse_blocks( get_post_field( 'post_content', (int) get_option( 'page_on_front' ) ) );
+        while ( $pending_blocks ) {
+            $block = array_shift( $pending_blocks );
+            if ( 'lutina/landing' === $block['blockName'] ) {
+                $landing_fields = $block['attrs']['fields'] ?? array();
+                break;
+            }
+            $pending_blocks = array_merge( $pending_blocks, $block['innerBlocks'] ?? array() );
+        }
+        $price_keys = array( 'trial_title', 'trial_duration', 'trial_price', 'main_course_label', 'course_duration', 'course_price' );
+        foreach ( lutina_academy_page_schemas()['landing']['fields'] as $field ) {
+            if ( ! in_array( $field['key'], $price_keys, true ) ) continue;
+            $value = isset( $landing_fields[ $field['key'] ] ) && is_string( $landing_fields[ $field['key'] ] )
+                ? $landing_fields[ $field['key'] ] : $field['default'];
+            $tokens[ '{{landing:' . $field['key'] . '}}' ] = esc_html( $value );
+        }
+    }
+
     if ( 'home' === $type ) {
         ob_start();
         get_template_part( 'template-parts/faq' );

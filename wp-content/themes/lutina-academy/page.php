@@ -1,6 +1,10 @@
 <?php
 /** Display ordinary pages as well as the academy's editable page blocks. */
-get_header( null, array( 'title' => get_the_title() . ' | ICA 池袋キャリアアカデミー' ) );
+if ( has_block( 'lutina/legal' ) ) {
+    get_header( 'landing' );
+} else {
+    get_header( null, array( 'title' => get_the_title() . ' | ICA 池袋キャリアアカデミー' ) );
+}
 while ( have_posts() ) {
     the_post();
     if ( has_block( 'lutina/home' ) || has_block( 'lutina/legal' ) ) {

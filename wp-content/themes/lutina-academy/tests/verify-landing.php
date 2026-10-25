@@ -37,6 +37,15 @@ try {
     $saved = get_post_field( 'post_content', $page_id );
     $html = do_blocks( $saved );
     lp_check( str_contains( $html, 'テスト体験料金' ) && str_contains( $html, 'テスト用のアカデミー説明' ), 'Trial price and academy description persist through the native editor API' );
+    $test_front = static function () use ( $page_id ) { return $page_id; };
+    add_filter( 'pre_option_page_on_front', $test_front );
+    try {
+        $legal_html = lutina_academy_render_page_block( 'legal', array() );
+        lp_check( str_contains( $legal_html, 'テスト体験料金' ) && str_contains( $legal_html, '598,000円' ), 'Legal disclosure follows saved LP trial and course prices' );
+        lp_check( ! preg_match( '/\{\{[^}]+\}\}/', $legal_html ), 'Legal disclosure has no unresolved placeholders' );
+    } finally {
+        remove_filter( 'pre_option_page_on_front', $test_front );
+    }
     lp_check( str_contains( $html, '598,000円' ) && str_contains( $html, '/test-lp.webp' ) && str_contains( $html, '<strong>講師メッセージ</strong>' ), 'Price, image and rich text changes persist and render' );
     lp_check( str_contains( $html, 'fv-sp-v7.png' ), 'Editing the desktop FV preserves the mobile artwork' );
     $blocks[0]['attrs']['fields']['course_price'] = 'プレビュー料金';

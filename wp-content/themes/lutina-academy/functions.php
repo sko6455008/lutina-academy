@@ -2,6 +2,11 @@
 function lutina_academy_scripts() {
     // Enqueue main stylesheet
     wp_enqueue_style( 'lutina-style', get_stylesheet_uri() );
+    if ( is_singular() && has_block( 'lutina/legal' ) ) {
+        wp_enqueue_style( 'lutina-landing', get_template_directory_uri() . '/landing.css', array(), filemtime( get_template_directory() . '/landing.css' ) );
+        wp_enqueue_style( 'lutina-legal', get_template_directory_uri() . '/legal.css', array( 'lutina-landing' ), filemtime( get_template_directory() . '/legal.css' ) );
+        return;
+    }
 
     if ( lutina_academy_is_landing() ) {
         wp_enqueue_style( 'lutina-landing', get_template_directory_uri() . '/landing.css', array(), filemtime( get_template_directory() . '/landing.css' ) );

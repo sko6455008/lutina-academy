@@ -50,6 +50,7 @@
                 el('p', null, '変更したい項目を開いて編集し、画面右上の「保存」で反映します。プレビューで公開前の表示も確認できます。'),
                 el('p', { className: 'lutina-editor-note' }, '配置・配色はそのままに、文章・画像・リンクを変更できます。変更履歴から以前の内容に戻すこともできます。')
             ),
+            type === 'legal' && el(Notice, { status: 'info', isDismissible: false }, 'お試し体験・本講座の名称、時間、料金は、トップページの「講座カリキュラム」の編集内容と連動します。料金を変更する場合はトップページを編集してください。'),
             type !== 'legal' && el(TextControl, { label: '編集項目を検索', placeholder: '例：料金、講師、住所', value: search, onChange: setSearch }),
             ...Object.entries(schema.groups).map(([group, title], index) => {
                 const visible = schema.fields.filter(field => field.group === group && (!search || (title + field.label + valueOf(field)).toLowerCase().includes(search.toLowerCase())));
