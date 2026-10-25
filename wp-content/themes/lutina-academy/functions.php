@@ -29,7 +29,7 @@ function lutina_academy_tokushoho_url() {
     return $page_id ? get_permalink( $page_id ) : home_url( '/tokushoho/' );
 }
 
-// カスタム投稿タイプ: Q&A（タイトル=質問、本文=回答。並び順は「ページ属性 > 順序」で管理）
+// Legacy Q&A stays registered only for recovery from Trash; use LPのFAQ for current content.
 function lutina_academy_register_qa_post_type() {
     register_post_type( 'qa', array(
         'label'  => 'Q&A',
@@ -43,6 +43,7 @@ function lutina_academy_register_qa_post_type() {
         ),
         'public'    => false,
         'show_ui'   => true,
+        'show_in_menu' => false,
         'menu_icon' => 'dashicons-editor-help',
         'supports'  => array( 'title', 'editor', 'page-attributes' ),
     ) );
@@ -78,5 +79,5 @@ function lutina_academy_seed_qa_posts() {
 
     update_option( 'lutina_academy_qa_seeded', 1 );
 }
-add_action( 'init', 'lutina_academy_seed_qa_posts', 20 );
+// Retired: do not recreate the old Q&A entries on new or existing sites.
 
