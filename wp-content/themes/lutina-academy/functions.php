@@ -7,6 +7,8 @@ function lutina_academy_scripts() {
         wp_enqueue_style( 'lutina-landing', get_template_directory_uri() . '/landing.css', array(), filemtime( get_template_directory() . '/landing.css' ) );
         wp_enqueue_style( 'lutina-landing-desktop', get_template_directory_uri() . '/landing-desktop.css', array( 'lutina-landing' ), filemtime( get_template_directory() . '/landing-desktop.css' ), '(min-width: 900px)' );
         wp_enqueue_style( 'lutina-landing-refinements', get_template_directory_uri() . '/landing-refinements.css', array( 'lutina-landing-desktop' ), filemtime( get_template_directory() . '/landing-refinements.css' ) );
+        wp_enqueue_style( 'lutina-landing-motion', get_template_directory_uri() . '/landing-motion.css', array( 'lutina-landing-refinements' ), filemtime( get_template_directory() . '/landing-motion.css' ) );
+        wp_enqueue_script( 'lutina-landing-motion', get_template_directory_uri() . '/landing-motion.js', array(), filemtime( get_template_directory() . '/landing-motion.js' ), true );
         return;
     }
     // Enqueue main script
